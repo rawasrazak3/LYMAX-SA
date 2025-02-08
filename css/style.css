@@ -707,7 +707,7 @@ header .navbar-toggler span.icon-bar {
     width: 30px;
     height: 2px;
     border-radius: 1px;
-    background: var(--theme-color-wh);
+    background: var(--theme-color-white);
     margin-top: 4px;
 }
 
