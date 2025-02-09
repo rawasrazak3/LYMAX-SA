@@ -424,7 +424,7 @@ header {
     z-index: 1000;
     height: 75px;
     padding: 0px 20px;
-    background-color: var(--theme-bg-dark);
+    background-color: var(--theme-color-primary);
     box-shadow: 0px 3px 6px #0000000f;
 }
 
@@ -1875,5 +1875,60 @@ footer a:focus {
 @media (max-width: 380px) {
     .social_media_links ul li {
         width: calc(50% - 10px);
+    }
+}
+
+
+/* Section padding */
+.logo-section {
+    padding-top: 20px;
+    padding-left: 30px;
+}
+
+/* Header padding */
+.logo-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-left: 30px;
+}
+
+/* Logo Slider */
+.logo-slider {
+    overflow: hidden;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Logo Track for scrolling effect */
+.logo-track {
+    display: flex;
+    gap: 40px; /* Adjust spacing between logos */
+    animation: scroll 20s linear infinite;
+}
+
+/* Individual logos */
+.logo-track img {
+    width: 120px; /* Adjust size to fit exactly 7 logos */
+    height: auto;
+    flex-shrink: 0;
+}
+
+/* Hover effect to pause animation */
+.logo-slider:hover .logo-track {
+    animation-play-state: paused;
+}
+
+/* Keyframe animation for continuous scrolling */
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
     }
 }
