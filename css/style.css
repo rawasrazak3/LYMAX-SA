@@ -762,9 +762,12 @@ header .navbar-toggler:not(.collapsed) span:nth-child(2) {
 }
 
 .home-banner .carousel-item {
-    position: relative;
+    /* position: relative;
     height: calc(100vh - 75px);
     overflow: hidden;
+    flex: 0 0 70%; /* Set width to 50% */
+    /* max-width: 70%; */ 
+    display: flex;
 }
 
 .home-banner .caption_box {
@@ -1668,7 +1671,7 @@ footer a:focus {
     color: var(--theme-color-white) !important;
 }
 
-@media only screen and (max-height: 700px) {
+@media only screen and (max-height: 800px) {
     .home-banner .carousel-item {
         height: calc(100vh - 75px);
     }
@@ -1914,7 +1917,7 @@ footer a:focus {
 
 /* Individual logos */
 .logo-track img {
-    width: 120px; /* Adjust size to fit exactly 7 logos */
+    width: 720px; /* Adjust size to fit exactly 7 logos */
     height: auto;
     flex-shrink: 0;
 }
@@ -1933,3 +1936,30 @@ footer a:focus {
         transform: translateX(-50%);
     }
 }
+
+/*******************************************/
+.carousel-inner {
+    display: flex;
+}
+
+.carousel-item {
+    flex: 0 0 100%; /* Ensures full width of carousel */
+}
+
+.carousel-item .row {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.carousel-item .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.theme_card img {
+    width: 100%;
+    height: auto;
+}
+
+
