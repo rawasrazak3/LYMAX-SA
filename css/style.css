@@ -129,7 +129,7 @@ img.obj_fit {
 }
 
 .theme_bg_dark {
-    background-color: var(--theme-bg-dark) !important;
+    background-color: var(--theme-color-primary) !important;
 }
 
 .theme_bg_white {
