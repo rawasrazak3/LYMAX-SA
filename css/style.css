@@ -1071,6 +1071,8 @@ header .navbar-toggler:not(.collapsed) span:nth-child(2) {
     position: relative;
     cursor: pointer;
     transition: var(--theme-transition);
+    width: 100%; 
+    height: 100%;
 }
 
 .theme_card_secondary:hover .overlay {
@@ -1088,6 +1090,13 @@ header .navbar-toggler:not(.collapsed) span:nth-child(2) {
     z-index: 2;
     background-color: rgba(0, 0, 0, 0.7);
     transition: var(--theme-transition);
+}
+
+.theme_card_secondary img {
+    width: 100%; /* Makes sure the image fills the width */
+    height: 100%; /* Stretches the image to fill height */
+    object-fit: cover; /* Ensures the image covers the entire card, stretching if needed */
+    object-position: center; /* Centers the image within the card */
 }
 
 .theme_card_secondary .inner_content_div {
