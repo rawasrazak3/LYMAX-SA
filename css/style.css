@@ -917,6 +917,50 @@ header .navbar-toggler:not(.collapsed) span:nth-child(2) {
     height: 45px;
 }
 
+/* buttons */
+
+.theme_card .theme_btn {
+    padding: 5px 15px 5px 30px;
+    border-radius: var(--theme-radius-button);
+    border: 1px solid var(--theme-color-primary);
+    color: var(--theme-color-white);
+    background-color: var(--theme-color-primary);
+    transition: var(--theme-transition);
+    cursor: pointer;
+    font-size: 14px;
+    min-width: 120px;
+    position: relative;
+    display: inline-block;
+    text-align: left;
+}
+
+.theme_card .theme_btn::before {
+    position: absolute;
+    content: "\F285";
+    font-family: var(--bootstrap-icons);
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--theme-color-white);
+    -webkit-text-stroke: 2px;
+    transition: var(--theme-transition);
+}
+
+.theme_card .theme_btn:hover,
+.theme_card .theme_btn:focus {
+    border: 1px solid var(--theme-color-white);
+    background-color: var(--theme-color-white);
+    color: var(--theme-color-primary);
+    padding: 5px 15px 5px 30px;
+    font-size: 14px !important;
+}
+
+.theme_card .theme_btn:hover::before,
+.theme_card .theme_btn:focus::before {
+    color: var(--theme-color-primary);
+}
+
+
 .theme_card .theme_card_body .body_text {
     font-size: var(--theme-font-size);
     margin-bottom: 0px;
@@ -1981,13 +2025,15 @@ footer a:focus {
 .logo-slider {
     overflow: hidden;
     white-space: nowrap;
+    position: relative;
+    width: 100%;
 }
 
 /* Logo Track for scrolling effect */
 .logo-track {
     display: flex;
     gap: 40px; /* Adjust spacing between logos */
-    animation: scroll 20s linear infinite;
+    animation: scroll 10s linear infinite;
 }
 
 /* Individual logos */
@@ -2008,7 +2054,7 @@ footer a:focus {
         transform: translateX(0);
     }
     to {
-        transform: translateX(-50%);
+        transform: translateX(-100%);
     }
 }
 
