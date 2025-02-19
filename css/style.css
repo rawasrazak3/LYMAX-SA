@@ -854,6 +854,7 @@ header .navbar-toggler:not(.collapsed) span:nth-child(2) {
     border-radius: 5px;
     background-color: transparent;
     padding: 20px;
+    width: 100%;
 }
 
 .theme_input_box .form-control {
@@ -871,10 +872,18 @@ header .navbar-toggler:not(.collapsed) span:nth-child(2) {
 
 .theme_input_box button {
     position: absolute;
-    right: 20px;
-    top: 50%;
+    /* right: 20px; */
+    /* top: 50%; */
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    height: 10%;
     transform: translateY(-50%);
-    background-color: transparent;
+    background-color: var(--theme-color-primary);
+    color: var(--theme-color-white);
 }
 
 .theme_input_box button i {
@@ -2162,6 +2171,15 @@ footer a:focus {
     visibility: visible;
     opacity: 1;
     bottom: 50px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
 }
 
 
