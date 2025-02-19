@@ -2039,7 +2039,7 @@ footer a:focus {
 /* Individual logos */
 .logo-track img {
     width: 200px; /* Adjust size to fit exactly 7 logos */
-    height: 150px;
+    height: auto;
     flex-shrink: 0;
 }
 
@@ -2081,6 +2081,87 @@ footer a:focus {
 .theme_card img {
     width: 100%;
     height: auto;
+}
+
+.course_list ::ul {
+    list-style: none;
+    padding: 0;
+}
+
+.course_list ::li {
+    background: #f4f4f4;
+    margin: 5px;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer; /* Makes it look clickable */
+}
+
+.course_list:li:hover {
+    background: #ddd;
+}
+
+
+/* Make the dropdown transparent */
+.select2-container--default .select2-selection--single {
+    background: transparent !important; /* Transparent background */
+    border: 1px solid #ccc;
+    color: white !important;
+    height: 100%;
+    width: 100%;
+}
+
+/* Change text color */
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: white !important; /* White text */
+}
+
+/* Make the dropdown menu transparent */
+.select2-dropdown {
+    background: rgba(0, 0, 0, 0.5) !important; /* Semi-transparent dropdown */
+    color: white !important;
+}
+
+/* Change hover & selection background */
+.select2-results__option {
+    background: transparent !important; /* Transparent items */
+    color: white !important; /* White text */
+}
+
+/* Highlight selected option */
+.select2-results__option--highlighted {
+    background: rgba(255, 255, 255, 0.2) !important; /* Light highlight */
+}
+
+/* Remove focus outline */
+.select2-selection {
+    outline: none !important;
+}
+
+
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+    opacity: 0;
+    transition: opacity 0.5s, bottom 0.5s;
+}
+
+/* Show the Snackbar when triggered */
+#snackbar.show {
+    visibility: visible;
+    opacity: 1;
+    bottom: 50px;
 }
 
 

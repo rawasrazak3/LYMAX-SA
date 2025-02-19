@@ -1,0 +1,213 @@
+@media only screen and (min-width: 1024px) {
+    .menu {
+        position: relative;
+        top: 0;
+        width: auto;
+        height: auto;
+        padding: 0rem;
+        margin-left: auto;
+        margin-right: auto;
+        background: none;
+        box-shadow: none;
+    }
+    .menu-inner {
+        display: flex;
+        flex-direction: row;
+        column-gap: 16px;
+        margin: 0 auto;
+    }
+    .menu-link {
+        text-transform: uppercase;
+    }
+    .menu-block {
+        margin-left: 2rem;
+    }
+    .burger {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .brand {
+        width: 190px;
+    }
+    .scroll_to_bar_wrap {
+        overflow-x: auto;
+    }
+    .scroll_to_bar_wrap li {
+        min-width: 240px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 1350px) {
+    .course-content .heading-md {
+        font-size: 35px;
+    }
+    .course-content {
+        padding-left: 35px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .country_list .btn {
+        font-size: 12px;
+    }
+    .selection .country_list .dropdown-toggle img,
+    .selection .country_list .dropdown-menu .dropdown-item img {
+        width: 30px;
+        height: 30px;
+    }
+    .header .container {
+        max-width: 100%;
+    }
+    .menu_item {
+        font-size: 13px;
+        font-weight: 400;
+    }
+}
+
+@media only screen and (max-width: 1145px) {
+    .brand {
+        width: 160px;
+    }
+    .selection .country_list {
+        width: auto;
+    }
+    .menu-inner {
+        gap: 10px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .brand.specrator::after,
+    .selection.specrator::after {
+        display: none;
+    }
+    .selection {
+        flex-direction: row-reverse;
+        gap: 9px;
+    }
+    .header .navbar {
+        justify-content: space-between;
+    }
+    .brand {
+        width: 234px;
+    }
+    .menu_item {
+        font-size: 16px;
+    }
+    .menu-inner {
+        gap: 25px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .course_content {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .course_content h2 {
+        font-size: 37px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .heading-md {
+        font-size: 35px;
+    }
+    .heading-lg {
+        font-size: 40px;
+    }
+    .section-about .img-wrap {
+        height: auto;
+    }
+    .sec_heading::after {
+        width: 150px;
+        height: 150px;
+    }
+    .program-slider .owl-nav {
+        margin-top: 40px;
+    }
+    .program-slider .owl-nav button.owl-next {
+        width: 40px !important;
+        height: 40px;
+    }
+    .section-success .counter h2 {
+        font-size: 55px;
+    }
+    .course-content h2 {
+        font-size: 35px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .heading-md {
+        font-size: 28px;
+    }
+    .heading-lg {
+        font-size: 35px;
+    }
+    .course_content {
+        padding: 50px 0px;
+    }
+    .header {
+        padding: 0 20px;
+    }
+    .brand {
+        width: 180px;
+    }
+    .country_list .btn span {
+        display: none;
+    }
+    .selection .country_list .dropdown-toggle img {
+        margin: 0;
+        width: 25px;
+        height: 25px;
+    }
+    .selection .country_list .dropdown-menu {
+        top: 54px;
+        left: -129px;
+    }
+    .dropdown-toggle::after {
+        margin: 0;
+        width: 15px;
+        height: 15px !important;
+    }
+    .section-testimonail::after {
+        width: 198px;
+        height: 198px;
+    }
+    .course_content h2 {
+        font-size: 30px;
+        line-height: 1.3;
+    }
+    .course_content {
+        padding: 40px 20px;
+    }
+    .section-content h2 {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .heading-md {
+        font-size: 23px;
+    }
+    .brand {
+        width: 157px;
+    }
+    .burger {
+        width: 1.3rem;
+    }
+    .selection .country_list {
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width:350px) {
+    .brand {
+        width: 147px;
+    }
+}
