@@ -2039,13 +2039,14 @@ footer a:focus {
     white-space: nowrap;
     position: relative;
     width: 100%;
+    height: auto;
 }
 
 /* Logo Track for scrolling effect */
 .logo-track {
     display: flex;
-    gap: 40px; /* Adjust spacing between logos */
-    animation: scroll 10s linear infinite;
+    gap: 60px; /* Adjust spacing between logos */
+    animation: scroll 30s linear infinite;
 }
 
 /* Individual logos */
@@ -2066,7 +2067,7 @@ footer a:focus {
         transform: translateX(0);
     }
     to {
-        transform: translateX(-100%);
+        transform: translateX(-600%);
     }
 }
 
