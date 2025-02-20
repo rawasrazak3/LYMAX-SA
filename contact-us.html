@@ -218,7 +218,7 @@
             <div class="row">
                 <div class="col-lg-12 ">
                     <div class="heading_box">
-                        <h1>Help Desk</h1>
+                        <h1>Contact Us</h1>
                         <span class="theme_hr "></span>
                     </div>
                 </div>
@@ -238,79 +238,71 @@
     <section class="programme__overview__sec">
         <div class="container">
             <div class="row">
-                <div class="col-12">
+                <div class="col-lg-8 my-2">
                     <div class="theme_content_box">
-                        <div class="row align-items-center">
-                            <div class="col-lg-8 mb-lg-0 mb-4">
-                                <div class="theme_input_box">
-                                    <h2>Contact Us</h2>
-                                    <form id="contactForm" action="send_email.php" method="POST">
-                                        <div class="form-group">
-                                            <!-- <label for="name">Name</label> -->
-                                            <input type="text" id="name" 
-                                                   name="name" 
-                                                   placeholder="Your Name" required>
-                                            <span class="error-message" id="nameError"></span>
-                                        </div>
-                                        <div class="form-group">
-                                            <!-- <label for="email">Email</label> -->
-                                            <input type="email" id="email" 
-                                                   name="email" 
-                                                   placeholder="Your Email" required>
-                                            <span class="error-message" id="emailError"></span>
-                                        </div>
-                                        <div class="form-group">
-                                            <!-- <label for="phone">Phone</label> -->
-                                            <input type="tel" id="phone" 
-                                                   name="phone" 
-                                                   placeholder="Your Phone Number" required>
-                                            <span class="error-message" id="phoneError"></span>
-                                        </div>
-                                        <div class="form-group">
-                                            <!-- <label for="message">Message</label> -->
-                                            <textarea id="message" 
-                                                      name="message" 
-                                                      placeholder="Your Message" 
-                                                      rows="5" required></textarea>
-                                            <span class="error-message" 
-                                                  id="messageError"></span>
-                                        </div>
-                                        <div id="responseMessage"></div>
-                                        <button type="submit" >Send Message</button>
-                                    </form>
+                        <div class="theme_input_box">
+                            <!-- <h2>Contact Us</h2> -->
+                            <form id="contactForm" action="send_email.php" method="POST">
+                                <div class="form-group">
+                                    <!-- <label for="name">Name</label> -->
+                                    <input type="text" id="name" 
+                                           name="name" 
+                                           placeholder="Your Name" required>
+                                    <span class="error-message" id="nameError"></span>
                                 </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="theme_card_alternate">
-                                    <ul>
-                                        <li> <a target="_blank" href="#"><i class="bi bi-geo-alt-fill"></i>
-                <p>Level 8, Infra Futura, Seaport-Airport Rd, Opp BMC, Thrikkakara, Kakkanadu, Kochi, Kerala-682021</p>
-            </a></li>
-                <li class="theme_color_primary">
-                <a href="javascript:void(0)">
-                <i class="bi bi-calendar2-week"></i>
-                <p>Monday - Friday</p>
-            </a>
-
-                                        </li>
-
-                                        <li>
-                                            <a href="javascript:void(0)">
-                <i class="bi bi-alarm"></i>
-                <p>08:00AM – 16:00PM</p>
-            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0)">
-                <i class="bi bi-x-octagon-fill"></i>
-                <p>Closed on Holidays</p>
-            </a>
-                                        </li>
-                                    </ul>
+                                <div class="form-group">
+                                    <!-- <label for="email">Email</label> -->
+                                    <input type="email" id="email" 
+                                           name="email" 
+                                           placeholder="Your Email" required>
+                                    <span class="error-message" id="emailError"></span>
                                 </div>
-                            </div>
+                                <div class="form-group">
+                                    <!-- <label for="phone">Phone</label> -->
+                                    <input type="tel" id="phone" 
+                                           name="phone" 
+                                           placeholder="Your Phone Number" required>
+                                    <span class="error-message" id="phoneError"></span>
+                                </div>
+                                <div class="form-group">
+                                    <!-- <label for="message">Message</label> -->
+                                    <textarea id="message" 
+                                              name="message" 
+                                              placeholder="Your Message" 
+                                              rows="5" required></textarea>
+                                    <span class="error-message" 
+                                          id="messageError"></span>
+                                </div>
+                                <div id="responseMessage"></div>
+                                <button type="submit" >Send Message</button>
+                            </form>
+                            <br><br>
                         </div>
-                        <h2></h2>
+                    </div>
+                </div>
+                <div class="col-lg-4 my-2" style="padding-top: 15px;">
+                    <div class="theme_card_alternate">
+                        <ul>
+                             <li class="theme_color_primary">
+                                <a href="javascript:void(0)">
+                                    <i class="bi bi-calendar2-week"></i>
+                                    <p>Monday - Friday</p>
+                                </a>
+                            </li>
+    
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <i class="bi bi-alarm"></i>
+                                    <p>08:00AM – 16:00PM</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <i class="bi bi-x-octagon-fill"></i>
+                                    <p>Closed on Holidays</p>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -445,117 +437,97 @@
     </script>
 
     <script>
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent form submission until validation is complete
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission until validation is complete
     
-        // Clear previous error messages
-        document.getElementById('nameError').innerText = '';
-        document.getElementById('emailError').innerText = '';
-        document.getElementById('phoneError').innerText = '';
-        document.getElementById('responseMessage').innerText = '';
+            // Clear previous error messages
+            document.getElementById('nameError').innerText = '';
+            document.getElementById('emailError').innerText = '';
+            document.getElementById('phoneError').innerText = '';
+            document.getElementById('responseMessage').innerText = '';
     
-        // Get form values
-        var name = document.getElementById('name').value;
-        var email = document.getElementById('email').value;
-        var phone = document.getElementById('phone').value;
-        var message = document.getElementById('message').value;
+            // Get form values
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var phone = document.getElementById('phone').value;
+            var message = document.getElementById('message').value;
     
-        // Simple client-side validation
-        var valid = true;
+            // Simple client-side validation
+            var valid = true;
     
-        if (name === '') {
-            document.getElementById('nameError').innerText = 'Name is required.';
-            valid = false;
-        }
-    
-        if (email === '') {
-            document.getElementById('emailError').innerText = 'Email is required.';
-            valid = false;
-        } else if (!validateEmail(email)) {
-            document.getElementById('emailError').innerText = 'Please enter a valid email address.';
-            valid = false;
-        }
-    
-        if (phone === '') {
-            document.getElementById('phoneError').innerText = 'Phone is required.';
-            valid = false;
-        }
-    
-        if (message === '') {
-            document.getElementById('messageError').innerText = 'Message is required.';
-            valid = false;
-        }
-    
-        if (valid) {
-            // Submit the form via AJAX (use Fetch API)
-            submitForm(name, email, phone, message);
-        }
-    });
-    
-    function validateEmail(email) {
-        var re = /\S+@\S+\.\S+/;
-        return re.test(email);
-    }
-    
-    function submitForm(name, email, phone, message) {
-        var formData = new FormData();
-        formData.append('name', name);
-        formData.append('email', email);
-        formData.append('phone', phone);
-        formData.append('message', message);
-    
-        fetch('send_email.php', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.json()) // Expecting JSON response from PHP backend
-        .then(data => {
-            if (data.success) {
-                document.getElementById('responseMessage').innerText = 'Message sent successfully!';
-                // Trigger the Snackbar
-                showSnackbar();
-                document.getElementById('contactForm').reset(); // Reset form after success
-            } else {
-                document.getElementById('responseMessage').innerText = 'Failed to send message: ' + data.error;
+            if (name === '') {
+                document.getElementById('nameError').innerText = 'Name is required.';
+                valid = false;
             }
-        })
-        .catch(error => {
-            document.getElementById('responseMessage').innerText = 'Error: ' + error.message;
+    
+            if (email === '') {
+                document.getElementById('emailError').innerText = 'Email is required.';
+                valid = false;
+            } else if (!validateEmail(email)) {
+                document.getElementById('emailError').innerText = 'Please enter a valid email address.';
+                valid = false;
+            }
+    
+            if (phone === '') {
+                document.getElementById('phoneError').innerText = 'Phone is required.';
+                valid = false;
+            }
+    
+            if (message === '') {
+                document.getElementById('messageError').innerText = 'Message is required.';
+                valid = false;
+            }
+    
+            if (valid) {
+                // Submit the form via AJAX (use Fetch API)
+                submitForm(name, email, phone, message);
+            }
         });
-    }
-        function showSnackbar() {
-            var snackbar = document.getElementById("snackbar");
-            snackbar.className = "show"; // Add the "show" class to trigger animation
+    
+        function validateEmail(email) {
+            var re = /\S+@\S+\.\S+/;
+            return re.test(email);
+        }
+    
+        function submitForm(name, email, phone, message) {
+            var formData = new FormData();
+            formData.append('name', name);
+            formData.append('email', email);
+            formData.append('phone', phone);
+            formData.append('message', message);
+    
+            fetch('send_email.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json()) // Expecting JSON response from PHP backend
+            .then(data => {
+                if (data.success) {
+                    document.getElementById('responseMessage').innerText = 'Message sent successfully!';
+                    // Trigger the Snackbar
+                    showSnackbar();
+                    document.getElementById('contactForm').reset(); // Reset form after success
+                } else {
+                    document.getElementById('responseMessage').innerText = 'Failed to send message: ' + data.error;
+                }
+            })
+            .catch(error => {
+                document.getElementById('responseMessage').innerText = 'Error: ' + error.message;
+            });
+        }
+            function showSnackbar() {
+                var snackbar = document.getElementById("snackbar");
+                nackbar.className = "show"; // Add the "show" class to trigger animation
             
-            // After 3 seconds, hide the Snackbar
-            setTimeout(function() {
-                snackbar.className = snackbar.className.replace("show", ""); 
-            }, 3000); // Snackbar will disappear after 3 seconds
-    }
+                // After 3 seconds, hide the Snackbar
+                setTimeout(function() {
+                    snackbar.className = snackbar.className.replace("show", ""); 
+                }, 
+            3000); // Snackbar will disappear after 3 seconds
+        }
 
     </script>
     
-
-<!-- <script>
-    document.getElementById("contactForm").addEventListener("submit", function(event) {
-        event.preventDefault(); // Prevent default form submission
-    
-        var formData = new FormData(this);
-    
-        fetch("send_email.php", {
-            method: "POST",
-            body: formData
-        })
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("response").innerHTML = data;
-        })
-        .catch(error => console.error("Error:", error));
-    });
-    </script> -->
-
 </body>
-
-
 
 </html>

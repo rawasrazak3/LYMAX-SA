@@ -59,7 +59,7 @@ body {
     color: var(--theme-color);
     position: relative;
     padding-top: 75px;
-    height: 2000px; /* To create scroll effect */
+    height: auto; /* To create scroll effect */
 }
 
 a,
@@ -863,8 +863,8 @@ header .navbar-toggler:not(.collapsed) span:nth-child(2) {
     border: none;
     color: var(--theme-color-white);
     width: 100%;
-    padding-right: 30px;
 }
+
 
 .theme_input_box .form-control::placeholder {
     font-size: 20px;
@@ -1261,6 +1261,7 @@ header .navbar-toggler:not(.collapsed) span:nth-child(2) {
 }
 
 .theme_card_secondary:hover p {
+    visibility: hidden;
     color: var(--theme-color-black);
 }
 
@@ -1440,6 +1441,7 @@ header .navbar-toggler:not(.collapsed) span:nth-child(2) {
 .theme_card_alternate {
     background-color: var(--theme-bg-additional);
     padding: 20px 15px;
+    margin-top: 0px;
     border-top: 8px solid var(--theme-color-primary);
 }
 
@@ -1523,7 +1525,7 @@ header .navbar-toggler:not(.collapsed) span:nth-child(2) {
 .quick_links_accordion .card-body a:hover,
 .quick_links_accordion .card-body a:focus {
     text-decoration: underline;
-    color: var(--theme-color-primary);
+    color: var(--theme-color-white);
     background: transparent;
 }
 
@@ -1635,7 +1637,7 @@ footer .address_ul a:hover i,
 footer .address_ul a:focus i,
 footer .address_ul a:hover p,
 footer .address_ul a:focus p {
-    color: var(--theme-color-primary);
+    color: var(--theme-color-white);
 }
 
 footer .address_ul a i {
@@ -1671,7 +1673,7 @@ a {
 footer a:hover,
 footer a:focus {
     text-decoration: underline;
-    color: var(--theme-color-primary);
+    color: var(--theme-color-white);
     font-size: var(--theme-font-size);
     ;
 }
@@ -2111,14 +2113,23 @@ footer a:focus {
     background: #ddd;
 }
 
+.home_course_dropdown {
+    position: relative;
+    border: 2px solid var(--theme-color-white);
+    border-radius: 5px;
+    background-color: transparent;
+    /* padding: 20px; */
+    width: 100%;
+}
 
 /* Make the dropdown transparent */
 .select2-container--default .select2-selection--single {
     background: transparent !important; /* Transparent background */
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
     color: white !important;
     height: 100%;
     width: 100%;
+    /* padding: 10px 10px; */
 }
 
 /* Change text color */
@@ -2183,4 +2194,34 @@ input, textarea {
     font-size: 1rem;
 }
 
+
+#courseDropdown {
+    width: 100%; /* Makes it full-width */
+    max-width: 400px; /* Prevents it from being too wide */
+    min-width: 200px; /* Ensures it's not too small */
+    padding: 10px 10px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: #fff; /* Keeps it visible on all themes */
+    box-shadow: none;
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Add media queries for better scaling */
+@media screen and (max-width: 768px) {
+    #courseDropdown {
+        font-size: 14px; /* Smaller text for smaller screens */
+        padding: 8px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #courseDropdown {
+        font-size: 12px; /* Even smaller for mobile */
+        padding: 6px;
+    }
+}
 
