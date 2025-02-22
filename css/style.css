@@ -2052,7 +2052,7 @@ footer a:focus {
 /* Individual logos */
 .logo-track img {
     width: 200px; /* Adjust size to fit exactly 7 logos */
-    height: auto;
+    height: 100px;
     flex-shrink: 0;
 }
 
