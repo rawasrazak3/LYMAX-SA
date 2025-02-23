@@ -822,7 +822,7 @@ header .navbar-toggler:not(.collapsed) span:nth-child(2) {
 .mobile-image {
     display: none; /* Hide image by default */
     min-width: 100%;
-    min-height: 100vh;
+    min-height: 120vh;
     z-index: 0;
     position: absolute;
 }
