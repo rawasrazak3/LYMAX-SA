@@ -821,12 +821,13 @@ header .navbar-toggler:not(.collapsed) span:nth-child(2) {
 
 .mobile-image {
     display: none; /* Hide image by default */
-    min-width: 100%;
+    min-width: 80%;
     min-height: 80vh;
     /* height: 800px; */
     z-index: 0;
     position: absolute;
 }
+
 
 /* Media Query for Mobile (Max width 768px) */
 @media (max-width: 768px) {
