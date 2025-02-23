@@ -824,6 +824,7 @@ header .navbar-toggler:not(.collapsed) span:nth-child(2) {
     min-width: 100%;
     min-height: 100vh;
     z-index: 0;
+    height: auto;
     position: absolute;
 }
 
