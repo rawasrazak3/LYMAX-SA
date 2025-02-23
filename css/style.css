@@ -2208,34 +2208,3 @@ input, textarea {
     font-size: 1rem;
 }
 
-
-#courseDropdown {
-    width: 100%; /* Makes it full-width */
-    max-width: 400px; /* Prevents it from being too wide */
-    min-width: 200px; /* Ensures it's not too small */
-    padding: 10px 10px;
-    font-size: 16px;
-    border: none;
-    outline: none;
-    background: #fff; /* Keeps it visible on all themes */
-    box-shadow: none;
-    -webkit-appearance: none; 
-    -moz-appearance: none;
-    appearance: none;
-}
-
-/* Add media queries for better scaling */
-@media screen and (max-width: 768px) {
-    #courseDropdown {
-        font-size: 14px; /* Smaller text for smaller screens */
-        padding: 8px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    #courseDropdown {
-        font-size: 12px; /* Even smaller for mobile */
-        padding: 6px;
-    }
-}
-
