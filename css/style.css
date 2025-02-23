@@ -2113,51 +2113,65 @@ footer a:focus {
     background: #ddd;
 }
 
+/* Main dropdown container */
 .home_course_dropdown {
     position: relative;
-    border: 2px solid var(--theme-color-white);
+    width: 100%; /* Full width */
+}
+
+/* Custom dropdown button */
+.custom-dropdown {
+    position: relative;
+    width: 100%;
+    border: 2px solid white;
     border-radius: 5px;
-    background-color: transparent;
-    /* padding: 20px; */
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    padding: 4px;
+    font-size: 16px;
+}
+
+/* Dropdown selected item */
+.dropdown-selected {
+    padding: 10px;
+}
+
+/* Dropdown list (hidden by default) */
+.dropdown-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
     width: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    border: 2px solid white;
+    border-radius: 5px;
+    max-height: 200px; /* Enables scrolling */
+    overflow-y: auto;  /* Adds scroll */
+    display: none; /* Hidden by default */
+    z-index: 1000;
 }
 
-/* Make the dropdown transparent */
-.select2-container--default .select2-selection--single {
-    background: transparent !important; /* Transparent background */
-    /* border: 1px solid #ccc; */
-    color: white !important;
-    height: 100%;
-    width: 100%;
-    /* padding: 10px 10px; */
+/* Show dropdown when hovering over the dropdown box */
+.custom-dropdown:hover .dropdown-list {
+    display: block;
 }
 
-/* Change text color */
-.select2-container--default .select2-selection--single .select2-selection__rendered {
-    color: white !important; /* White text */
+/* Individual dropdown items */
+.dropdown-list li {
+    list-style: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: white;
 }
 
-/* Make the dropdown menu transparent */
-.select2-dropdown {
-    background: rgba(0, 0, 0, 0.5) !important; /* Semi-transparent dropdown */
-    color: white !important;
+/* Hover and selected item effect */
+.dropdown-list li:hover {
+    background: rgba(255, 255, 255, 0.2);
 }
 
-/* Change hover & selection background */
-.select2-results__option {
-    background: transparent !important; /* Transparent items */
-    color: white !important; /* White text */
-}
 
-/* Highlight selected option */
-.select2-results__option--highlighted {
-    background: rgba(255, 255, 255, 0.2) !important; /* Light highlight */
-}
-
-/* Remove focus outline */
-.select2-selection {
-    outline: none !important;
-}
 
 
 #snackbar {
