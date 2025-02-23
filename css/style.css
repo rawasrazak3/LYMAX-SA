@@ -804,7 +804,6 @@ header .navbar-toggler:not(.collapsed) span:nth-child(2) {
     height: calc(100vh - 75px);
     overflow: hidden;
     padding: 0 !important;
-    /* background-image: url("../img/home-banner.webp"); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -812,11 +811,31 @@ header .navbar-toggler:not(.collapsed) span:nth-child(2) {
     width: 100%;
 }
 
-.home-banner video {
+.desktop-video {
     min-width: 100%;
     min-height: 100vh;
     z-index: 0;
     position: absolute;
+    display: block; /* Show video by default */
+}
+
+.mobile-image {
+    display: none; /* Hide image by default */
+    min-width: 100%;
+    min-height: 100vh;
+    z-index: 0;
+    position: absolute;
+}
+
+/* Media Query for Mobile (Max width 768px) */
+@media (max-width: 768px) {
+    .desktop-video {
+        display: none; /* Hide video */
+    }
+
+    .mobile-image {
+        display: block; /* Show image */
+    }
 }
 
 .home_banner_overlay {
