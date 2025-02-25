@@ -821,8 +821,8 @@ header .navbar-toggler:not(.collapsed) span:nth-child(2) {
 
 .mobile-image {
     display: none; /* Hide image by default */
-    min-width: 80%;
-    min-height: 80vh;
+    min-width: 100%;
+    min-height: 100vh;
     /* height: 800px; */
     z-index: 0;
     position: absolute;
@@ -830,7 +830,7 @@ header .navbar-toggler:not(.collapsed) span:nth-child(2) {
 
 
 /* Media Query for Mobile (Max width 768px) */
-@media (max-width: 768px) {
+@media (max-width: 420px) {
     .desktop-video {
         display: none; /* Hide video */
     }
