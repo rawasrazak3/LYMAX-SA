@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rawasrazak3.github.io/LYMAX-SA/sitemap.xml
