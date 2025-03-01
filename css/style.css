@@ -1783,7 +1783,7 @@ footer a:focus {
 .theme_content_box p {
     color: var(--theme-color);
     font-size: var(--theme-font-size);
-    ;
+    text-align: justify;
 }
 
 .theme_content_box a.theme_btn {
