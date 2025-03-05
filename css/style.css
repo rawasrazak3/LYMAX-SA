@@ -801,13 +801,13 @@ header .navbar-toggler:not(.collapsed) span:nth-child(2) {
 
 .home-banner {
     position: relative;
-    height: calc(100vh - 75px);
+    /* height: calc(100vh - 75px); */
     overflow: hidden;
     padding: 0 !important;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: auto;
+    height: 100vh;
     width: 100%;
 }
 
@@ -816,7 +816,7 @@ header .navbar-toggler:not(.collapsed) span:nth-child(2) {
     min-height: 100vh;
     z-index: 0;
     position: absolute;
-    display: block; /* Show video by default */
+    display: block; 
 }
 
 .mobile-image {
@@ -872,6 +872,9 @@ header .navbar-toggler:not(.collapsed) span:nth-child(2) {
     overflow: hidden;
     flex: 0 0 70%; /* Set width to 50% */
     /* max-width: 70%; */ 
+    position: relative;
+    height: calc(100vh - 75px);
+    overflow: hidden;
     display: flex;
 }
 
@@ -1480,8 +1483,14 @@ header .navbar-toggler:not(.collapsed) span:nth-child(2) {
 .theme_card_alternate {
     background-color: var(--theme-bg-additional);
     padding: 20px 15px;
-    margin-top: 0px;
+    margin-bottom: 30px;
+    position: sticky;
+    top: 70px; /* Ensures it stays fixed after scrolling 20px */
+    z-index: 1000; /* Prevents overlap issues */
+    max-height: calc(100vh - 100px); /* Prevents overflow beyond the screen */
+    overflow-y: auto; /* Enables scrolling inside the card if needed */
     border-top: 8px solid var(--theme-color-primary);
+
 }
 
 .theme_card_alternate ul {
@@ -1869,6 +1878,7 @@ footer a:focus {
         position: relative;
         width: 100%;
         top: 0;
+        height: auto;
         transform: translateY(0%);
         padding: 50px 0px;
     }

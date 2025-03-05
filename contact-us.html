@@ -472,7 +472,7 @@
             .then(response => response.json()) // Expecting JSON response from PHP backend
             .then(data => {
                 if (data.success) {
-                    document.getElementById('responseMessage').innerText = 'Message sent successfully!';
+                    document.getElementById('responseMessage').innerText = data.message;
                     // Trigger the Snackbar
                     showSnackbar();
                     document.getElementById('contactForm').reset(); // Reset form after success
@@ -486,7 +486,7 @@
         }
             function showSnackbar() {
                 var snackbar = document.getElementById("snackbar");
-                nackbar.className = "show"; // Add the "show" class to trigger animation
+                snackbar.className = "show"; // Add the "show" class to trigger animation
             
                 // After 3 seconds, hide the Snackbar
                 setTimeout(function() {
