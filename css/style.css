@@ -709,8 +709,7 @@ header .navbar {
 
 .header_navlinks {
     padding-left: 0;
-    display: flex; /* Display links in a row */
-    justify-content: flex-start; /* Align links to the start */
+    display: block; /* Display links in a row */
     flex-wrap: wrap; /*allows wrapping to new line if there isnt enough space*/
 }
 
