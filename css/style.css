@@ -668,9 +668,7 @@ header .navbar {
     height: 100%;
     overflow-y: auto;
     padding: 70px 50px;
-/*     margin-left: auto; */
-    display: flex; /* Added flexbox */
-    flex-direction: column; /* Added flexbox column */
+    margin-left: auto;
 }
 
 .search_box_content {
