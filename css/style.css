@@ -1029,7 +1029,6 @@ header .navbar-toggler:not(.collapsed) span:nth-child(2) {
     position: relative;
     padding-top: 10px;
     font-size: var(--theme-font-size);
-    ;
     margin-bottom: 0;
 }
 
@@ -1045,7 +1044,6 @@ header .navbar-toggler:not(.collapsed) span:nth-child(2) {
 
 .theme_card .theme_card_body .body_text_secondary {
     font-size: var(--theme-font-size);
-    ;
     margin-bottom: 0px;
 }
 
@@ -2256,4 +2254,3 @@ input, textarea {
     box-sizing: border-box;
     font-size: 1rem;
 }
-
