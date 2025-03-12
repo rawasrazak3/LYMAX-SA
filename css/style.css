@@ -637,7 +637,9 @@ header .navbar {
     visibility: hidden;
 }
 
-.side_navbar_wrapper.expanded,
+.side_navbar_wrapper.expanded{
+    width: 45%;
+}
 .search_box_wrapper.expanded {
     opacity: 1;
     transform: translateX(0%);
@@ -663,7 +665,7 @@ header .navbar {
 
 .side_navbar_content {
 /*     width: 65%; */
-    width: 45%;
+    width: 100%;
     background-color: #434343;
     border-left: 6px solid var(--theme-color-primary);
     z-index: 10;
