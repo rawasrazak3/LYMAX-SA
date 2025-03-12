@@ -660,15 +660,17 @@ header .navbar {
 }
 
 .side_navbar_content {
-    width: 65%;
+    width: 45%;
     background-color: #434343;
     border-left: 6px solid var(--theme-color-primary);
     z-index: 10;
-    position: relative;
+    position: fixed;
     height: 100%;
     overflow-y: auto;
     padding: 70px 50px;
     margin-left: auto;
+    display: flex; /* Added flexbox */
+    flex-direction: column; /* Added flexbox column */
 }
 
 .search_box_content {
@@ -707,8 +709,9 @@ header .navbar {
 
 .header_navlinks {
     padding-left: 0;
-    display: flex;
-    flex-wrap: wrap;
+    display: flex; /* Display links in a row */
+    justify-content: flex-start; /* Align links to the start */
+    flex-wrap: wrap; /*allows wrapping to new line if there isnt enough space*/
 }
 
 .header_navlinks li {
