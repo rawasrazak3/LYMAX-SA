@@ -625,13 +625,15 @@ header .navbar {
     top: 75;
     right: 0;
     left: auto;
-    width: 100vw;
+/*     width: 100vw; */
+    width:30%;
     height: 100vh;
     opacity: 0;
     transform: translateX(50%);
     transform-origin: right center;
     transition: transform 500ms ease-in, opacity 500ms linear, visibility 500ms ease-in;
-    z-index: 999;
+/*     z-index: 999; */
+    z-index: 1020;
     visibility: hidden;
 }
 
