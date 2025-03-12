@@ -663,7 +663,7 @@ header .navbar {
 
 .side_navbar_content {
 /*     width: 65%; */
-    width: 35%;
+    width: 45%;
     background-color: #434343;
     border-left: 6px solid var(--theme-color-primary);
     z-index: 10;
@@ -715,7 +715,7 @@ header .navbar {
 }
 
 .header_navlinks li {
-    width: 50%;
+    width: 100%;
     margin-bottom: 20px;
 }
 
