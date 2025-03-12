@@ -707,7 +707,7 @@ header .navbar {
 
 .header_navlinks {
     padding-left: 0;
-    display: flex;
+    display: block;
     flex-wrap: wrap;
 }
 
