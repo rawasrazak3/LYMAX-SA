@@ -673,7 +673,7 @@ header .navbar {
     transform: translateX(50%);
     transform-origin: right center;
     transition: transform 500ms ease-in, opacity 500ms linear, visibility 500ms ease-in;
-    z-index: 999;
+    z-index: 1030;
     visibility: hidden;
 }
 
