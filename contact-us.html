@@ -80,7 +80,7 @@
     </script>
 
     <!-- Start of HubSpot Embed Code -->
-    <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/25167852.js"></script>
+    <!-- <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/25167852.js"></script> -->
     <!-- End of HubSpot Embed Code -->
 
     <!-- Flat Picker -->
@@ -116,25 +116,9 @@
 </head>
 
 <body class="">
-
-    <div class="search_box_wrapper">
-        <div class="search_box_content">
-            <span class="search_box_close_btn">
-    <i class="bi bi-x-circle-fill"></i>
-  </span>
-            <div class="theme_input_box">
-                <form action="https://rawasrazak3.github.io/LYMAX-SA/programmes/search" method="get">
-                    <input type="text" class="form-control" name="name" placeholder="Search" />
-                    <button type="submit"><i class="bi bi-search"></i></button>
-                </form>
-            </div>
-        </div>
-    </div>
     <div class="side_navbar_wrapper">
         <div class="side_navbar_overlay"></div>
         <div class="side_navbar_content">
-
-
             <div class="row">
                 <div class="col-12">
                     <ul class="header_navlinks">
@@ -146,7 +130,6 @@
                     </ul>
                 </div>
             </div>
-
         </div>
     </div>
     <header>
@@ -154,24 +137,17 @@
             <nav class="navbar navbar-expand-lg p-0">
                 <a class="navbar-brand p-0" href="https://rawasrazak3.github.io/LYMAX-SA">
                     <img src="https://rawasrazak3.github.io/LYMAX-SA/img/lymax-main-logo.svg " alt="" />
-            </a>
-
+                </a>
                 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="sr-only"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
+                    <span class="sr-only"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
             </nav>
         </div>
     </header>
-    <div class="container">
-    </div>
-
-
-
-
-
+    <div class="container"></div>
 
     <section class="common_banner_sec">
         <img src="https://rawasrazak3.github.io/LYMAX-SA/img/contact_us/banners/banner-contact.webp" class="banner_img" alt="">
@@ -181,53 +157,43 @@
                 <div class="col-lg-12 ">
                     <div class="heading_box">
                         <h1>Contact Us</h1>
-                        <span class="theme_hr "></span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-
-
-
-
-
-
-
     <!-- programme overview section start -->
-
     <section class="programme__overview__sec">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 my-2">
                     <div class="theme_content_box">
                         <div class="theme_input_box">
-                            <!-- <h2>Contact Us</h2> -->
                             <form id="contactForm" action="send_email.php" method="POST">
                                 <div class="form-group">
-                                    <!-- <label for="name">Name</label> -->
+                                    <label for="name">Name <span style="color: red;">*</span></label>
                                     <input type="text" id="name" 
                                            name="name" 
                                            placeholder="Your Name" required>
                                     <span class="error-message" id="nameError"></span>
                                 </div>
                                 <div class="form-group">
-                                    <!-- <label for="email">Email</label> -->
+                                    <label for="email">Email <span style="color: red;">*</span></label>
                                     <input type="email" id="email" 
                                            name="email" 
                                            placeholder="Your Email" required>
                                     <span class="error-message" id="emailError"></span>
                                 </div>
                                 <div class="form-group">
-                                    <!-- <label for="phone">Phone</label> -->
+                                    <label for="phone">Phone <span style="color: red;">*</span>(Please include country code)</label>
                                     <input type="tel" id="phone" 
                                            name="phone" 
-                                           placeholder="Your Phone Number" required>
+                                           placeholder="91 XXXXXXXXXX" required>
                                     <span class="error-message" id="phoneError"></span>
                                 </div>
                                 <div class="form-group">
-                                    <!-- <label for="message">Message</label> -->
+                                    <label for="message">Message</label>
                                     <textarea id="message" 
                                               name="message" 
                                               placeholder="Your Message" 
@@ -236,6 +202,7 @@
                                           id="messageError"></span>
                                 </div>
                                 <div id="responseMessage"></div>
+                                <br><br>
                                 <button type="submit" >Send Message</button>
                             </form>
                             <br><br>
@@ -247,7 +214,7 @@
                         <ul>
                              <li class="theme_color_primary">
                                 <a href="javascript:void(0)">
-                                    <i class="bi bi-calendar2-week"></i>
+                                    <i class="bi bi-calendar2-week" ></i>
                                     <p>Monday - Friday</p>
                                 </a>
                             </li>
@@ -279,7 +246,6 @@
             <div class="container pt-5 pb-3">
                 <div class="row mb-sm-5">
                     <div class="col-lg-4 mb-lg-0 mb-4">
-                        <!-- <h1 class="theme_color_white mb-3">Logo Here</h1>  -->
                         <img src="https://rawasrazak3.github.io/LYMAX-SA/img/lymax-with-slogan-logo.svg" 
                         alt="" 
                         class="mb-0 ml-0"
@@ -325,8 +291,6 @@
                                     <li><a href="https://rawasrazak3.github.io/LYMAX-SA/privacy-policy">Privacy Policy</a></li>
                                     <li><a href="https://rawasrazak3.github.io/LYMAX-SA/cookie-policy">Cookie Policy</a></li>
                                     <li><a href="https://rawasrazak3.github.io/LYMAX-SA/refund-policy">Refund Policy</a></li>
-                                    <!-- <li><a href="#">External linking policy</a></li> -->
-                                    <!-- <li><a href="#">Accessibility Statement</a></li>  -->
                                 </ul>
                             </div>
 
@@ -334,16 +298,16 @@
                                 <h6>Stay connected</h6>
                                 <ul class="social_links">
                                     <li>
-                                        <a target="_blank" href="#"><i class="bi bi-facebook"></i></a>
+                                        <a target="_blank" href="javascript:void(0)"><i class="bi bi-facebook"></i></a>
                                     </li>
                                     <li>
-                                        <a target="_blank" href="#"><i class="bi bi-linkedin"></i></a>
+                                        <a target="_blank" href="javascript:void(0)"><i class="bi bi-linkedin"></i></a>
                                     </li>
                                     <li>
                                         <a target="_blank" href="https://www.instagram.com/lymax.learning?igsh=MzFhcG44ZmdybDZ5"><i class="bi bi-instagram"></i></a>
                                     </li>
                                     <li>
-                                        <a target="_blank" href="#"><i class="bi bi-youtube"></i></a>
+                                        <a target="_blank" href="javascript:void(0)"><i class="bi bi-youtube"></i></a>
                                     </li>
                                 </ul>
                                 <h6>Our Official Partner</h6>
@@ -418,11 +382,23 @@
             // Get form values
             var name = document.getElementById('name').value;
             var email = document.getElementById('email').value;
-            var phone = document.getElementById('phone').value;
+            let phoneInput = document.getElementById("phone");
+            let phoneError = document.getElementById("phoneError");
+    
+            let phoneNumber = phoneInput.value.trim();
             var message = document.getElementById('message').value;
     
             // Simple client-side validation
             var valid = true;
+
+            // Ensure the phone number starts with +91
+            if (!phoneNumber.startsWith("91")) {
+                phoneInput.value = "91" + phoneNumber;
+                phoneNumber = phoneInput.value;
+            }
+
+            // Remove 91 and check length
+            let numericPhone = phoneNumber.replace("91", "").trim();
     
             if (name === '') {
                 document.getElementById('nameError').innerText = 'Name is required.';
@@ -437,8 +413,8 @@
                 valid = false;
             }
     
-            if (phone === '') {
-                document.getElementById('phoneError').innerText = 'Phone is required.';
+            if (numericPhone.length < 10 || numericPhone.length > 10) {
+                document.getElementById('phoneError').innerText = 'Phone number must be exactly 10 digits.';
                 valid = false;
             }
     

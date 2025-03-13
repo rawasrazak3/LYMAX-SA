@@ -80,7 +80,7 @@
     </script>
 
     <!-- Start of HubSpot Embed Code -->
-    <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/25167852.js"></script>
+    <!-- <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/25167852.js"></script> -->
     <!-- End of HubSpot Embed Code -->
 
     <!-- Flat Picker -->
@@ -101,275 +101,224 @@
     }
 </style>
 
-    <meta itemprop="image" content="">
+<meta itemprop="image" content="">
 <meta property="og:image" content="" />
 <meta name="twitter:image" content="" />
 </head>
 
 <body class="">
-
-    <div class="search_box_wrapper">
-<div class="search_box_content">
-  <span class="search_box_close_btn">
-    <i class="bi bi-x-circle-fill"></i>
-  </span>
-  <div class="theme_input_box">
-    <form action="https://rawasrazak3.github.io/LYMAX-SA/programmes/search" method="get">
-      <input type="text" class="form-control" name="name" placeholder="Search" />
-      <button type="submit"><i class="bi bi-search"></i></button>
-    </form>
-  </div>
-</div>
-</div>    <div class="side_navbar_wrapper">
-  <div class="side_navbar_overlay"></div>
-  <div class="side_navbar_content">
-
-    <div class="row">
-      <div class="col-12">
-        <ul class="header_navlinks">
-            <li><a href="https://rawasrazak3.github.io/LYMAX-SA">Home</a></li>
-            <li><a href=" https://rawasrazak3.github.io/LYMAX-SA/studying-with-us">Studying with Us</a></li>
-            <li><a href=" https://rawasrazak3.github.io/LYMAX-SA/about-us">About Us</a></li>
-            <li><a href="https://rawasrazak3.github.io/LYMAX-SA/programmes">Programmes</a></li>
-            <li><a href=" https://rawasrazak3.github.io/LYMAX-SA/contact-us">Contact Us</a></li>
-        </ul>
-      </div>
+    <div class="side_navbar_wrapper">
+        <div class="side_navbar_overlay"></div>
+        <div class="side_navbar_content">
+            <div class="row">
+                <div class="col-12">
+                    <ul class="header_navlinks">
+                        <li><a href="https://rawasrazak3.github.io/LYMAX-SA">Home</a></li>
+                        <li><a href=" https://rawasrazak3.github.io/LYMAX-SA/studying-with-us">Studying with Us</a></li>
+                        <li><a href=" https://rawasrazak3.github.io/LYMAX-SA/about-us">About Us</a></li>
+                        <li><a href="https://rawasrazak3.github.io/LYMAX-SA/programmes">Programmes</a></li>
+                        <li><a href=" https://rawasrazak3.github.io/LYMAX-SA/contact-us">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
+    <header>
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg p-0">
+                <a class="navbar-brand p-0" href="https://rawasrazak3.github.io/LYMAX-SA">
+                    <img src="https://rawasrazak3.github.io/LYMAX-SA/img/lymax-main-logo.svg " alt="" />
+                </a>
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="sr-only"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </nav>
+        </div>
+    </header>   
 
-  </div>
-</div>
-<header>
-    <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg p-0">
-            <a class="navbar-brand p-0" href="https://rawasrazak3.github.io/LYMAX-SA">
-                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/lymax-main-logo.svg " alt="" />
-        </a>
+    <div class="container"></div>   
 
-            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="sr-only"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        </nav>
-    </div>
-</header>   
-
-<div class="container"></div>   
-
-<section class="common_banner_sec">
+    <section class="common_banner_sec">
         <img src="https://rawasrazak3.github.io/LYMAX-SA/img/contact_us/banners/banner-contact.webp" class="banner_img" alt="">
-        <div class="overlay"></div>
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 ">
+                        <div class="heading_box">
+                            <h1>Application Form</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- programme overview section start -->
+
+    <section class="programme__overview__sec">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 ">
-                    <div class="heading_box">
-                        <h1>Application Form</h1>
-                        <span class="theme_hr "></span>
+                <div class="col-lg-8 my-2">
+                    <div class="theme_content_box">
+                        <div class="theme_input_box">
+                            <form id="contactForm" action="send_email.php" method="POST">
+                                <div class="form-group">
+                                    <label for="name">Name <span style="color: red;">*</span></label>
+                                    <input type="text" id="name" 
+                                       name="name" 
+                                       placeholder="Your Name" required>
+                                    <span class="error-message" id="nameError"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email <span style="color: red;">*</span></label>
+                                    <input type="email" id="email" 
+                                       name="email" 
+                                       placeholder="Your Email" required>
+                                    <span class="error-message" id="emailError"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone <span style="color: red;">*</span></label>
+                                    <input type="tel" id="phone" 
+                                       name="phone" 
+                                       placeholder="Your Phone Number" required>
+                                    <span class="error-message" id="phoneError"></span>
+                                </div>
+                                <p>Select Higher Qualification <span style="color: red;">*</span></p>
+                                <select class="form-select select2" id="qualification">
+                                    <option value="" selected disabled>Select Qualification</option>
+                                    <option value="PG">PG</option>
+                                    <option value="Bachelor">Bachelor</option>
+                                    <option value="Plus two">Plus two</option>
+                                    <option value="SSLC">SSLC</option>
+                                </select>
+
+                                <p class="mt-4">Select Course <span style="color: red;">*</span></p>
+                                <select class="form-select select2" id="course">
+                                    <option value="" selected disabled>Select Course</option>
+                                    <option value="Accounting & Finance">Accounting & Finance</option>
+                                    <option value="Business & Management">Business & Management</option>
+                                    <option value="Data Science & Artificial Intelligence">Data Science & Artificial Intelligence</option>
+                                    <option value="Cyber Security & Networking">Cyber Security & Networking</option>
+                                    <option value="Logistics & Supplychain">Logistics & Supplychain</option>
+                                    <option value="Education & Training">Education & Training</option>
+                                    <option value="Information Technology">Information Technology</option>
+                                    <option value="Hospitality & Tourism">Hospitality & Tourism</option>
+                                    <option value="Health & Social Care">Health & Social Care</option>
+                                </select>
+                                <br>
+                                <br>
+                                <div class="form-group">
+                                <label for="address">Address <span style="color: red;">*</span></label>
+                                    <textarea id="address" 
+                                          name="address" 
+                                          placeholder="Address" 
+                                          rows="3" required>
+                                    </textarea>
+                                    <span class="error-message" id="addressError"></span>
+                                </div>
+                                <div id="responseMessage"></div>
+                                <br><br>
+                                <button type="submit-form" >Submit Form</button>
+                            </form>
+                            <br><br>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-<!-- programme overview section start -->
-
-<section class="programme__overview__sec">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 my-2">
-                <div class="theme_content_box">
-                    <div class="theme_input_box">
-                        <!-- <h2>Contact Us</h2> -->
-                        <form id="contactForm" action="send_email.php" method="POST">
-                            <div class="form-group">
-                                <!-- <label for="name">Name</label> -->
-                                <input type="text" id="name" 
-                                       name="name" 
-                                       placeholder="Your Name" required>
-                                <span class="error-message" id="nameError"></span>
-                            </div>
-                            <div class="form-group">
-                                <!-- <label for="email">Email</label> -->
-                                <input type="email" id="email" 
-                                       name="email" 
-                                       placeholder="Your Email" required>
-                                <span class="error-message" id="emailError"></span>
-                            </div>
-                            <div class="form-group">
-                                <!-- <label for="phone">Phone</label> -->
-                                <input type="tel" id="phone" 
-                                       name="phone" 
-                                       placeholder="Your Phone Number" required>
-                                <span class="error-message" id="phoneError"></span>
-                            </div>
-                            <p>Select Higher Qualification</p>
-                                <select class="form-select select2" id="qualification">
-                                <option value="" selected disabled>Select Qualification</option>
-                                <option value="PG">PG</option>
-                                <option value="Bachelor">Bachelor</option>
-                                <option value="Plus two">Plus two</option>
-                                <option value="SSLC">SSLC</option>
-                                </select>
-
-                            <p class="mt-4">Select Course</p>
-                                <select class="form-select select2" id="course">
-                                <option value="" selected disabled>Select Course</option>
-                                <option value="Accounting & Finance">Accounting & Finance</option>
-                                <option value="Business & Management">Business & Management</option>
-                                <option value="Data Science & Artificial Intelligence">Data Science & Artificial Intelligence</option>
-                                <option value="Cyber Security & Networking">Cyber Security & Networking</option>
-                                <option value="Logistics & Supplychain">Logistics & Supplychain</option>
-                                <option value="Education & Training">Education & Training</option>
-                                <option value="Information Technology">Information Technology</option>
-                                <option value="Hospitality & Tourism">Hospitality & Tourism</option>
-                                <option value="Health & Social Care">Health & Social Care</option>
-                                </select>
-                                <br>
-                                <br>
-                            <div class="form-group">
-                                <!-- <label for="message">Message</label> -->
-                                <textarea id="address" 
-                                          name="address" 
-                                          placeholder="Address" 
-                                          rows="3" required></textarea>
-                                <span class="error-message" 
-                                      id="addressError"></span>
-                            </div>
-                            <div id="responseMessage"></div>
-                            <br><br>
-                            <button type="submit-form" >Submit Form</button>
-                        </form>
-                        <br><br>
-                    </div>
-                </div>
-            </div>
-            <!-- <div class="col-lg-4 my-2" style="padding-top: 15px;">
-                <div class="theme_card_alternate">
-                    <ul>
-                         <li class="theme_color_primary">
-                            <a href="javascript:void(0)">
-                                <i class="bi bi-calendar2-week"></i>
-                                <p>Monday - Friday</p>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="javascript:void(0)">
-                                <i class="bi bi-alarm"></i>
-                                <p>08:00AM – 16:00PM</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)">
-                                <i class="bi bi-x-octagon-fill"></i>
-                                <p>Closed on Holidays</p>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div> -->
-        </div>
-    </div>
-</section>
 <!-- programme overview section end -->
 
-<div id="snackbar">Message sent successfully!</div>
+    <div id="snackbar">Message sent successfully!</div>
 
-<footer>
-    <footer class="theme_bg_dark">
-        <div class="container pt-5 pb-3">
-            <div class="row mb-sm-5">
-                <div class="col-lg-4 mb-lg-0 mb-4">
-                    <!-- <h1 class="theme_color_white mb-3">Logo Here</h1>  -->
-                    <img src="https://rawasrazak3.github.io/LYMAX-SA/img/lymax-with-slogan-logo.svg" 
-                    alt="" 
-                    class="mb-0 ml-0"
-                    style="height: 110px" />
-                    <ul class="address_ul">
-                        <li>
-                            <a target="_blank" href="https://maps.app.goo.gl/fo2E7qLkoRLqE9Yw5">
-                            <i class="bi bi-globe"></i>
-                            <p>Level 8, Infra Futura, Seaport-Airport Rd, Opp BMC, Thrikkakara, Kakkanadu, Kochi, Kerala-682021</p>
-                        </a>
-                        </li>
-                        <li>
-                            <a href="tel:+917994748495">
-                            <i class="bi bi-telephone-fill"></i>
-                            <p>+91 7994748495</p>
-                        </a>
-                        </li>
-                        <li>
-                            <a href="mailto:info@LymaxLearning.com" target="_blank">
-                            <i class="bi bi-envelope-fill"></i>
-                            <p>info@LymaxLearning.com</p>
-                        </a>
-                        </li>
-
-                    </ul>
-                </div>
-                <div class="col-lg-8">
-                    <div class="row">
-
-                        <div class="col-lg-4 col-md-6 mb-lg-0 mb-4">
-                            <h6>Company</h6>
-                            <ul>
-                                <li><a href="https://rawasrazak3.github.io/LYMAX-SA/about-us">About Us</a></li>
-                                <li><a href="https://rawasrazak3.github.io/LYMAX-SA/programmes">Programmes</a></li>
-                                <li><a href="https://rawasrazak3.github.io/LYMAX-SA/studying-with-us">Studying with Us</a></li>
-                                <li><a href="https://rawasrazak3.github.io/LYMAX-SA/contact-us">Contact Us</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-4 col-md-6 mb-lg-0 mb-4">
-                            <h6>Useful Info</h6>
-                            <ul>
-                                <li><a href="https://rawasrazak3.github.io/LYMAX-SA/terms-and-conditions">Terms & conditions </a></li>
-                                <li><a href="https://rawasrazak3.github.io/LYMAX-SA/privacy-policy">Privacy Policy</a></li>
-                                <li><a href="https://rawasrazak3.github.io/LYMAX-SA/cookie-policy">Cookie Policy</a></li>
-                                <li><a href="https://rawasrazak3.github.io/LYMAX-SA/refund-policy">Refund Policy</a></li>
-                                <!-- <li><a href="#">External linking policy</a></li> -->
-                                <!-- <li><a href="#">Accessibility Statement</a></li>  -->
-                            </ul>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 mb-lg-0 mb-4">
-                            <h6>Stay connected</h6>
-                            <ul class="social_links">
-                                <li>
-                                    <a target="_blank" href="#"><i class="bi bi-facebook"></i></a>
-                                </li>
-                                <li>
-                                    <a target="_blank" href="#"><i class="bi bi-linkedin"></i></a>
-                                </li>
-                                <li>
-                                    <a target="_blank" href="https://www.instagram.com/lymax.learning?igsh=MzFhcG44ZmdybDZ5"><i class="bi bi-instagram"></i></a>
-                                </li>
-                                <li>
-                                    <a target="_blank" href="#"><i class="bi bi-youtube"></i></a>
-                                </li>
-                            </ul>
-                            <h6>Our Official Partner</h6>
-                            <img  src="https://rawasrazak3.github.io/LYMAX-SA/img/home/official-partner.webp" style="width: 130px;height: auto;" />
+    <footer>
+        <footer class="theme_bg_dark">
+            <div class="container pt-5 pb-3">
+                <div class="row mb-sm-5">
+                    <div class="col-lg-4 mb-lg-0 mb-4">
+                        <img src="https://rawasrazak3.github.io/LYMAX-SA/img/lymax-with-slogan-logo.svg" 
+                            alt="" 
+                            class="mb-0 ml-0"
+                            style="height: 110px" />
+                        <ul class="address_ul">
+                            <li>
+                                <a target="_blank" href="https://maps.app.goo.gl/fo2E7qLkoRLqE9Yw5">
+                                    <i class="bi bi-globe"></i>
+                                    <p>Level 8, Infra Futura, Seaport-Airport Rd, Opp BMC, Thrikkakara, Kakkanadu, Kochi, Kerala-682021</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tel:+917994748495">
+                                <i class="bi bi-telephone-fill"></i>
+                                <p>+91 7994748495</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:info@LymaxLearning.com" target="_blank">
+                                <i class="bi bi-envelope-fill"></i>
+                                <p>info@LymaxLearning.com</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 mb-lg-0 mb-4">
+                                <h6>Company</h6>
+                                <ul>
+                                    <li><a href="https://rawasrazak3.github.io/LYMAX-SA/about-us">About Us</a></li>
+                                    <li><a href="https://rawasrazak3.github.io/LYMAX-SA/programmes">Programmes</a></li>
+                                    <li><a href="https://rawasrazak3.github.io/LYMAX-SA/studying-with-us">Studying with Us</a></li>
+                                    <li><a href="https://rawasrazak3.github.io/LYMAX-SA/contact-us">Contact Us</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mb-lg-0 mb-4">
+                                <h6>Useful Info</h6>
+                                <ul>
+                                    <li><a href="https://rawasrazak3.github.io/LYMAX-SA/terms-and-conditions">Terms & conditions </a></li>
+                                    <li><a href="https://rawasrazak3.github.io/LYMAX-SA/privacy-policy">Privacy Policy</a></li>
+                                    <li><a href="https://rawasrazak3.github.io/LYMAX-SA/cookie-policy">Cookie Policy</a></li>
+                                    <li><a href="https://rawasrazak3.github.io/LYMAX-SA/refund-policy">Refund Policy</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mb-lg-0 mb-4">
+                                <h6>Stay connected</h6>
+                                <ul class="social_links">
+                                    <li>
+                                        <a target="_blank" href="javascript:void(0)"><i class="bi bi-facebook"></i></a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="javascript:void(0)"><i class="bi bi-linkedin"></i></a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://www.instagram.com/lymax.learning?igsh=MzFhcG44ZmdybDZ5"><i class="bi bi-instagram"></i></a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="javascript:void(0)"><i class="bi bi-youtube"></i></a>
+                                    </li>
+                                </ul>
+                                <h6>Our Official Partner</h6>
+                                <img  src="https://rawasrazak3.github.io/LYMAX-SA/img/home/official-partner.webp" style="width: 130px;height: auto;" />
+                            </div>
                         </div>
                     </div>
-
                 </div>
-
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <p class="mb-0">©2025 All Rights Reserved. © Lymax and/or its subsidiaries or affiliates are copyrights
-                    </p>
+                <div class="row">
+                    <div class="col-12">
+                        <p class="mb-0">©2025 All Rights Reserved. © Lymax and/or its subsidiaries or affiliates are copyrights
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </footer>
     </footer>
-</footer>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
-    <!-- <script src="https://lgs.ac.uk/js-cynosure/main-custom.js"></script> -->
+
     <!-- Sweet alert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Flat picker -->

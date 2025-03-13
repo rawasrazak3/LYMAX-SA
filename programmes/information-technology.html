@@ -52,16 +52,19 @@
 
     <!-- Tile for Win8 -->
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="https://rawasrazak3.github.io/LYMAX-SA/img/icons/icon-256x256.png?v=2.6">
+    <meta name="msapplication-TileImage"
+        content="https://rawasrazak3.github.io/LYMAX-SA/img/icons/icon-256x256.png?v=2.6">
 
     <link rel="icon" href="https://rawasrazak3.github.io/LYMAX-SA/img/fav-icon.png" />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href=" https://rawasrazak3.github.io/LYMAX-SA/css/style.css?v=3.4" />
 
     <script>
@@ -69,10 +72,10 @@
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('/serviceworker.js', {
                 scope: '.'
-            }).then(function(registration) {
+            }).then(function (registration) {
                 // Registration was successful
                 //  console.log('Laravel PWA: ServiceWorker registration successful with scope: ', registration.scope);
-            }, function(err) {
+            }, function (err) {
                 // registration failed :(
                 //  console.log('Laravel PWA: ServiceWorker registration failed: ', err);
             });
@@ -95,244 +98,218 @@
     </style>
 
     <meta itemprop="image" content="">
-<meta property="og:image" content="" />
-<meta name="twitter:image" content="" />
-<style>
-.light_box {
-    padding: 20px;
-    background: #66AB88;
-    margin-bottom: 30px;
-}
-.h2-light{
-    color: var(--theme-color) !important;
-    font-weight: 400 !important;
-}
-.entry_req_card_body p, .entry_req_card_body ul li, .entry_req_card_body ul li a ,.entry_req_card_body ul li a:hover{
-    font-size: 14px !important;
-}
-.entry_req_card .entry_req_card_body p {
-    margin-bottom: 10px;
-}
-</style>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        let header = document.querySelector("header");
+    <meta property="og:image" content="" />
+    <meta name="twitter:image" content="" />
+    <style>
+        .light_box {
+            padding: 20px;
+            background: #66AB88;
+            margin-bottom: 30px;
+        }
 
-        window.addEventListener("scroll", function() {
-            if (window.scrollY > 100) {
-                header.classList.add("scrolled");
-                header.classList.remove("at-top");
-            } else {
-                header.classList.add("at-top");
-                header.classList.remove("scrolled");
-            }
+        .h2-light {
+            color: var(--theme-color) !important;
+            font-weight: 400 !important;
+        }
+
+        .entry_req_card_body p,
+        .entry_req_card_body ul li,
+        .entry_req_card_body ul li a,
+        .entry_req_card_body ul li a:hover {
+            font-size: 14px !important;
+        }
+
+        .entry_req_card .entry_req_card_body p {
+            margin-bottom: 10px;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let header = document.querySelector("header");
+
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > 100) {
+                    header.classList.add("scrolled");
+                    header.classList.remove("at-top");
+                } else {
+                    header.classList.add("at-top");
+                    header.classList.remove("scrolled");
+                }
+            });
         });
-    });
-</script>
+    </script>
 </head>
 
 <body class="">
-
-    <div class="search_box_wrapper">
-<div class="search_box_content">
-  <span class="search_box_close_btn">
-    <i class="bi bi-x-circle-fill"></i>
-  </span>
-  <div class="theme_input_box">
-    <form action="https://rawasrazak3.github.io/LYMAX-SA/programmes/search" method="get">
-      <input type="text" class="form-control" name="name" placeholder="Search" />
-      <button type="submit"><i class="bi bi-search"></i></button>
-    </form>
-  </div>
-</div>
-</div>    <div class="side_navbar_wrapper">
-  <div class="side_navbar_overlay"></div>
-  <div class="side_navbar_content">
-
-
-    <!-- <div class="row mb-5">
-      <div class="col-12 text-right">
-        <a target="_blank" href="https://canvas.myunihub.net/login/canvas" class="theme_btn theme_btn_secondary ml-auto">
-          My UniHub
-        </a>
-      </div>
-    </div> -->
-
-    <div class="row">
-      <div class="col-12">
-        <ul class="header_navlinks">
-          <li><a href="https://rawasrazak3.github.io/LYMAX-SA">Home</a></li>
-          <li><a href=" https://rawasrazak3.github.io/LYMAX-SA/studying-with-us">Studying with Us</a></li>
-          <li><a href=" https://rawasrazak3.github.io/LYMAX-SA/about-us">About Us</a></li>
-          <li><a href="https://rawasrazak3.github.io/LYMAX-SA/programmes">Programmes</a></li>
-          <!-- <li><a href="https://lgs.ac.uk/kaplan-test-of-english-kte">Kaplan Test of English (KTE)</a></li> -->
-          <li><a href=" https://rawasrazak3.github.io/LYMAX-SA/contact-us">Contact Us</a></li>
-          <!-- <li><a href=" https://lgs.ac.uk/alumni">Alumni</a></li> -->
-        </ul>
-      </div>
-    </div>
-
-  </div>
-</div>
-<header>
-    <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg p-0">
-            <a class="navbar-brand p-0" href="https://rawasrazak3.github.io/LYMAX-SA">
-                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/lymax-main-logo.svg " alt="" />
-        </a>
-
-
-            <!-- <div class="right_header_box">
-                <button type="button" class="header_search_btn">
-                <i class="bi bi-search"></i>
-            </button> -->
-
-                <!-- <div class="country_list">
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                        <img src="img/flag-uk.webp" alt="">
-                        United Kingdom
-                    </button>
-                        <div class="dropdown-menu py-0">
-                            <a class="dropdown-item active mb-0" href="javascript:void(0);">
-                            <img src="img/flag-uk.webp" alt="">
-                            United Kingdom
-                        </a>
-
-                            <a class="dropdown-item" href="https://lgs.edu.mt/"> <img src="img/flag-malta.webp" alt="">
-                            Malta</a>
-                        </div>
-                    </div>
-                </div> -->
-            <!-- </div> -->
-
-            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="sr-only"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        </nav>
-    </div>
-</header>   <div class="container">
-                </div>    
-<section class="common_banner_sec">
-    <img src="https://rawasrazak3.github.io/LYMAX-SA/uploads/programmes/information-technology-course.webp" class="banner_img" alt="">
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 ">
-                <div class="heading_box">
-                    <h1>Information Technology</h1>
-                    
-                    <span class="theme_hr "></span>
-                                        <h2>Advanced Entry Route</h2>
-                    <a target="_blank" href="https://rawasrazak3.github.io/LYMAX-SA/apply-online" class="theme_btn">
-                        Apply Now
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-<!-- degree overview section start -->
-<!-- <section class="theme_bg py-0 programme__info__sec">
-    <div class="container-fluid px-0">
-        <div class="row no-gutters align-items-center flex-lg-row flex-column-reverse">
-            <div class="col-lg-6 p-0">
-                <img src="https://lgs.ac.uk/img/sec-2-img.webp" alt="">
-            </div>
-            <div class="col-lg-6 text-start p-sm-5 p-3">
-                Awarded by the University of Buckingham
-            </div>
-        </div>
-    </div>
-</section>
- -->
-
-<!-- avaiilable degree section end -->
-
-
-
-
-
-
-
-<!-- programme overview section start -->
-
-<section class="programme__overview__sec">
-    <div class="container">
-        <div class="theme_content_box">
+    <div class="side_navbar_wrapper">
+        <div class="side_navbar_overlay"></div>
+        <div class="side_navbar_content">
             <div class="row">
-                <div class="col-lg-8 my-2">
-                    <h2>Modules</h2>
-                    <ul>
-                        <li> Information Technology and IT Ethics</li>
-                        <li> Mathematics and Statistics for IT</li>
-                        <li> PC Maintenance and Operating Systems</li>
-                        <li> Computer Graphics Editing and Database Concepts</li>
-                        <li> Web Programming / Programming Concepts and Java for Android Programming</li>
-                        <li> Technopreneurship</li>
-                        <li> C#.NET Programming</li>
-                        <li> System Administration</li>
-                        <li> Graphical User Interface (GUI)</li>
-                        <li> Network Routing and Switching</li>
-                        <li> Network Design and Administration</li>
+                <div class="col-12">
+                    <ul class="header_navlinks">
+                        <li><a href="https://rawasrazak3.github.io/LYMAX-SA">Home</a></li>
+                        <li><a href=" https://rawasrazak3.github.io/LYMAX-SA/studying-with-us">Studying with Us</a></li>
+                        <li><a href=" https://rawasrazak3.github.io/LYMAX-SA/about-us">About Us</a></li>
+                        <li><a href="https://rawasrazak3.github.io/LYMAX-SA/programmes">Programmes</a></li>
+                        <li><a href=" https://rawasrazak3.github.io/LYMAX-SA/contact-us">Contact Us</a></li>
                     </ul>
-                    <p>The qualification in Information Technology is designed for aspiring IT professionals seeking advanced skills and career progression. This comprehensive program equips learners with practical expertise in areas like software development, cybersecurity, and data management. Ideal for students and professionals aiming to enhance their technical knowledge, it bridges the gap between foundational and specialized IT roles. With a focus on real-world applications, the diploma prepares you for high-demand roles in the tech industry. Ready to take the next step? Explore this program today and unlock your potential in the dynamic world of IT!</p>
-                    <p>This is a  is a comprehensive program designed to equip learners with advanced technical skills and industry-relevant knowledge. This dual-level course offers a seamless progression, covering software development, cybersecurity, data management, and IT project management. Graduates gain a competitive edge, unlocking diverse career opportunities such as IT consultant, systems analyst, or software engineer. With a focus on practical learning and real-world applications, this qualification ensures students are job-ready. Flexible study options and globally recognized certification make it ideal for aspiring IT professionals seeking to excel in a rapidly evolving digital landscape.</p>
-                    <div class="light_box">
-                 <!-- <h2 class="h2-light"><span class="theme_color_primary">Accelerate your path</span> 
-                    to becoming an impactful leader with our MBA Advanced Entry route</h2> -->
-                    <h2 style="color: white;font-weight: bold;">Benefits of studying the course</h2>
-                    <p style="color: white;">It holds immense significance in today’s market, particularly in the UK, where the demand for skilled IT professionals continues to surge. According to recent statistics, the UK tech sector employs over 1.7 million people, contributing £150 billion annually to the economy. This diploma equips learners with advanced technical skills, such as software development, cybersecurity, and data analysis, aligning with current industry trends like cloud computing and AI integration. With 82% of UK businesses reporting a digital skills gap, this qualification bridges the divide, preparing professionals for roles in high-demand areas.
-                        Career opportunities. This course not only enhances employability but also fosters innovation, enabling professionals to drive digital transformation in sectors like finance, healthcare, and retail. With the UK government investing £2.5 billion in digital infrastructure, this qualification ensures learners remain competitive in a rapidly evolving market.</p>
-                    <!-- <p>The programme&nbsp;exposes you to a global network, diverse student group, career opportunities, and rigorous&nbsp;academic experience.</p>
-                    <p>The MBA Advanced Entry route programme is offered to students that already hold relevant practical hands-on management experience and a recognised Postgraduate Diploma (PgD) in management or an equivalent qualification.</p> -->
-                 </div>
-                    <h2>Career Opportunities</h2>
-                    <p>Below is a partial list of career roles where you can leverage your qualification to advance your professional endeavours.</p>
-                    <h3>Software Developer</h3>
-                    <p>Design, develop, and maintain software applications, ensuring high performance and scalability. High demand in the UK job market with competitive salary ranges.</p>
-                    <h3>Data Analyst</h3>
-                    <p>Analyze and interpret complex data sets to help businesses make informed decisions. Growing demand for data-driven insights across industries.</p>
-                    <h3>Cybersecurity Specialist</h3>
-                    <p>Protect systems and networks from cyber threats. Increasing demand due to rising cybersecurity concerns in the UK.</p>
-                    <h3>IT Project Manager</h3>
-                    <p>Oversee IT projects, ensuring timely delivery and alignment with business goals. Strong leadership and technical skills are essential.</p>
-                    <h3>Cloud Engineer</h3>
-                    <p>Manage cloud infrastructure and services, focusing on platforms like AWS, Azure, and Google Cloud. Knowledge of DevOps practices is a plus.</p>
-
-                    <h2>Learn key facts about this qualification</h2>
-                    <p>This is a comprehensive program designed to equip learners with advanced IT skills and knowledge. It combines foundational and specialized modules, preparing students for a successful career in the tech industry.</p>
-                    <p>Key learning outcomes include mastering programming languages, understanding database management, and developing expertise in cybersecurity. Students also gain practical experience in software development, network design, and IT project management, ensuring they are industry-ready. This course is depending on the study mode. It offers flexibility for full-time or part-time learners, making it ideal for working professionals seeking to upskill or transition into IT roles. The curriculum aligns with current tech trends, ensuring graduates meet employer demands. This qualification is recognized globally, opening doors to roles like IT consultant, systems analyst, or software developer. By blending theoretical knowledge with hands-on training, the diploma ensures students are well-prepared for the dynamic IT sector. It also serves as a pathway to higher education, such as a bachelor’s degree, for those aiming to further specialize in the field.</p>
-
-                    <h2>Who is this course for</h2>
-                    <h3>Recent School Leavers</h3>
-                    <p>This course provides a clear pathway into the UK's booming tech sector, where IT roles have grown by 40% in the last five years.</p>
-                    <h3>Career Changers</h3>
-                    <p>With digital skills gaps affecting 48% of UK businesses, this qualification equips learners with the expertise to fill these roles.</p>
-                    <h3>IT Enthusiasts</h3>
-                    <p>The course bridges the gap between informal learning and professional IT certifications, enhancing employability.</p>
-                    <h3>International Students</h3>
-                    <p>With the UK tech sector valued at £184 billion, this qualification opens doors to lucrative IT careers worldwide.</p>
-                    
-                    <h2>Assessments</h2>
-                    <p>The assessment process primarily relies on the submission of assignments, and it does not involve any written examinations or 
-                        direct observations.</p>
                 </div>
-                <div class="col-lg-4 my-2">
-                    <div class="entry_req_card">
-                        <h2 class="card_heading">Entry Requirements</h2>
-                        <div class="entry_req_card_body">
-                            <p>Students wishing to join the course must provide the following supporting documents:</p>
-                            <p>&nbsp;</p>
-                            <ul>
-                                <!-- <li>A relevant Level 7 Postgraduate Diploma such as 
-                                    <a href="https://othm.org.uk/othm-level-7-diploma-in-strategic-management-and-leadership.html">OTHM Level 7 Diploma in Strategic Management and Leadership</a> (students need to submit both certificate and transcript on application)</li> -->
+            </div>
+        </div>
+    </div>
+    <header>
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg p-0">
+                <a class="navbar-brand p-0" href="https://rawasrazak3.github.io/LYMAX-SA">
+                    <img src="https://rawasrazak3.github.io/LYMAX-SA/img/lymax-main-logo.svg " alt="" />
+                </a>
+
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="sr-only"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+    </div>
+    <section class="common_banner_sec">
+        <img src="https://rawasrazak3.github.io/LYMAX-SA/uploads/programmes/information-technology-course.webp"
+            class="banner_img" alt="">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 ">
+                    <div class="heading_box">
+                        <h1>Information Technology</h1>
+                        <h2>Advanced Entry Route</h2>
+                        <a target="_blank" href="https://rawasrazak3.github.io/LYMAX-SA/apply-online" class="theme_btn">
+                            Apply Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- programme overview section start -->
+    <section class="programme__overview__sec">
+        <div class="container">
+            <div class="theme_content_box">
+                <div class="row">
+                    <div class="col-lg-8 my-2">
+                        <h2>Modules</h2>
+                        <ul>
+                            <li> Information Technology and IT Ethics</li>
+                            <li> Mathematics and Statistics for IT</li>
+                            <li> PC Maintenance and Operating Systems</li>
+                            <li> Computer Graphics Editing and Database Concepts</li>
+                            <li> Web Programming / Programming Concepts and Java for Android Programming</li>
+                            <li> Technopreneurship</li>
+                            <li> C#.NET Programming</li>
+                            <li> System Administration</li>
+                            <li> Graphical User Interface (GUI)</li>
+                            <li> Network Routing and Switching</li>
+                            <li> Network Design and Administration</li>
+                        </ul>
+                        <p>The qualification in Information Technology is designed for aspiring IT professionals seeking
+                            advanced skills and career progression. This comprehensive program equips learners with
+                            practical expertise in areas like software development, cybersecurity, and data management.
+                            Ideal for students and professionals aiming to enhance their technical knowledge, it bridges
+                            the gap between foundational and specialized IT roles. With a focus on real-world
+                            applications, the diploma prepares you for high-demand roles in the tech industry. Ready to
+                            take the next step? Explore this program today and unlock your potential in the dynamic
+                            world of IT!</p>
+                        <p>This is a is a comprehensive program designed to equip learners with advanced technical
+                            skills and industry-relevant knowledge. This dual-level course offers a seamless
+                            progression, covering software development, cybersecurity, data management, and IT project
+                            management. Graduates gain a competitive edge, unlocking diverse career opportunities such
+                            as IT consultant, systems analyst, or software engineer. With a focus on practical learning
+                            and real-world applications, this qualification ensures students are job-ready. Flexible
+                            study options and globally recognized certification make it ideal for aspiring IT
+                            professionals seeking to excel in a rapidly evolving digital landscape.</p>
+                        <div class="light_box">
+                            <h2 style="color: white;font-weight: bold;">Benefits of studying the course</h2>
+                            <p style="color: white;">It holds immense significance in today’s market, particularly in
+                                the UK, where the demand for skilled IT professionals continues to surge. According to
+                                recent statistics, the UK tech sector employs over 1.7 million people, contributing £150
+                                billion annually to the economy. This diploma equips learners with advanced technical
+                                skills, such as software development, cybersecurity, and data analysis, aligning with
+                                current industry trends like cloud computing and AI integration. With 82% of UK
+                                businesses reporting a digital skills gap, this qualification bridges the divide,
+                                preparing professionals for roles in high-demand areas.
+                                Career opportunities. This course not only enhances employability but also fosters
+                                innovation, enabling professionals to drive digital transformation in sectors like
+                                finance, healthcare, and retail. With the UK government investing £2.5 billion in
+                                digital infrastructure, this qualification ensures learners remain competitive in a
+                                rapidly evolving market.</p>
+                        </div>
+                        <h2>Career Opportunities</h2>
+                        <p>Below is a partial list of career roles where you can leverage your qualification to advance
+                            your professional endeavours.</p>
+                        <h3>Software Developer</h3>
+                        <p>Design, develop, and maintain software applications, ensuring high performance and
+                            scalability. High demand in the UK job market with competitive salary ranges.</p>
+                        <h3>Data Analyst</h3>
+                        <p>Analyze and interpret complex data sets to help businesses make informed decisions. Growing
+                            demand for data-driven insights across industries.</p>
+                        <h3>Cybersecurity Specialist</h3>
+                        <p>Protect systems and networks from cyber threats. Increasing demand due to rising
+                            cybersecurity concerns in the UK.</p>
+                        <h3>IT Project Manager</h3>
+                        <p>Oversee IT projects, ensuring timely delivery and alignment with business goals. Strong
+                            leadership and technical skills are essential.</p>
+                        <h3>Cloud Engineer</h3>
+                        <p>Manage cloud infrastructure and services, focusing on platforms like AWS, Azure, and Google
+                            Cloud. Knowledge of DevOps practices is a plus.</p>
+
+                        <h2>Learn key facts about this qualification</h2>
+                        <p>This is a comprehensive program designed to equip learners with advanced IT skills and
+                            knowledge. It combines foundational and specialized modules, preparing students for a
+                            successful career in the tech industry.</p>
+                        <p>Key learning outcomes include mastering programming languages, understanding database
+                            management, and developing expertise in cybersecurity. Students also gain practical
+                            experience in software development, network design, and IT project management, ensuring they
+                            are industry-ready. This course is depending on the study mode. It offers flexibility for
+                            full-time or part-time learners, making it ideal for working professionals seeking to
+                            upskill or transition into IT roles. The curriculum aligns with current tech trends,
+                            ensuring graduates meet employer demands. This qualification is recognized globally, opening
+                            doors to roles like IT consultant, systems analyst, or software developer. By blending
+                            theoretical knowledge with hands-on training, the diploma ensures students are well-prepared
+                            for the dynamic IT sector. It also serves as a pathway to higher education, such as a
+                            bachelor’s degree, for those aiming to further specialize in the field.</p>
+
+                        <h2>Who is this course for</h2>
+                        <h3>Recent School Leavers</h3>
+                        <p>This course provides a clear pathway into the UK's booming tech sector, where IT roles have
+                            grown by 40% in the last five years.</p>
+                        <h3>Career Changers</h3>
+                        <p>With digital skills gaps affecting 48% of UK businesses, this qualification equips learners
+                            with the expertise to fill these roles.</p>
+                        <h3>IT Enthusiasts</h3>
+                        <p>The course bridges the gap between informal learning and professional IT certifications,
+                            enhancing employability.</p>
+                        <h3>International Students</h3>
+                        <p>With the UK tech sector valued at £184 billion, this qualification opens doors to
+                            lucrative IT careers worldwide.</p>
+
+                        <h2>Assessments</h2>
+                        <p>The assessment process primarily relies on the submission of assignments, and it does not
+                            involve any written examinations or
+                            direct observations.</p>
+                    </div>
+                    <div class="col-lg-4 my-2">
+                        <div class="entry_req_card">
+                            <h2 class="card_heading">Entry Requirements</h2>
+                            <div class="entry_req_card_body">
+                                <p>Students wishing to join the course must provide the following supporting documents:
+                                </p>
+                                <p>&nbsp;</p>
+                                <ul>
                                     <li>Year 12th Pass with 55 % (Any board of examinations)</li>
                                     <li>Non stream subjects require our additional foundation courses</li>
                                     <li>English Proficiency – 70% exempted from proficiency tests</li>
@@ -340,314 +317,327 @@
                                     <li>Statement of Purpose</li>
                                     <li>Photo ID (Passport)</li>
                                 </ul>
+                                <a href="https://rawasrazak3.github.io/LYMAX-SA/apply-online" class="theme_btn">Apply
+                                    Now</a>
+                            </div>
 
-                            <!-- <div class="accordion programme__accordion mt-3 pt-3 border-top" id="accordionExample">
-                                <div class="card">
-                                    <div class="card-header" id="headingOne">
-                                        <h2 class="mb-0">
-                                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">English Requirements</button>
-                                        </h2>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- programme overview section end -->
+
+    <!-- master degree section start -->
+    <section class="master__degree__sec px-sm-0 px-3">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-lg-12 offset-lg-0.5">
+                    <h2>Our MAP Programs</h2>
+                    <p class="mb-md- mb-35">Students can choose from our wide range of programmes to meet individual
+                        career goals
+                    </p>
+                    <!-- carousel row -->
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="3000">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row mb-4">
+
+                                    <div class="col-md-4">
+                                        <div class="theme_card">
+                                            <a
+                                                href="https://rawasrazak3.github.io/LYMAX-SA/programmes/accounting-and-finance">
+                                                <img src="https://rawasrazak3.github.io/LYMAX-SA//uploads/programmes/accounting-finance-course.webp"
+                                                    alt="">
+                                                <div class="theme_card_body">
+                                                    <h3>Accounting & Finance</h3>
+                                                    <a href="https://rawasrazak3.github.io/LYMAX-SA/apply-online"
+                                                        class="theme_btn">Apply Now</a>
+                                                </div>
+                                                <div class="theme_card_footer">
+                                                    <p><span class="theme_color_primary">Credits: </span>120/240</p>
+                                                </div>
+                                            </a>
+                                        </div>
                                     </div>
-
-                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                        <div class="card-body px-0 pb-0">
-                                            <p>We recognise the following evidence of English language proficiency.</p>
-                                            <ul>
-                                                <li>A level pass in English.</li>
-                                                <li>Award of Bachelor&rsquo;s degree which was studied and assessed in English</li>
-                                                <li>Kaplan Test of English (KTE) (Online test) with an overall score of 478-509 with at least 444-477 in writing and 410-443 in all other components. 
-                                                    <a href="../../../kaplan-test-of-english-kte" target="_blank" rel="noopener">Click here</a> for a discount code.</li>
-                                                    <li>IELTS with an overall score of 6.5 with at least 6.0 in writing and 5.5 in all other components.</li>
-                                                    <li>TOEFL with a score of 72 overall and a minimum of 18 in reading, 17 in listening, 20 in speaking and 17 in writing (including Home Edition)</li>
-                                                </ul>
+                                    <div class="col-md-4">
+                                        <div class="theme_card">
+                                            <a
+                                                href="https://rawasrazak3.github.io/LYMAX-SA/programmes/business-and-management">
+                                                <img src="https://rawasrazak3.github.io/LYMAX-SA/uploads/programmes/business-management-course.webp"
+                                                    alt="">
+                                                <div class="theme_card_body">
+                                                    <h3>Business & Management</h3>
+                                                    <a href="https://rawasrazak3.github.io/LYMAX-SA/apply-online"
+                                                        class="theme_btn">Apply Now</a>
+                                                </div>
+                                                <div class="theme_card_footer">
+                                                    <p><span class="theme_color_primary">Credits: </span>120/240</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="theme_card">
+                                            <a
+                                                href="https://rawasrazak3.github.io/LYMAX-SA/programmes/data-science-and-artificial-intelligence">
+                                                <img src="https://rawasrazak3.github.io/LYMAX-SA/uploads/programmes/data-science-artificial-intelligence-course.webp"
+                                                    alt="">
+                                                <div class="theme_card_body">
+                                                    <h3>Data Science and Artificial Intelligence</h3>
+                                                    <a href="https://rawasrazak3.github.io/LYMAX-SA/apply-online"
+                                                        class="theme_btn">Apply Now</a>
+                                                </div>
+                                                <div class="theme_card_footer">
+                                                    <p><span class="theme_color_primary">Credits: </span>120/240</p>
+                                                </div>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <p class="my-3">In addition to the above requirements, all applicants will be required to have a live virtual interview with a staff member of London Graduate School.   <br>Details of these arrangements will be sent subject to your successful application.</p>
-
-                            <h2>Fee: £3,850</h2> -->
-                            <a href="https://rawasrazak3.github.io/LYMAX-SA/apply-online" class="theme_btn">Apply Now</a>
-                        </div>
-
-                        
-                    </div>
-
-
-                </div>
-            </div>
-        </div>
-</section>
-<!-- programme overview section end -->
-
-
-
-<!-- master degree section start -->
-<section class="master__degree__sec px-sm-0 px-3">
-    <div class="container">
-        <div class="row mb-4">
-            <div class="col-lg-12 offset-lg-0.5">
-                <h2>Our MAP Programs</h2>
-                <p class="mb-md- mb-35">Students can choose from our wide range of programmes to meet individual career goals
-                </p>
-                <!-- carousel row -->
-                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="3000">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="row mb-4">
-
-                                <div class="col-md-4">
-                                    <div class="theme_card">
-                                        <a href="https://rawasrazak3.github.io/LYMAX-SA/programmes/accounting-and-finance">
-                                         <img src="https://rawasrazak3.github.io/LYMAX-SA//uploads/programmes/accounting-finance-course.webp" alt="">
-                                         <div class="theme_card_body">
-                                             <h3>Accounting & Finance</h3>    
-                                             <a href="https://rawasrazak3.github.io/LYMAX-SA/apply-online" class="theme_btn">Apply Now</a>                                             
-                                         </div>
-                                         <div class="theme_card_footer">
-                                            <p><span class="theme_color_primary">Credits: </span>120/240</p>
-                                         </div>
-                                     </a>
+                            <div class="carousel-item ">
+                                <div class="row mb-4">
+                                    <div class="col-md-4">
+                                        <div class="theme_card">
+                                            <a
+                                                href="https://rawasrazak3.github.io/LYMAX-SA/programmes/cyber-security-and-networking">
+                                                <img src="https://rawasrazak3.github.io/LYMAX-SA/uploads/programmes/cyber-ecurity-networking-course.webp"
+                                                    alt="">
+                                                <div class="theme_card_body">
+                                                    <h3>Cyber Security & Networking</h3>
+                                                    <a href="https://rawasrazak3.github.io/LYMAX-SA/apply-online"
+                                                        class="theme_btn">Apply Now</a>
+                                                </div>
+                                                <div class="theme_card_footer">
+                                                    <p><span class="theme_color_primary">Credits: </span>120/240</p>
+                                                </div>
+                                            </a>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="theme_card">
-                                        <a href="https://rawasrazak3.github.io/LYMAX-SA/programmes/business-and-management">
-                                         <img src="https://rawasrazak3.github.io/LYMAX-SA/uploads/programmes/business-management-course.webp" alt="">
-                                         <div class="theme_card_body">
-                                             <h3>Business & Management</h3> 
-                                             <a href="https://rawasrazak3.github.io/LYMAX-SA/apply-online" class="theme_btn">Apply Now</a> 
-                                         </div>
-                                         <div class="theme_card_footer">
-                                            <p><span class="theme_color_primary">Credits: </span>120/240</p>
-                                         </div>
-                                     </a>
+                                    <div class="col-md-4">
+                                        <div class="theme_card">
+                                            <a
+                                                href="https://rawasrazak3.github.io/LYMAX-SA/programmes/logistics-and-supplychain">
+                                                <img src="https://rawasrazak3.github.io/LYMAX-SA/uploads/programmes/logistics-supplychain-course.webp"
+                                                    alt="">
+                                                <div class="theme_card_body">
+                                                    <h3>Logistics & Supplychain</h3>
+                                                    <a href="https://rawasrazak3.github.io/LYMAX-SA/apply-online"
+                                                        class="theme_btn">Apply Now</a>
+                                                </div>
+                                                <div class="theme_card_footer">
+                                                    <p><span class="theme_color_primary">Credits: </span>120/240</p>
+                                                </div>
+                                            </a>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="theme_card">
-                                        <a href="https://rawasrazak3.github.io/LYMAX-SA/programmes/data-science-and-artificial-intelligence">
-                                         <img src="https://rawasrazak3.github.io/LYMAX-SA/uploads/programmes/data-science-artificial-intelligence-course.webp" alt="">
-                                         <div class="theme_card_body">
-                                             <h3>Data Science and Artificial Intelligence</h3>
-                                             <a href="https://rawasrazak3.github.io/LYMAX-SA/apply-online" class="theme_btn">Apply Now</a> 
-                                         </div>
-                                         <div class="theme_card_footer">
-                                            <p><span class="theme_color_primary">Credits: </span>120/240</p>
-                                         </div>
-                                     </a>
+                                    <div class="col-md-4">
+                                        <div class="theme_card">
+                                            <a
+                                                href="https://rawasrazak3.github.io/LYMAX-SA/programmes/education-and-training">
+                                                <img src="https://rawasrazak3.github.io/LYMAX-SA/uploads/programmes/education-training-course.webp"
+                                                    alt="">
+                                                <div class="theme_card_body">
+                                                    <h3>Education & Training</h3>
+                                                    <a href="https://rawasrazak3.github.io/LYMAX-SA/apply-online"
+                                                        class="theme_btn">Apply Now</a>
+                                                </div>
+                                                <div class="theme_card_footer">
+                                                    <p><span class="theme_color_primary">Credits: </span>120/240</p>
+                                                </div>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="carousel-item ">
-                            <div class="row mb-4">
-                                <div class="col-md-4">
-                                    <div class="theme_card">
-                                        <a href="https://rawasrazak3.github.io/LYMAX-SA/programmes/cyber-security-and-networking">
-                                         <img src="https://rawasrazak3.github.io/LYMAX-SA/uploads/programmes/cyber-ecurity-networking-course.webp" alt="">
-                                         <div class="theme_card_body">
-                                             <h3>Cyber Security & Networking</h3>    
-                                             <a href="https://rawasrazak3.github.io/LYMAX-SA/apply-online" class="theme_btn">Apply Now</a>                                        
-                                         </div>
-                                         <div class="theme_card_footer">
-                                            <p><span class="theme_color_primary">Credits: </span>120/240</p>
-                                         </div>
-                                     </a>
+                            <div class="carousel-item ">
+                                <div class="row mb-4">
+                                    <div class="col-md-4">
+                                        <div class="theme_card">
+                                            <a
+                                                href="https://rawasrazak3.github.io/LYMAX-SA/programmes/information-technology">
+                                                <img src="https://rawasrazak3.github.io/LYMAX-SA/uploads/programmes/information-technology-course.webp"
+                                                    alt="">
+                                                <div class="theme_card_body">
+                                                    <h3>Information Technology</h3>
+                                                    <a href="https://rawasrazak3.github.io/LYMAX-SA/apply-online"
+                                                        class="theme_btn">Apply Now</a>
+                                                </div>
+                                                <div class="theme_card_footer">
+                                                    <p><span class="theme_color_primary">Credits: </span>120/240</p>
+                                                </div>
+                                            </a>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="theme_card">
-                                        <a href="https://rawasrazak3.github.io/LYMAX-SA/programmes/logistics-and-supplychain">
-                                         <img src="https://rawasrazak3.github.io/LYMAX-SA/uploads/programmes/logistics-supplychain-course.webp" alt="">
-                                         <div class="theme_card_body">
-                                             <h3>Logistics & Supplychain</h3>
-                                             <a href="https://rawasrazak3.github.io/LYMAX-SA/apply-online" class="theme_btn">Apply Now</a> 
-                                         </div>
-                                         <div class="theme_card_footer">
-                                            <p><span class="theme_color_primary">Credits: </span>120/240</p>
-                                         </div>
-                                     </a>
+                                    <div class="col-md-4">
+                                        <div class="theme_card">
+                                            <a
+                                                href="https://rawasrazak3.github.io/LYMAX-SA/programmes/hospitality-and-tourism">
+                                                <img src="https://rawasrazak3.github.io/LYMAX-SA/uploads/programmes/hospitality-tourism-course.webp"
+                                                    alt="">
+                                                <div class="theme_card_body">
+                                                    <h3>Hospitality & Tourism</h3>
+                                                    <a href="https://rawasrazak3.github.io/LYMAX-SA/apply-online"
+                                                        class="theme_btn">Apply Now</a>
+                                                </div>
+                                                <div class="theme_card_footer">
+                                                    <p><span class="theme_color_primary">Credits: </span>120/240</p>
+                                                </div>
+                                            </a>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="theme_card">
-                                        <a href="https://rawasrazak3.github.io/LYMAX-SA/programmes/education-and-training">
-                                         <img src="https://rawasrazak3.github.io/LYMAX-SA/uploads/programmes/education-training-course.webp" alt="">
-                                         <div class="theme_card_body">
-                                             <h3>Education & Training</h3>
-                                             <a href="https://rawasrazak3.github.io/LYMAX-SA/apply-online" class="theme_btn">Apply Now</a> 
-                                         </div>
-                                         <div class="theme_card_footer">
-                                            <p><span class="theme_color_primary">Credits: </span>120/240</p>
-                                         </div>
-                                     </a>
+                                    <div class="col-md-4">
+                                        <div class="theme_card">
+                                            <a
+                                                href="https://rawasrazak3.github.io/LYMAX-SA/programmes/health-and-social-care">
+                                                <img src="https://rawasrazak3.github.io/LYMAX-SA/uploads/programmes/health-and-social-care.webp"
+                                                    alt="">
+                                                <div class="theme_card_body">
+                                                    <h3>Health & Social Care</h3>
+                                                    <a href="https://rawasrazak3.github.io/LYMAX-SA/apply-online"
+                                                        class="theme_btn">Apply Now</a>
+                                                </div>
+                                                <div class="theme_card_footer">
+                                                    <p><span class="theme_color_primary">Credits: </span>120/240</p>
+                                                </div>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="carousel-item ">
-                            <div class="row mb-4">
-                                <div class="col-md-4">
-                                    <div class="theme_card">
-                                        <a href="https://rawasrazak3.github.io/LYMAX-SA/programmes/information-technology">
-                                         <img src="https://rawasrazak3.github.io/LYMAX-SA/uploads/programmes/information-technology-course.webp" alt="">
-                                         <div class="theme_card_body">
-                                             <h3>Information Technology</h3>
-                                             <a href="https://rawasrazak3.github.io/LYMAX-SA/apply-online" class="theme_btn">Apply Now</a> 
-                                         </div>
-                                         <div class="theme_card_footer">
-                                            <p><span class="theme_color_primary">Credits: </span>120/240</p>
-                                         </div>
-                                     </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="theme_card">
-                                        <a href="https://rawasrazak3.github.io/LYMAX-SA/programmes/hospitality-and-tourism">
-                                         <img src="https://rawasrazak3.github.io/LYMAX-SA/uploads/programmes/hospitality-tourism-course.webp" alt="">
-                                         <div class="theme_card_body">
-                                             <h3>Hospitality & Tourism</h3>
-                                             <a href="https://rawasrazak3.github.io/LYMAX-SA/apply-online" class="theme_btn">Apply Now</a> 
-                                         </div>
-                                         <div class="theme_card_footer">
-                                            <p><span class="theme_color_primary">Credits: </span>120/240</p>
-                                         </div>
-                                     </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="theme_card">
-                                        <a href="https://rawasrazak3.github.io/LYMAX-SA/programmes/health-and-social-care">
-                                            <img src="https://rawasrazak3.github.io/LYMAX-SA/uploads/programmes/health-and-social-care.webp" alt="">
-                                         <div class="theme_card_body">
-                                            <h3>Health & Social Care</h3>
-                                             <a href="https://rawasrazak3.github.io/LYMAX-SA/apply-online" class="theme_btn">Apply Now</a> 
-                                         </div>
-                                         <div class="theme_card_footer">
-                                            <p><span class="theme_color_primary">Credits: </span>120/240</p>
-                                         </div>
-                                     </a>
-                                    </div>
-                                </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-target="#carouselExampleControls"
+                            data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true">
+                                <i class="bi bi-chevron-left"></i>
+                            </span>
+                            <span class="sr-only">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-target="#carouselExampleControls"
+                            data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true">
+                                <i class="bi bi-chevron-right"></i>
+                            </span>
+                            <span class="sr-only">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- master degree section end -->
+    <footer>
+        <footer class="theme_bg_dark">
+            <div class="container pt-5 pb-3">
+                <div class="row mb-sm-5">
+                    <div class="col-lg-4 mb-lg-0 mb-4">
+                        <img src="https://rawasrazak3.github.io/LYMAX-SA/img/lymax-with-slogan-logo.svg" alt=""
+                            class="mb-0 ml-0" style="height: 110px" />
+                        <ul class="address_ul">
+                            <li>
+                                <a target="_blank" href="https://maps.app.goo.gl/fo2E7qLkoRLqE9Yw5">
+                                    <i class="bi bi-globe"></i>
+                                    <p>Level 8, Infra Futura, Seaport-Airport Rd, Opp BMC, Thrikkakara, Kakkanadu,
+                                        Kochi, Kerala-682021</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tel:+917994748495">
+                                    <i class="bi bi-telephone-fill"></i>
+                                    <p>+91 7994748495</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:info@LymaxLearning.com" target="_blank">
+                                    <i class="bi bi-envelope-fill"></i>
+                                    <p>info@LymaxLearning.com</p>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="row">
+
+                            <div class="col-lg-4 col-md-6 mb-lg-0 mb-4">
+                                <h6>Company</h6>
+                                <ul>
+                                    <li><a href="https://rawasrazak3.github.io/LYMAX-SA/about-us">About Us</a></li>
+                                    <li><a href="https://rawasrazak3.github.io/LYMAX-SA/programmes">Programmes</a></li>
+                                    <li><a href="https://rawasrazak3.github.io/LYMAX-SA/studying-with-us">Studying with
+                                            Us</a></li>
+                                    <li><a href="https://rawasrazak3.github.io/LYMAX-SA/contact-us">Contact Us</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mb-lg-0 mb-4">
+                                <h6>Useful Info</h6>
+                                <ul>
+                                    <li><a href="https://rawasrazak3.github.io/LYMAX-SA/terms-and-conditions">Terms &
+                                            conditions </a></li>
+                                    <li><a href="https://rawasrazak3.github.io/LYMAX-SA/privacy-policy">Privacy
+                                            Policy</a></li>
+                                    <li><a href="https://rawasrazak3.github.io/LYMAX-SA/cookie-policy">Cookie Policy</a>
+                                    </li>
+                                    <li><a href="https://rawasrazak3.github.io/LYMAX-SA/refund-policy">Refund Policy</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 mb-lg-0 mb-4">
+                                <h6>Stay connected</h6>
+                                <ul class="social_links">
+                                    <li>
+                                        <a target="_blank" href="javascript:void(0)"><i class="bi bi-facebook"></i></a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="javascript:void(0)"><i class="bi bi-linkedin"></i></a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank"
+                                            href="https://www.instagram.com/lymax.learning?igsh=MzFhcG44ZmdybDZ5"><i
+                                                class="bi bi-instagram"></i></a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="javascript:void(0)"><i class="bi bi-youtube"></i></a>
+                                    </li>
+                                </ul>
+                                <h6>Our Official Partner</h6>
+                                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/official-partner.webp"
+                                    style="width: 130px;height: auto;" />
                             </div>
                         </div>
 
                     </div>
-                    <button class="carousel-control-prev" type="button" data-target="#carouselExampleControls" data-slide="prev">
-                     <span class="carousel-control-prev-icon" aria-hidden="true">
-                         <i class="bi bi-chevron-left"></i>
-                     </span>
-                     <span class="sr-only">Previous</span>
-                 </button>
-                    <button class="carousel-control-next" type="button" data-target="#carouselExampleControls" data-slide="next">
-                     <span class="carousel-control-next-icon" aria-hidden="true">
-                         <i class="bi bi-chevron-right"></i>
-                     </span>
-                     <span class="sr-only">Next</span>
-                 </button>
+
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
- <!-- master degree section end -->   
- <footer>
-    <footer class="theme_bg_dark">
-        <div class="container pt-5 pb-3">
-            <div class="row mb-sm-5">
-                <div class="col-lg-4 mb-lg-0 mb-4">
-                    <!-- <h1 class="theme_color_white mb-3">Logo Here</h1>  -->
-                    <img src="https://rawasrazak3.github.io/LYMAX-SA/img/lymax-with-slogan-logo.svg" 
-                    alt="" 
-                    class="mb-0 ml-0"
-                    style="height: 110px" />
-                    <ul class="address_ul">
-                        <li>
-                            <a target="_blank" href="https://maps.app.goo.gl/fo2E7qLkoRLqE9Yw5">
-                            <i class="bi bi-globe"></i>
-                            <p>Level 8, Infra Futura, Seaport-Airport Rd, Opp BMC, Thrikkakara, Kakkanadu, Kochi, Kerala-682021</p>
-                        </a>
-                        </li>
-                        <li>
-                            <a href="tel:+917994748495">
-                            <i class="bi bi-telephone-fill"></i>
-                            <p>+91 7994748495</p>
-                        </a>
-                        </li>
-                        <li>
-                            <a href="mailto:info@LymaxLearning.com" target="_blank">
-                            <i class="bi bi-envelope-fill"></i>
-                            <p>info@LymaxLearning.com</p>
-                        </a>
-                        </li>
-
-                    </ul>
-                </div>
-                <div class="col-lg-8">
-                    <div class="row">
-
-                        <div class="col-lg-4 col-md-6 mb-lg-0 mb-4">
-                            <h6>Company</h6>
-                            <ul>
-                                <li><a href="https://rawasrazak3.github.io/LYMAX-SA/about-us">About Us</a></li>
-                                <li><a href="https://rawasrazak3.github.io/LYMAX-SA/programmes">Programmes</a></li>
-                                <li><a href="https://rawasrazak3.github.io/LYMAX-SA/studying-with-us">Studying with Us</a></li>
-                                <li><a href="https://rawasrazak3.github.io/LYMAX-SA/contact-us">Contact Us</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-4 col-md-6 mb-lg-0 mb-4">
-                            <h6>Useful Info</h6>
-                            <ul>
-                                <li><a href="https://rawasrazak3.github.io/LYMAX-SA/terms-and-conditions">Terms & conditions </a></li>
-                                <li><a href="https://rawasrazak3.github.io/LYMAX-SA/privacy-policy">Privacy Policy</a></li>
-                                <li><a href="https://rawasrazak3.github.io/LYMAX-SA/cookie-policy">Cookie Policy</a></li>
-                                <li><a href="https://rawasrazak3.github.io/LYMAX-SA/refund-policy">Refund Policy</a></li>
-                                <!-- <li><a href="#">External linking policy</a></li> -->
-                                <!-- <li><a href="#">Accessibility Statement</a></li>  -->
-                            </ul>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 mb-lg-0 mb-4">
-                            <h6>Stay connected</h6>
-                            <ul class="social_links">
-                                <li>
-                                    <a target="_blank" href="#"><i class="bi bi-facebook"></i></a>
-                                </li>
-                                <li>
-                                    <a target="_blank" href="#"><i class="bi bi-linkedin"></i></a>
-                                </li>
-                                <li>
-                                    <a target="_blank" href="https://www.instagram.com/lymax.learning?igsh=MzFhcG44ZmdybDZ5"><i class="bi bi-instagram"></i></a>
-                                </li>
-                                <li>
-                                    <a target="_blank" href="#"><i class="bi bi-youtube"></i></a>
-                                </li>
-                            </ul>
-                            <h6>Our Official Partner</h6>
-                            <img  src="https://rawasrazak3.github.io/LYMAX-SA/img/home/official-partner.webp" style="width: 130px;height: auto;" />
-                        </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p class="mb-0">©2025 All Rights Reserved. © Lymax and/or its subsidiaries or affiliates are
+                            copyrights
+                        </p>
                     </div>
-
-                </div>
-
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <p class="mb-0">©2025 All Rights Reserved. © Lymax and/or its subsidiaries or affiliates are copyrights
-                    </p>
                 </div>
             </div>
-        </div>
+        </footer>
     </footer>
-</footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+        crossorigin="anonymous"></script>
     <!-- <script src="https://lgs.ac.uk/js-cynosure/main-custom.js"></script> -->
     <!-- Sweet alert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -662,7 +652,7 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('.select-2').select2({
 
             });
@@ -670,7 +660,9 @@
     </script>
 
     <!-- input mask -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8-beta.17/jquery.inputmask.min.js" integrity="sha512-zdfH1XdRONkxXKLQxCI2Ak3c9wNymTiPh5cU4OsUavFDATDbUzLR+SYWWz0RkhDmBDT0gNSUe4xrQXx8D89JIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8-beta.17/jquery.inputmask.min.js"
+        integrity="sha512-zdfH1XdRONkxXKLQxCI2Ak3c9wNymTiPh5cU4OsUavFDATDbUzLR+SYWWz0RkhDmBDT0gNSUe4xrQXx8D89JIQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         $(".sort-code").inputmask("99-99-99");
         $(".national-insurance-number").inputmask("AA 99 99 99 A");
@@ -678,7 +670,7 @@
 
     <!-- Bootstrap custom file input -->
     <script>
-        $('.custom-file-input').on('change', function() {
+        $('.custom-file-input').on('change', function () {
             //get the file name
             var fileName = $(this).val();
             //replace the "Choose a file" label
@@ -686,6 +678,6 @@
         })
     </script>
 
-        </body>
+</body>
 
 </html>
