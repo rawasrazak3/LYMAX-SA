@@ -527,49 +527,10 @@ header .navbar-brand img {
 header .navbar {
     padding: 0px 0px;
     height: 75px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-@media (max-width: 1000px) {
-    .header-text {
-        display: block;
-        color: yellow;
-        font-size: 18px;
-        font-weight: 500;
-        text-align: center;
-        position: absolute;
-        left: 50%;
-        /* right: 50%; */
-        margin-top: 35px;
-        transform: translateX(-50%);
-        white-space: nowrap;
-    }
-
-    
-}
-
-@media (max-width: 750px) {
-    .header-text {
-        display: none;
-        color: yellow;
-        font-size: 14px;
-        font-weight: 500;
-        text-align: center;
-        position: absolute;
-        left: 50%;
-        /* right: 50%; */
-        margin-top: 35px;
-        transform: translateX(-50%);
-        white-space: nowrap;
-    }
-
-    
 }
 
 
-/* .right_header_box .country_list .dropdown-toggle::after {
+.right_header_box .country_list .dropdown-toggle::after {
     content: "\F282";
     font-family: var(--bootstrap-icons);
     border: none;
@@ -683,7 +644,7 @@ header .navbar {
     transform: translateX(50%);
     transform-origin: right center;
     transition: transform 500ms ease-in, opacity 500ms linear, visibility 500ms ease-in;
-    z-index: 999;
+    z-index: 1030;
     visibility: hidden;
 }
 
@@ -714,14 +675,12 @@ header .navbar {
     width: 45%;
     background-color: #434343;
     border-left: 6px solid var(--theme-color-primary);
-    z-index: 10;
+    z-index: 1030;
     position: relative;
     height: 100%;
     overflow-y: auto;
     padding: 70px 50px;
-/*     margin-left: auto; */
-    display: flex; /* Added flexbox */
-    flex-direction: column; /* Added flexbox column */
+    margin-left: auto;
 }
 
 /* .search_box_content {
@@ -760,8 +719,7 @@ header .navbar {
 
 .header_navlinks {
     padding-left: 0;
-    display: flex; /* Display links in a row */
-    justify-content: flex-start; /* Align links to the start */
+    display: block; /* Display links in a row */
     flex-wrap: wrap; /*allows wrapping to new line if there isnt enough space*/
 }
 
