@@ -486,6 +486,14 @@ header {
     z-index: 1050;
 }
 
+header .navbar {
+    padding: 0px 0px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 /* When scrolled down */
 header.scrolled {
     background-color: rgba(0, 0, 0, 0.4); /* Light transparent */
@@ -513,7 +521,7 @@ header .navbar-brand img {
 /* Header text */
 .header-text {
     display: block;
-    color: yellow;
+    color: #FFD700;
     font-size: 28px;
     font-weight: 500;
     text-align: center;
@@ -522,14 +530,6 @@ header .navbar-brand img {
     margin-top: 35px;
     transform: translateX(-50%);
     white-space: nowrap;
-}
-
-header .navbar {
-    padding: 0px 0px;
-    height: 75px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 @media (max-width: 1000px) {

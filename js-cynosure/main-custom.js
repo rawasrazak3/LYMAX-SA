@@ -435,3 +435,142 @@ document.addEventListener("DOMContentLoaded", function() {
         // Possibly fall back to a more compatible method here
     }
 });
+
+// header transparent when scrolling 
+$(document).ready(function() {
+    let $header = $("header");
+
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 100) {
+            $header.addClass("scrolled").removeClass("at-top");
+        } else {
+            $header.addClass("at-top").removeClass("scrolled");
+        }
+    });
+});
+
+//contact form validation and submit
+$(document).ready(function() {
+    $("#contactForm").submit(function(event) {
+        event.preventDefault(); // Prevent form submission until validation is complete
+
+        // Clear previous error messages
+        $("#nameError, #emailError, #phoneError, #responseMessage").text("");
+
+        // Get form values
+        let name = $("#name").val().trim();
+        let email = $("#email").val().trim();
+        let phoneInput = $("#phone");
+        let phoneNumber = phoneInput.val().trim();
+        let message = $("#message").val().trim();
+        let valid = true;
+
+        // Ensure the phone number starts with +91
+        if (!phoneNumber.startsWith("91")) {
+            phoneInput.val("91" + phoneNumber);
+            phoneNumber = phoneInput.val();
+        }
+
+        // Remove "91" and check length
+        let numericPhone = phoneNumber.replace("91", "").trim();
+
+        // Validation
+        if (name === "") {
+            $("#nameError").text("Name is required.");
+            valid = false;
+        }
+
+        if (email === "") {
+            $("#emailError").text("Email is required.");
+            valid = false;
+        } else if (!validateEmail(email)) {
+            $("#emailError").text("Please enter a valid email address.");
+            valid = false;
+        }
+
+        if (numericPhone.length !== 10) {
+            $("#phoneError").text("Phone number must be exactly 10 digits.");
+            valid = false;
+        }
+
+        if (message === "") {
+            $("#messageError").text("Message is required.");
+            valid = false;
+        }
+
+        if (valid) {
+            // Submit the form via AJAX (Fetch API alternative in jQuery)
+            submitForm(name, email, phoneNumber, message);
+        }
+    });
+
+    function validateEmail(email) {
+        return /\S+@\S+\.\S+/.test(email);
+    }
+
+    function submitForm(name, email, phone, message) {
+        let formData = new FormData();
+        formData.append("name", name);
+        formData.append("email", email);
+        formData.append("phone", phone);
+        formData.append("message", message);
+
+        $.ajax({
+            url: "send_email.php",
+            type: "POST",
+            data: formData,
+            processData: false,
+            contentType: false,
+            dataType: "json",
+            success: function(data) {
+                if (data.success) {
+                    $("#responseMessage").text(data.message);
+                    showSnackbar();
+                    $("#contactForm")[0].reset(); // Reset form after success
+                } else {
+                    $("#responseMessage").text("Failed to send message: " + data.error);
+                }
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                $("#responseMessage").text("Error: " + errorThrown);
+            }
+        });
+    }
+
+    function showSnackbar() {
+        let snackbar = $("#snackbar");
+        snackbar.addClass("show");
+
+        // Hide Snackbar after 2 seconds
+        setTimeout(function() {
+            snackbar.removeClass("show");
+        }, 2000);
+    }
+});
+
+//home banner course dropdown list
+$(document).ready(function () {
+    const $dropdown = $(".custom-dropdown");
+    const $selected = $(".dropdown-selected");
+    const $dropdownList = $(".dropdown-list");
+    const $options = $(".dropdown-list li");
+
+    // Toggle dropdown on click
+    $dropdown.click(function (event) {
+        event.stopPropagation(); // Prevent closing when clicking inside
+        $dropdownList.toggle();
+    });
+
+    // Select option
+    $options.click(function () {
+        $selected.text($(this).text());
+        $dropdownList.hide(); // Hide dropdown after selection
+    });
+
+    // Close dropdown when clicking outside
+    $(document).click(function (event) {
+        if (!$dropdown.is(event.target) && !$dropdown.has(event.target).length) {
+            $dropdownList.hide();
+        }
+    });
+});
