@@ -57,11 +57,13 @@
     <link rel="icon" href="https://lgs.ac.uk/img/fav-icon.png" />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href=" https://lgs.ac.uk/css/style.css?v=3.4" />
 
     <script>
@@ -69,10 +71,10 @@
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('/serviceworker.js', {
                 scope: '.'
-            }).then(function(registration) {
+            }).then(function (registration) {
                 // Registration was successful
                 //  console.log('Laravel PWA: ServiceWorker registration successful with scope: ', registration.scope);
-            }, function(err) {
+            }, function (err) {
                 // registration failed :(
                 //  console.log('Laravel PWA: ServiceWorker registration failed: ', err);
             });
@@ -100,169 +102,121 @@
 </head>
 
 <body class="">
-
-    <div class="search_box_wrapper">
-        <div class="search_box_content">
-            <span class="search_box_close_btn">
-    <i class="bi bi-x-circle-fill"></i>
-  </span>
-            <div class="theme_input_box">
-                <form action="https://lgs.ac.uk/programmes/search" method="get">
-                    <input type="text" class="form-control" name="name" placeholder="Search" />
-                    <button type="submit"><i class="bi bi-search"></i></button>
-                </form>
-            </div>
-        </div>
-    </div>
-    <div class="side_navbar_wrapper">
-        <div class="side_navbar_overlay"></div>
-        <div class="side_navbar_content">
-
-
-            <div class="row mb-5">
-                <div class="col-12 text-right">
-                    <a target="_blank" href="https://canvas.myunihub.net/login/canvas" class="theme_btn theme_btn_secondary ml-auto">
-          My UniHub
-        </a>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-12">
-                    <ul class="header_navlinks">
-                        <li><a href="https://lgs.ac.uk">Home</a></li>
-                        <li><a href=" https://lgs.ac.uk/studying-with-us">Studying with Us</a></li>
-                        <li><a href=" https://lgs.ac.uk/about-us">About Us</a></li>
-                        <li><a href="https://lgs.ac.uk/programmes">Programmes</a></li>
-                        <li><a href="https://lgs.ac.uk/kaplan-test-of-english-kte">Kaplan Test of English (KTE)</a></li>
-                        <li><a href=" https://lgs.ac.uk/contact-us">Contact Us</a></li>
-                        <li><a href=" https://lgs.ac.uk/alumni">Alumni</a></li>
-                    </ul>
-
-                    <p class="mt-lg-5 mt-2 mb-4 theme_color_white">Intakes Starts in April, July, October and January</p>
-                    <a href="https://lgs.ac.uk/apply-online" class="theme_btn">
-          Apply Now
-        </a>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <header>
-        <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg p-0">
-                <a class="navbar-brand p-0" href="https://lgs.ac.uk">
-                <img src="https://lgs.ac.uk/img/logo-main.svg " alt="" />
-            </a>
-
-
-                <div class="right_header_box">
-                    <button type="button" class="header_search_btn">
-                    <i class="bi bi-search"></i>
-                </button>
-
-                    <div class="country_list">
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                            <img src="https://lgs.ac.uk/img/flag-uk.webp" alt="">
-                            United Kingdom
-                        </button>
-                            <div class="dropdown-menu py-0">
-                                <a class="dropdown-item active mb-0" href="javascript:void(0);">
-                                <img src="https://lgs.ac.uk/img/flag-uk.webp" alt="">
-                                United Kingdom
-                            </a>
-
-                                <a class="dropdown-item" href="https://lgs.edu.mt/"> <img src="https://lgs.ac.uk/img/flag-malta.webp" alt="">
-                                Malta</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="sr-only"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            </nav>
-        </div>
-    </header>
-    <div class="container">
-    </div>
-
-
-
-
-
-
-
     <section class="common_banner_sec">
         <img src="https://lgs.ac.uk/img/banners/banner-contact.webp" class="banner_img" alt="">
         <div class="overlay"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 ">
-                    <div class="heading_box">
-                        <h1>General Enquiry Form
-                        </h1>
-                        <span class="theme_hr "></span>
+        <div class="main-header">
+            <img class="logo" src="https://rawasrazak3.github.io/LYMAX-SA/img/lymax-main-logo.svg " alt="" />
+            <div class="navbar">
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Study With Us</a></li>
+                        <li><a href="#">Programmes</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="side-drawer-button">
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" onclick="openDrawer()"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="sr-only"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+        </div>
+
+        <div id="sideDrawer" class="side-drawer">
+            <button class="close-btn" onclick="closeDrawer()">✖</button>
+            <div class="drawer-content">
+                <img class="logo" src="https://rawasrazak3.github.io/LYMAX-SA/img/lymax-main-logo.svg" alt="Logo">
+
+                <div class="drawer-body">
+                    <div class="drawer-body-content">
+                        <div class="contact-section">
+                            <h3>Get In Touch</h3>
+                            <br>
+                            <p><i class="fa-solid fa-envelope"></i> Email Us <br> <span class="pl-4"
+                                    style="font-size: 18px;font-weight: bold;">info@LymaxLearning.com</span></p>
+                            <p><i class="fa-solid fa-phone"></i> Call Us <br><span class="pl-4"
+                                    style="font-size: 18px;font-weight: bold;">+91 7994748495</span></p>
+                            <button class="navigate-btn"
+                                onclick="window.open('https://maps.app.goo.gl/fo2E7qLkoRLqE9Yw5', '_blank')">
+                                <i class="fa-solid fa-location-dot"></i> Navigate
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="drawer-body-content">
+                        <div class="quick-links">
+                            <h3>Quick Links</h3>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Apply Now</a></li>
+                                <li><a href="#">Careers</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="drawer-body-content">
+                        <div class="main-links">
+                            <a href="#">About Us</a>
+                            <a href="#">Study with Us</a>
+                            <a href="#">Programmes</a>
+                            <a href="#">Contact Us</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-
-
-
-
-
-
-
     <!-- programme overview section start -->
-
     <section class="programme__overview__sec">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="theme_content_box">
+                        <h1>General Enquiry</h1>
                         <div class="row">
                             <div class="col-lg-8 mb-lg-8 mb-4">
                                 <script src="https://js-na2.hsforms.net/forms/embed/241940021.js" defer></script>
-                                <div class="hs-form-frame"  
-                                    data-region="na2" 
-                                    data-form-id="d2000e22-8287-4819-8c5d-5a6e488b4d7a" 
-                                data-portal-id="241940021">
+                                <div class="hs-form-frame" data-region="na2"
+                                    data-form-id="d2000e22-8287-4819-8c5d-5a6e488b4d7a" data-portal-id="241940021">
                                 </div>
                             </div>
                             <div class="col-lg-4 pt-4">
                                 <div class="theme_card_alternate">
                                     <ul>
-                                        <li> <a target="_blank" href="https://goo.gl/maps/7AdBRXtQfbYWwzFv8"><i class="bi bi-geo-alt-fill"></i>
-                <p>8
-                    Waterside Court, Galleon Boulevard Dartford, DA2 6NX, United Kingdom</p>
-            </a></li>
+                                        <li> <a target="_blank" href="https://goo.gl/maps/7AdBRXtQfbYWwzFv8"><i
+                                                    class="bi bi-geo-alt-fill"></i>
+                                                <p>8
+                                                    Waterside Court, Galleon Boulevard Dartford, DA2 6NX, United Kingdom
+                                                </p>
+                                            </a></li>
                                         <li class="theme_color_primary">
                                             <a href="javascript:void(0)">
-                <i class="bi bi-calendar2-week"></i>
-                <p>Monday - Friday</p>
-            </a>
+                                                <i class="bi bi-calendar2-week"></i>
+                                                <p>Monday - Friday</p>
+                                            </a>
 
                                         </li>
 
                                         <li>
                                             <a href="javascript:void(0)">
-                <i class="bi bi-alarm"></i>
-                <p>08:00AM – 16:00PM</p>
-            </a>
+                                                <i class="bi bi-alarm"></i>
+                                                <p>08:00AM – 16:00PM</p>
+                                            </a>
                                         </li>
                                         <li>
                                             <a href="javascript:void(0)">
-                <i class="bi bi-x-octagon-fill"></i>
-                <p>Closed on UK bank Holidays</p>
-            </a>
+                                                <i class="bi bi-x-octagon-fill"></i>
+                                                <p>Closed on UK bank Holidays</p>
+                                            </a>
                                         </li>
                                     </ul>
                                 </div>
@@ -288,22 +242,22 @@
                         <ul class="address_ul">
                             <li>
                                 <a target="_blank" href="https://goo.gl/maps/7AdBRXtQfbYWwzFv8">
-                                <i class="bi bi-globe"></i>
-                                <p>8
-                                    Waterside Court, Galleon Boulevard Dartford, DA2 6NX, United Kingdom</p>
-                            </a>
+                                    <i class="bi bi-globe"></i>
+                                    <p>8
+                                        Waterside Court, Galleon Boulevard Dartford, DA2 6NX, United Kingdom</p>
+                                </a>
                             </li>
                             <li>
                                 <a href="tel:+44(0)2071184242">
-                                <i class="bi bi-telephone-fill"></i>
-                                <p>+44(0)20 7118 4242</p>
-                            </a>
+                                    <i class="bi bi-telephone-fill"></i>
+                                    <p>+44(0)20 7118 4242</p>
+                                </a>
                             </li>
                             <li>
                                 <a href="mailto:help@lgs.ac.uk" target="_blank">
-                                <i class="bi bi-envelope-fill"></i>
-                                <p>help@lgs.ac.uk</p>
-                            </a>
+                                    <i class="bi bi-envelope-fill"></i>
+                                    <p>help@lgs.ac.uk</p>
+                                </a>
                             </li>
 
                         </ul>
@@ -327,8 +281,10 @@
                                     <li><a href="https://lgs.ac.uk/privacy-cookies">Privacy & cookies</a></li>
                                     <li><a href="https://lgs.ac.uk/policies">Policies and procedures</a></li>
                                     <li><a href="https://lgs.ac.uk/copyright">Copyright notice</a></li>
-                                    <li><a href="https://lgs.ac.uk/external-linking-policy">External linking policy</a></li>
-                                    <li><a href="https://lgs.ac.uk/accessibility-statement">Accessibility Statement</a></li>
+                                    <li><a href="https://lgs.ac.uk/external-linking-policy">External linking policy</a>
+                                    </li>
+                                    <li><a href="https://lgs.ac.uk/accessibility-statement">Accessibility Statement</a>
+                                    </li>
                                 </ul>
                             </div>
 
@@ -336,16 +292,22 @@
                                 <h6>Stay connected</h6>
                                 <ul class="social_links">
                                     <li>
-                                        <a target="_blank" href="https://www.facebook.com/lgsglobal"><i class="bi bi-facebook"></i></a>
+                                        <a target="_blank" href="https://www.facebook.com/lgsglobal"><i
+                                                class="bi bi-facebook"></i></a>
                                     </li>
                                     <li>
-                                        <a target="_blank" href="https://www.linkedin.com/company/londongraduateschool/"><i class="bi bi-linkedin"></i></a>
+                                        <a target="_blank"
+                                            href="https://www.linkedin.com/company/londongraduateschool/"><i
+                                                class="bi bi-linkedin"></i></a>
                                     </li>
                                     <li>
-                                        <a target="_blank" href="https://www.instagram.com/lgsglobal/"><i class="bi bi-instagram"></i></a>
+                                        <a target="_blank" href="https://www.instagram.com/lgsglobal/"><i
+                                                class="bi bi-instagram"></i></a>
                                     </li>
                                     <li>
-                                        <a target="_blank" href="https://www.youtube.com/channel/UCzIcs0nldEov5cEZXX0h33w"><i class="bi bi-youtube"></i></a>
+                                        <a target="_blank"
+                                            href="https://www.youtube.com/channel/UCzIcs0nldEov5cEZXX0h33w"><i
+                                                class="bi bi-youtube"></i></a>
                                     </li>
                                 </ul>
                             </div>
@@ -356,16 +318,23 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <p class="mb-0">©2025 All Rights Reserved. © London Graduate School and/or its subsidiaries or affiliates are copyrights
+                        <p class="mb-0">©2025 All Rights Reserved. © London Graduate School and/or its subsidiaries or
+                            affiliates are copyrights
                         </p>
                     </div>
                 </div>
             </div>
         </footer>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+        crossorigin="anonymous"></script>
     <!-- <script src="https://lgs.ac.uk/js-cynosure/main-custom.js"></script> -->
     <!-- Sweet alert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -380,7 +349,7 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('.select-2').select2({
 
             });
@@ -388,7 +357,9 @@
     </script>
 
     <!-- input mask -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8-beta.17/jquery.inputmask.min.js" integrity="sha512-zdfH1XdRONkxXKLQxCI2Ak3c9wNymTiPh5cU4OsUavFDATDbUzLR+SYWWz0RkhDmBDT0gNSUe4xrQXx8D89JIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8-beta.17/jquery.inputmask.min.js"
+        integrity="sha512-zdfH1XdRONkxXKLQxCI2Ak3c9wNymTiPh5cU4OsUavFDATDbUzLR+SYWWz0RkhDmBDT0gNSUe4xrQXx8D89JIQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         $(".sort-code").inputmask("99-99-99");
         $(".national-insurance-number").inputmask("AA 99 99 99 A");
@@ -396,7 +367,7 @@
 
     <!-- Bootstrap custom file input -->
     <script>
-        $('.custom-file-input').on('change', function() {
+        $('.custom-file-input').on('change', function () {
             //get the file name
             var fileName = $(this).val();
             //replace the "Choose a file" label

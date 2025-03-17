@@ -52,30 +52,36 @@
 
     <!-- Tile for Win8 -->
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="https://rawasrazak3.github.io/LYMAX-SA/img/icons/icon-256x256.png?v=2.6">
+    <meta name="msapplication-TileImage"
+        content="https://rawasrazak3.github.io/LYMAX-SA/img/icons/icon-256x256.png?v=2.6">
 
     <link rel="icon" href="https://rawasrazak3.github.io/LYMAX-SA/img/fav-icon.png" />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://rawasrazak3.github.io/LYMAX-SA/css/style.css?v=3.4" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css?v=3.4" />
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- font awesome icon -->
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 
     <script>
         // Initialize the service worker
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('/serviceworker.js', {
                 scope: '.'
-            }).then(function(registration) {
+            }).then(function (registration) {
                 // Registration was successful
                 //  console.log('Laravel PWA: ServiceWorker registration successful with scope: ', registration.scope);
-            }, function(err) {
+            }, function (err) {
                 // registration failed :(
                 //  console.log('Laravel PWA: ServiceWorker registration failed: ', err);
             });
@@ -94,12 +100,35 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
         .swal2-container {
             z-index: 9999999 !important;
         }
     </style>
+
+    <script>
+        function openDrawer() {
+            document.getElementById("sideDrawer").classList.add("open");
+        }
+
+        function closeDrawer() {
+            document.getElementById("sideDrawer").classList.remove("open");
+        }
+    </script>
+
+    <script>
+        // Function to close overlay manually
+        function closeOverlay() {
+            document.getElementById("imageOverlay").style.display = "none";
+        }
+
+        // Automatically close overlay after 3 seconds
+        setTimeout(() => {
+            closeOverlay();
+        }, 3000);
+    </script>
 
     <meta itemprop="image" content="">
     <meta property="og:image" content="" />
@@ -120,11 +149,11 @@
             });
         });
     </script> -->
-    
+
 </head>
 
 <body class="">
-    <div class="side_navbar_wrapper">
+    <!-- <div class="side_navbar_wrapper">
         <div class="side_navbar_overlay"></div>
         <div class="side_navbar_content">
             <div class="row">
@@ -139,8 +168,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <header>
+    </div> -->
+    <!-- <header>
         <div class="container-fluid">
             <nav class="navbar navbar-expand-lg p-0">
                 <a class="navbar-brand p-0" href="https://rawasrazak3.github.io/LYMAX-SA">
@@ -149,130 +178,231 @@
 
                 <h2 class="header-text">India's 1st World Class Higher Education Hub</h2>
 
-                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="sr-only"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                </button>    
+                </button>
             </nav>
         </div>
-    </header>
-    <div class="container"></div>
-    
-    <!-- home banner start -->
+    </header> -->
+    <!-- <div class="container"></div> -->
+
     <section class="home-banner">
-        <div class="home_banner_overlay"></div>
+        <video autoplay muted loop playsinline >
+            <source src="https://rawasrazak3.github.io/LYMAX-SA/img/video/london.mp4" type="video/mp4">
+        </video>
         
+        <!-- Dark Overlay -->
+        <div class="overlay"></div>
+
+        <!-- Navbar -->
+        <div class="main-header">
+            <img class="logo" src="https://rawasrazak3.github.io/LYMAX-SA/img/lymax-main-logo.svg " alt="" />
+            <div class="navbar">
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Study With Us</a></li>
+                        <li><a href="#">Programmes</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </nav>
+                <!-- <button class="cta-button">Let's Talk</button> -->
+            </div>
+            <div class="side-drawer-button">
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                    onclick="openDrawer()"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="sr-only"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="home-banner-content">
+            <h1>India's 1st World Higher Secondary University</h1>
+            <h2>Unlock Your Global Career with Our</h2>
+            <h3>Modular Acceleration Programmes(MAP)</h3>
+            <h6>Bachelors/Masters/PhD Progressions</h6>
+
+            <div class="home-banner-content-stats">
+                <div class="home-banner-content-stat-box">
+                    <h2>72</h2>
+                    <p>Universities</p>
+                </div>
+                <div class="home-banner-content-stat-box">
+                    <h2>13+</h2>
+                    <p>Countries</p>
+                </div>
+                <div class="home-banner-content-stat-box">
+                    <h2>30+</h2>
+                    <p>Courses</p>
+                </div>
+                <div class="home-banner-content-stat-box">
+                    <h2>70%</h2>
+                    <p>Scholarships</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="sideDrawer" class="side-drawer">
+            <button class="close-btn" onclick="closeDrawer()">✖</button>
+            <div class="drawer-content">
+                <img class="logo" src="https://rawasrazak3.github.io/LYMAX-SA/img/lymax-main-logo.svg" alt="Logo">
+
+                <div class="drawer-body">
+                    <div class="drawer-body-content">
+                        <div class="contact-section">
+                            <h3>Get In Touch</h3>
+                            <br>
+                            <p><i class="fa-solid fa-envelope"></i> Email Us <br> <span class="pl-4" style="font-size: 18px;font-weight: bold;">info@LymaxLearning.com</span></p>
+                            <p><i class="fa-solid fa-phone"></i> Call Us <br><span class="pl-4" style="font-size: 18px;font-weight: bold;">+91 7994748495</span></p>
+                            <button class="navigate-btn" onclick="window.open('https://maps.app.goo.gl/fo2E7qLkoRLqE9Yw5', '_blank')">
+                                <i class="fa-solid fa-location-dot"></i> Navigate
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="drawer-body-content">
+                        <div class="quick-links">
+                            <h3>Quick Links</h3>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Apply Now</a></li>
+                                <li><a href="#">Careers</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="drawer-body-content">
+                        <div class="main-links">
+                            <a href="#">About Us</a>
+                            <a href="#">Study with Us</a>
+                            <a href="#">Programmes</a>
+                            <a href="#">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Overlay Container -->
+        <div class="home-ads-banner-overlay" id="imageOverlay">
+            <button class="close-btn" onclick="closeOverlay()">×</button>
+            <img src="/img/home-banner-ads.jpg" alt="Overlay Image">
+        </div>
+
+    </section>
+
+    <!-- home banner start -->
+    <!-- <section class="home-banner">
+        <div class="home_banner_overlay"></div> -->
+
         <!-- Video for Desktop -->
-        <video class="desktop-video" src="https://rawasrazak3.github.io/LYMAX-SA/img/video/london.mp4" loop muted autoplay></video>
+        <!-- <video class="desktop-video" src="https://rawasrazak3.github.io/LYMAX-SA/img/video/london.mp4" autoplay=""
+            muted="" loop="" playsinline="" preload="metadata"></video> -->
 
         <!-- Image for Mobile -->
-        <img class="mobile-image" src="https://rawasrazak3.github.io/LYMAX-SA/img/home/banner/home-thumbnail.webp" alt="London" />
+        <!-- <img class="mobile-image" src="https://rawasrazak3.github.io/LYMAX-SA/img/home/banner/home-thumbnail.webp" alt="London" /> -->
 
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <!-- <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="caption_box">
                         <div class="container">
                             <div class="row">
+                                <a class="navbar-brand p-0" href="https://rawasrazak3.github.io/LYMAX-SA">
+                                    <img src="https://rawasrazak3.github.io/LYMAX-SA/img/lymax-main-logo.svg " alt="" />
+                                </a>
                                 <div class="col-lg-8 offset-lg-0 text-sm-center">
                                     <h3 class="title mb-1">Unlock Your Global Career with Our</h3>
                                     <h1 class="theme_color_white mb-3">Modular Acceleration Programmes(MAP)</h1>
-                                    <h6 class="theme_color_white theme_bg_primary d-inline-block px-3 py-2">Bachelors/Masters/PhD Progressions</h6>
+                                    <h6 class="theme_color_white theme_bg_primary d-inline-block px-3 py-2">
+                                        Bachelors/Masters/PhD Progressions</h6>
                                     <br>
                                     <div class="home_course_dropdown">
                                         <div class="custom-dropdown">
                                             <div class="dropdown-selected">Looking for a course?</div>
                                             <ul class="dropdown-list">
                                                 <li data-value="accounting">
-                                                    <a href="https://rawasrazak3.github.io/LYMAX-SA/programmes/accounting-and-finance">
+                                                    <a
+                                                        href="https://rawasrazak3.github.io/LYMAX-SA/programmes/accounting-and-finance">
                                                         Accounting & Finance
-                                                    <a>
+                                                        <a>
                                                 </li>
                                                 <li data-value="business">
-                                                    <a href="https://rawasrazak3.github.io/LYMAX-SA/programmes/business-and-management">
+                                                    <a
+                                                        href="https://rawasrazak3.github.io/LYMAX-SA/programmes/business-and-management">
                                                         Business & Management
                                                     </a>
                                                 </li>
                                                 <li data-value="data-science">
-                                                    <a href="https://rawasrazak3.github.io/LYMAX-SA/programmes/data-science-and-artificial-intelligence">
+                                                    <a
+                                                        href="https://rawasrazak3.github.io/LYMAX-SA/programmes/data-science-and-artificial-intelligence">
                                                         Data Science & Artificial Intelligence
                                                     </a>
                                                 </li>
                                                 <li data-value="cyber-security">
-                                                    <a href="https://rawasrazak3.github.io/LYMAX-SA/programmes/cyber-security-and-networking">
+                                                    <a
+                                                        href="https://rawasrazak3.github.io/LYMAX-SA/programmes/cyber-security-and-networking">
                                                         Cyber Security & Networking
                                                     </a>
                                                 </li>
                                                 <li data-value="logistics">
-                                                    <a href="https://rawasrazak3.github.io/LYMAX-SA/programmes/logistics-and-supplychain">
+                                                    <a
+                                                        href="https://rawasrazak3.github.io/LYMAX-SA/programmes/logistics-and-supplychain">
                                                         Logistics & Supply Chain
                                                     </a>
                                                 </li>
                                                 <li data-value="education">
-                                                    <a href="https://rawasrazak3.github.io/LYMAX-SA/programmes/education-and-training">
+                                                    <a
+                                                        href="https://rawasrazak3.github.io/LYMAX-SA/programmes/education-and-training">
                                                         Education & Training
                                                     </a>
                                                 </li>
                                                 <li data-value="it">
-                                                    <a href="https://rawasrazak3.github.io/LYMAX-SA/programmes/information-technology">
+                                                    <a
+                                                        href="https://rawasrazak3.github.io/LYMAX-SA/programmes/information-technology">
                                                         Information Technology
                                                     </a>
                                                 </li>
                                                 <li data-value="hospitality">
-                                                    <a href="https://rawasrazak3.github.io/LYMAX-SA/programmes/hospitality-and-tourism">
+                                                    <a
+                                                        href="https://rawasrazak3.github.io/LYMAX-SA/programmes/hospitality-and-tourism">
                                                         Hospitality & Tourism
                                                     </a>
                                                 </li>
                                                 <li data-value="health">
-                                                    <a href="https://rawasrazak3.github.io/LYMAX-SA/programmes/health-and-social-care">
+                                                    <a
+                                                        href="https://rawasrazak3.github.io/LYMAX-SA/programmes/health-and-social-care">
                                                         Health & Social Care
                                                     </a>
                                                 </li>
                                             </ul>
                                         </div>
-                                    </div>                                    
-                                    <!-- <script>
-                                        document.addEventListener("DOMContentLoaded", function () {
-                                            const dropdown = document.querySelector(".custom-dropdown");
-                                            const selected = document.querySelector(".dropdown-selected");
-                                            const dropdownList = document.querySelector(".dropdown-list");
-                                            const options = document.querySelectorAll(".dropdown-list li");
-                                
-                                            // Toggle dropdown on click
-                                            dropdown.addEventListener("click", function () {
-                                                dropdownList.style.display = dropdownList.style.display === "block" ? "none" : "block";
-                                            });
-                                
-                                            // Select option
-                                            options.forEach(option => {
-                                                option.addEventListener("click", function () {
-                                                    selected.textContent = this.textContent;
-                                                    dropdownList.style.display = "none"; // Hide dropdown after selection
-                                                });
-                                            });
-                                
-                                            // Close dropdown when clicking outside
-                                            document.addEventListener("click", function (event) {
-                                                if (!dropdown.contains(event.target)) {
-                                                    dropdownList.style.display = "none";
-                                                }
-                                            });
-                                        });
-                                    </script> -->
-
+                                    </div> -->
+<!-- 
                                     <br>
-                                    <a href="https://rawasrazak3.github.io/LYMAX-SA/apply-online" class="theme_btn mb-sm-0 mb-2">Register Your Course Interest</a>
+                                    <a href="https://rawasrazak3.github.io/LYMAX-SA/apply-online"
+                                        class="theme_btn mb-sm-0 mb-2">Register Your Course Interest</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-    </section>
+    </section> -->
     <!-- home banner end -->
-    
+
     <!-- avaiilable degree section start -->
     <section class="theme_bg py-0">
         <div class="container-fluid px-0">
@@ -282,31 +412,38 @@
                 </div>
                 <div class="col-lg-6 text-start p-sm-6 p-4">
                     <h3 class="mb-2" style="font-size: x-large;">Affordable, Flexible, Global, and Future-Ready</h3>
-                    <p style="text-align: justify;">At Lymax Learning, we believe that quality education should not be limited by financial barriers. 
-                        Our vision is to empower students with flexible and affordable learning opportunities that enable 
-                        them to achieve their academic and career aspirations without incurring the high costs typically 
+                    <p style="text-align: justify;">At Lymax Learning, we believe that quality education should not be
+                        limited by financial barriers.
+                        Our vision is to empower students with flexible and affordable learning opportunities that
+                        enable
+                        them to achieve their academic and career aspirations without incurring the high costs typically
                         associated with higher education.</p>
                     <h3 class="mb-2" style="font-size: x-large;">What We Offer</h3>
-                    <p style="text-align: justify;">Lymax Learning specializes in pathway programs that provide an alternative route to earning a bachelor's 
-                        or master’s degree. Our students can complete part of their studies with us at significantly lower 
-                        costs and then transfer to top universities worldwide to finish their degree. This unique model 
-                        allows students to save up to two-thirds of traditional university tuition fees while still obtaining 
+                    <p style="text-align: justify;">Lymax Learning specializes in pathway programs that provide an
+                        alternative route to earning a bachelor's
+                        or master’s degree. Our students can complete part of their studies with us at significantly
+                        lower
+                        costs and then transfer to top universities worldwide to finish their degree. This unique model
+                        allows students to save up to two-thirds of traditional university tuition fees while still
+                        obtaining
                         a globally recognized qualification.</p>
-                    <p style="text-align: justify;">By choosing Lymax Learning, students benefit from a structured academic pathway, expert guidance, and 
+                    <p style="text-align: justify;">By choosing Lymax Learning, students benefit from a structured
+                        academic pathway, expert guidance, and
                         a seamless transition to universities in the UK, US, Canada, Europe, and beyond.</p>
                 </div>
             </div>
         </div>
     </section>
     <!-- avaiilable degree section end -->
-    
+
     <!-- master degree section start -->
     <section class="master__degree__sec px-sm-0 px-3">
         <div class="container">
             <div class="row mb-4">
                 <div class="col-lg-12 offset-lg-0.5">
                     <h2 style="color: var(--theme-color-primary);">MAP Programs </h2>
-                    <p class="mb-md- mb-35">Students can choose from our wide range of programmes to meet individual career goals
+                    <p class="mb-md- mb-35">Students can choose from our wide range of programmes to meet individual
+                        career goals
                     </p>
                     <!-- carousel row -->
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="3000">
@@ -316,91 +453,53 @@
 
                                     <div class="col-md-4">
                                         <div class="theme_card">
-                                            <a href="https://rawasrazak3.github.io/LYMAX-SA/programmes/accounting-and-finance">
-                                             <img src="https://rawasrazak3.github.io/LYMAX-SA/uploads/programmes/accounting-finance-course.webp" alt="">
-                                             <div class="theme_card_body">
-                                                 <h3>Accounting & Finance</h3>  
-                                                 <a href="https://rawasrazak3.github.io/LYMAX-SA/apply-online" class="theme_btn">Apply Now</a>                                            
-                                             </div>
-                                             <div class="theme_card_footer">
-                                                 <p><span class="theme_color_primary">Credits: </span>120/240</p>
-                                             </div>
-                                         </a>
+                                            <a
+                                                href="https://rawasrazak3.github.io/LYMAX-SA/programmes/accounting-and-finance">
+                                                <img src="https://rawasrazak3.github.io/LYMAX-SA/uploads/programmes/accounting-finance-course.webp"
+                                                    alt="">
+                                                <div class="theme_card_body">
+                                                    <h3>Accounting & Finance</h3>
+                                                    <a href="https://rawasrazak3.github.io/LYMAX-SA/apply-online"
+                                                        class="theme_btn">Apply Now</a>
+                                                </div>
+                                                <div class="theme_card_footer">
+                                                    <p><span class="theme_color_primary">Credits: </span>120/240</p>
+                                                </div>
+                                            </a>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="theme_card">
-                                            <a href="https://rawasrazak3.github.io/LYMAX-SA/programmes/business-and-management">
-                                             <img src="https://rawasrazak3.github.io/LYMAX-SA/uploads/programmes/business-management-course.webp" alt="">
-                                             <div class="theme_card_body">
-                                                 <h3>Business & Management</h3> 
-                                                 <a href="https://rawasrazak3.github.io/LYMAX-SA/apply-online" class="theme_btn">Apply Now</a> 
-                                             </div>
-                                             <div class="theme_card_footer">
-                                                <p><span class="theme_color_primary">Credits: </span>120/240</p>
-                                             </div>
-                                         </a>
+                                            <a
+                                                href="https://rawasrazak3.github.io/LYMAX-SA/programmes/business-and-management">
+                                                <img src="https://rawasrazak3.github.io/LYMAX-SA/uploads/programmes/business-management-course.webp"
+                                                    alt="">
+                                                <div class="theme_card_body">
+                                                    <h3>Business & Management</h3>
+                                                    <a href="https://rawasrazak3.github.io/LYMAX-SA/apply-online"
+                                                        class="theme_btn">Apply Now</a>
+                                                </div>
+                                                <div class="theme_card_footer">
+                                                    <p><span class="theme_color_primary">Credits: </span>120/240</p>
+                                                </div>
+                                            </a>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="theme_card">
-                                            <a href="https://rawasrazak3.github.io/LYMAX-SA/programmes/data-science-and-artificial-intelligence">
-                                             <img src="https://rawasrazak3.github.io/LYMAX-SA/uploads/programmes/data-science-artificial-intelligence-course.webp" alt="">
-                                             <div class="theme_card_body">
-                                                 <h3>Data Science & Artificial Intelligence</h3>
-                                                 <a href="https://rawasrazak3.github.io/LYMAX-SA/apply-online" class="theme_btn">Apply Now</a> 
-                                             </div>
-                                             <div class="theme_card_footer">
-                                                <p><span class="theme_color_primary">Credits: </span>120/240</p>
-                                             </div>
-                                         </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="carousel-item ">
-                                <div class="row mb-4">
-                                    <div class="col-md-4">
-                                        <div class="theme_card">
-                                            <a href="https://rawasrazak3.github.io/LYMAX-SA/programmes/cyber-security-and-networking">
-                                             <img src="https://rawasrazak3.github.io/LYMAX-SA/uploads/programmes/cyber-ecurity-networking-course.webp" alt="">
-                                             <div class="theme_card_body">
-                                                 <h3>Cyber Security & Networking</h3>   
-                                                 <a href="https://rawasrazak3.github.io/LYMAX-SA/apply-online" class="theme_btn">Apply Now</a>                                         
-                                             </div>
-                                             <div class="theme_card_footer">
-                                                <p><span class="theme_color_primary">Credits: </span>120/240</p>
-                                             </div>
-                                         </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="theme_card">
-                                            <a href="https://rawasrazak3.github.io/LYMAX-SA/programmes/logistics-and-supplychain">
-                                             <img src="https://rawasrazak3.github.io/LYMAX-SA/uploads/programmes/logistics-supplychain-course.webp" alt="">
-                                             <div class="theme_card_body">
-                                                 <h3>Logistics & Supplychain</h3>
-                                                 <a href="https://rawasrazak3.github.io/LYMAX-SA/apply-online" class="theme_btn">Apply Now</a> 
-                                             </div>
-                                             <div class="theme_card_footer">
-                                                <p><span class="theme_color_primary">Credits: </span>120/240</p>
-                                             </div>
-                                         </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="theme_card">
-                                            <a href="https://rawasrazak3.github.io/LYMAX-SA/programmes/education-and-training">
-                                             <img src="https://rawasrazak3.github.io/LYMAX-SA/uploads/programmes/education-training-course.webp" alt="">
-                                             <div class="theme_card_body">
-                                                 <h3>Education & Training</h3>
-                                                 <a href="https://rawasrazak3.github.io/LYMAX-SA/apply-online" class="theme_btn">Apply Now</a> 
-                                             </div>
-                                             <div class="theme_card_footer">
-                                                <p><span class="theme_color_primary">Credits: </span>120/240</p>
-                                             </div>
-                                         </a>
+                                            <a
+                                                href="https://rawasrazak3.github.io/LYMAX-SA/programmes/data-science-and-artificial-intelligence">
+                                                <img src="https://rawasrazak3.github.io/LYMAX-SA/uploads/programmes/data-science-artificial-intelligence-course.webp"
+                                                    alt="">
+                                                <div class="theme_card_body">
+                                                    <h3>Data Science & Artificial Intelligence</h3>
+                                                    <a href="https://rawasrazak3.github.io/LYMAX-SA/apply-online"
+                                                        class="theme_btn">Apply Now</a>
+                                                </div>
+                                                <div class="theme_card_footer">
+                                                    <p><span class="theme_color_primary">Credits: </span>120/240</p>
+                                                </div>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -410,79 +509,148 @@
                                 <div class="row mb-4">
                                     <div class="col-md-4">
                                         <div class="theme_card">
-                                            <a href="https://rawasrazak3.github.io/LYMAX-SA/programmes/information-technology">
-                                             <img src="https://rawasrazak3.github.io/LYMAX-SA/uploads/programmes/information-technology-course.webp" alt="">
-                                             <div class="theme_card_body">
-                                                 <h3>Information Technology</h3>
-                                                 <a href="https://rawasrazak3.github.io/LYMAX-SA/apply-online" class="theme_btn">Apply Now</a> 
-                                             </div>
-                                             <div class="theme_card_footer">
-                                                <p><span class="theme_color_primary">Credits: </span>120/240</p>
-                                             </div>
-                                         </a>
+                                            <a
+                                                href="https://rawasrazak3.github.io/LYMAX-SA/programmes/cyber-security-and-networking">
+                                                <img src="https://rawasrazak3.github.io/LYMAX-SA/uploads/programmes/cyber-ecurity-networking-course.webp"
+                                                    alt="">
+                                                <div class="theme_card_body">
+                                                    <h3>Cyber Security & Networking</h3>
+                                                    <a href="https://rawasrazak3.github.io/LYMAX-SA/apply-online"
+                                                        class="theme_btn">Apply Now</a>
+                                                </div>
+                                                <div class="theme_card_footer">
+                                                    <p><span class="theme_color_primary">Credits: </span>120/240</p>
+                                                </div>
+                                            </a>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="theme_card">
-                                            <a href="https://rawasrazak3.github.io/LYMAX-SA/programmes/hospitality-and-tourism">
-                                             <img src="https://rawasrazak3.github.io/LYMAX-SA/uploads/programmes/hospitality-tourism-course.webp" alt="">
-                                             <div class="theme_card_body">
-                                                 <h3>Hospitality & Tourism</h3>
-                                                 <a href="https://rawasrazak3.github.io/LYMAX-SA/apply-online" class="theme_btn">Apply Now</a> 
-                                             </div>
-                                             <div class="theme_card_footer">
-                                                <p><span class="theme_color_primary">Credits: </span>120/240</p>
-                                             </div>
-                                         </a>
+                                            <a
+                                                href="https://rawasrazak3.github.io/LYMAX-SA/programmes/logistics-and-supplychain">
+                                                <img src="https://rawasrazak3.github.io/LYMAX-SA/uploads/programmes/logistics-supplychain-course.webp"
+                                                    alt="">
+                                                <div class="theme_card_body">
+                                                    <h3>Logistics & Supplychain</h3>
+                                                    <a href="https://rawasrazak3.github.io/LYMAX-SA/apply-online"
+                                                        class="theme_btn">Apply Now</a>
+                                                </div>
+                                                <div class="theme_card_footer">
+                                                    <p><span class="theme_color_primary">Credits: </span>120/240</p>
+                                                </div>
+                                            </a>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="theme_card">
-                                            <a href="https://rawasrazak3.github.io/LYMAX-SA/programmes/health-and-social-care">
-                                             <img src="https://rawasrazak3.github.io/LYMAX-SA/uploads/programmes/health-and-social-care.webp" alt="">
-                                             <div class="theme_card_body">
-                                                 <h3>Health & Social Care</h3>
-                                                 <a href="https://rawasrazak3.github.io/LYMAX-SA/apply-online" class="theme_btn">Apply Now</a> 
-                                             </div>
-                                             <div class="theme_card_footer">
-                                                <p><span class="theme_color_primary">Credits: </span>120/240</p>
-                                             </div>
-                                         </a>
+                                            <a
+                                                href="https://rawasrazak3.github.io/LYMAX-SA/programmes/education-and-training">
+                                                <img src="https://rawasrazak3.github.io/LYMAX-SA/uploads/programmes/education-training-course.webp"
+                                                    alt="">
+                                                <div class="theme_card_body">
+                                                    <h3>Education & Training</h3>
+                                                    <a href="https://rawasrazak3.github.io/LYMAX-SA/apply-online"
+                                                        class="theme_btn">Apply Now</a>
+                                                </div>
+                                                <div class="theme_card_footer">
+                                                    <p><span class="theme_color_primary">Credits: </span>120/240</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item ">
+                                <div class="row mb-4">
+                                    <div class="col-md-4">
+                                        <div class="theme_card">
+                                            <a
+                                                href="https://rawasrazak3.github.io/LYMAX-SA/programmes/information-technology">
+                                                <img src="https://rawasrazak3.github.io/LYMAX-SA/uploads/programmes/information-technology-course.webp"
+                                                    alt="">
+                                                <div class="theme_card_body">
+                                                    <h3>Information Technology</h3>
+                                                    <a href="https://rawasrazak3.github.io/LYMAX-SA/apply-online"
+                                                        class="theme_btn">Apply Now</a>
+                                                </div>
+                                                <div class="theme_card_footer">
+                                                    <p><span class="theme_color_primary">Credits: </span>120/240</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="theme_card">
+                                            <a
+                                                href="https://rawasrazak3.github.io/LYMAX-SA/programmes/hospitality-and-tourism">
+                                                <img src="https://rawasrazak3.github.io/LYMAX-SA/uploads/programmes/hospitality-tourism-course.webp"
+                                                    alt="">
+                                                <div class="theme_card_body">
+                                                    <h3>Hospitality & Tourism</h3>
+                                                    <a href="https://rawasrazak3.github.io/LYMAX-SA/apply-online"
+                                                        class="theme_btn">Apply Now</a>
+                                                </div>
+                                                <div class="theme_card_footer">
+                                                    <p><span class="theme_color_primary">Credits: </span>120/240</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="theme_card">
+                                            <a
+                                                href="https://rawasrazak3.github.io/LYMAX-SA/programmes/health-and-social-care">
+                                                <img src="https://rawasrazak3.github.io/LYMAX-SA/uploads/programmes/health-and-social-care.webp"
+                                                    alt="">
+                                                <div class="theme_card_body">
+                                                    <h3>Health & Social Care</h3>
+                                                    <a href="https://rawasrazak3.github.io/LYMAX-SA/apply-online"
+                                                        class="theme_btn">Apply Now</a>
+                                                </div>
+                                                <div class="theme_card_footer">
+                                                    <p><span class="theme_color_primary">Credits: </span>120/240</p>
+                                                </div>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
                         </div>
-                        <button class="carousel-control-prev" type="button" data-target="#carouselExampleControls" data-slide="prev">
-                         <span class="carousel-control-prev-icon" aria-hidden="true">
-                             <i class="bi bi-chevron-left"></i>
-                         </span>
-                         <span class="sr-only">Previous</span>
-                     </button>
-                        <button class="carousel-control-next" type="button" data-target="#carouselExampleControls" data-slide="next">
-                         <span class="carousel-control-next-icon" aria-hidden="true">
-                             <i class="bi bi-chevron-right"></i>
-                         </span>
-                         <span class="sr-only">Next</span>
-                     </button>
+                        <button class="carousel-control-prev" type="button" data-target="#carouselExampleControls"
+                            data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true">
+                                <i class="bi bi-chevron-left"></i>
+                            </span>
+                            <span class="sr-only">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-target="#carouselExampleControls"
+                            data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true">
+                                <i class="bi bi-chevron-right"></i>
+                            </span>
+                            <span class="sr-only">Next</span>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <!-- master degree section end -->
-    
+
     <!--school locations section start -->
     <section class="py-0">
         <div class="container-fluid p-0">
-            <h2 class="mb-4" style="text-align: center;color: var(--theme-color-primary);">From India to the World: Your Global Education Pathway!</h2>
+            <h2 class="mb-4" style="text-align: center;color: var(--theme-color-primary);">From India to the World: Your
+                Global Education Pathway!</h2>
             <div class="row no-gutters">
                 <div class="col-lg-3">
                     <div class="theme_card_secondary">
                         <a href="javascript:void(0);">
                             <div class="overlay"></div>
-                            <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/country/uk.webp" class="img-fluid w-100" alt="">
+                            <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/country/uk.webp"
+                                class="img-fluid w-100" alt="">
                             <div class="inner_content_div">
                                 <p>UNITED KINGDOM</p>
                             </div>
@@ -493,7 +661,8 @@
                     <div class="theme_card_secondary">
                         <a href="javascript:;">
                             <div class="overlay"></div>
-                            <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/country/usa.webp" class="img-fluid w-100" alt="">
+                            <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/country/usa.webp"
+                                class="img-fluid w-100" alt="">
                             <div class="inner_content_div">
                                 <p>AMERICA</p>
                             </div>
@@ -504,7 +673,8 @@
                     <div class="theme_card_secondary">
                         <a href="javascript:;">
                             <div class="overlay"></div>
-                            <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/country/canada.webp" class="img-fluid w-100 h-100 object-fit:contain" alt="">
+                            <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/country/canada.webp"
+                                class="img-fluid w-100 h-100 object-fit:contain" alt="">
                             <div class="inner_content_div">
                                 <p>CANADA</p>
                             </div>
@@ -515,7 +685,8 @@
                     <div class="theme_card_secondary">
                         <a href="javascript:;">
                             <div class="overlay"></div>
-                            <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/country/australia.webp" class="img-fluid w-100" alt="">
+                            <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/country/australia.webp"
+                                class="img-fluid w-100" alt="">
                             <div class="inner_content_div">
                                 <p>AUSTRALIA</p>
                             </div>
@@ -525,7 +696,7 @@
             </div>
         </div>
     </section>
-    
+
     <section class="py-0">
         <div class="container-fluid p-0">
             <div class="row no-gutters">
@@ -533,7 +704,8 @@
                     <div class="theme_card_secondary">
                         <a href="javascript:void(0);">
                             <div class="overlay"></div>
-                            <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/country/dubai.webp" class="img-fluid w-100" alt="">
+                            <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/country/dubai.webp"
+                                class="img-fluid w-100" alt="">
                             <div class="inner_content_div">
                                 <p>UAE</p>
                             </div>
@@ -544,7 +716,8 @@
                     <div class="theme_card_secondary">
                         <a href="javascript:;">
                             <div class="overlay"></div>
-                            <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/country/europe.webp" class="img-fluid w-100" alt="">
+                            <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/country/europe.webp"
+                                class="img-fluid w-100" alt="">
                             <div class="inner_content_div">
                                 <p>EUROPE</p>
                             </div>
@@ -555,7 +728,8 @@
                     <div class="theme_card_secondary">
                         <a href="javascript:;">
                             <div class="overlay"></div>
-                            <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/country/singapore.webp" class="img-fluid w-100" alt="">
+                            <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/country/singapore.webp"
+                                class="img-fluid w-100" alt="">
                             <div class="inner_content_div">
                                 <p>SINGAPORE</p>
                             </div>
@@ -566,7 +740,8 @@
                     <div class="theme_card_secondary">
                         <a href="javascript:;">
                             <div class="overlay"></div>
-                            <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/country/malaysia.webp" class="img-fluid w-100" alt="">
+                            <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/country/malaysia.webp"
+                                class="img-fluid w-100" alt="">
                             <div class="inner_content_div">
                                 <p>MALAYSIA</p>
                             </div>
@@ -577,7 +752,7 @@
         </div>
     </section>
     <!--school locations section end -->
-    
+
     <!-- success rate section start-->
     <section class="logo-section">
         <div class="logo-header">
@@ -585,7 +760,8 @@
             <div class="flex flex-col gap-5">
                 <br>
                 <br>
-                <h1 class="text-2xl md:text-4xl text-[#303030] font-semibold text-center md:text-start" style="color: var(--theme-color-primary);">
+                <h1 class="text-2xl md:text-4xl text-[#303030] font-semibold text-center md:text-start"
+                    style="color: var(--theme-color-primary);">
                     Our University Progressions
                 </h1>
                 <hr class="border-gray-300 md:hidden">
@@ -594,13 +770,14 @@
         </div>
         <br>
         <br>
-    
+
         <!-- Logo Slider -->
         <div class="logo-slider">
             <div class="logo-track">
                 <!-- Duplicate logos for smooth infinite scrolling -->
                 <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/anglia.webp" alt="Cork" />
-                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/bloomsberry.webp" alt="Croatia" />
+                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/bloomsberry.webp"
+                    alt="Croatia" />
                 <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/brooks.webp" alt="Czech" />
                 <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/deakin.webp" alt="University" />
                 <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/eastlondon.webp" alt="EWF" />
@@ -610,90 +787,102 @@
                 <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/hertfort.webp" alt="Lithuania" />
                 <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/leicester.webp" alt="Logo 10" />
                 <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/midland.webp" alt="Logo 11" />
-    
+
                 <!-- Duplicate logos for infinite scroll effect -->
                 <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/northum.webp" alt="Cork" />
                 <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/portsmouth.webp" alt="Croatia" />
                 <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/south-bank.webp" alt="Czech" />
-                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/stafford.webp" alt="University" />
+                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/stafford.webp"
+                    alt="University" />
                 <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/ucb.webp" alt="EWF" />
                 <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/ucd.webp" alt="Ireland" />
                 <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/uov.webp" alt="Italy" />
                 <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/uw.webp" alt="Latvia" />
                 <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/uws.webp" alt="Lithuania" />
                 <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/wastcanada.webp" alt="Logo 10" />
-                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/westminister.webp" alt="Logo 11" />
+                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/westminister.webp"
+                    alt="Logo 11" />
 
                 <!-- Duplicate logos for smooth infinite scrolling -->
                 <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/wrexham.webp" alt="Logo 10" />
                 <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/yorkville.webp" alt="Logo 11" />
-                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/abery.webp" alt="Abery Logo"/>
-                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/arden.webp" alt="Abery Logo"/>
-                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/aru.webp" alt="Abery Logo"/>
-                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/aston.webp" alt="Abery Logo"/>
-                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/auckland.webp" alt="Abery Logo"/>
-                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/birman.webp" alt="Abery Logo"/>
-                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/bolton.webp" alt="Abery Logo"/>
-                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/brighton.webp" alt="Abery Logo"/>
-                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/chestere.webp" alt="Abery Logo"/>
+                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/abery.webp" alt="Abery Logo" />
+                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/arden.webp" alt="Abery Logo" />
+                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/aru.webp" alt="Abery Logo" />
+                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/aston.webp" alt="Abery Logo" />
+                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/auckland.webp"
+                    alt="Abery Logo" />
+                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/birman.webp" alt="Abery Logo" />
+                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/bolton.webp" alt="Abery Logo" />
+                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/brighton.webp"
+                    alt="Abery Logo" />
+                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/chestere.webp"
+                    alt="Abery Logo" />
 
                 <!-- Duplicate logos for smooth infinite scrolling -->
-                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/chicago.webp" alt="Abery Logo"/>
-                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/chichester.webp" alt="Abery Logo"/>
-                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/conventry.webp" alt="Abery Logo"/>
-                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/cqu.webp" alt="Abery Logo"/>
-                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/crandell.webp" alt="Abery Logo"/>
-                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/kamk.webp" alt="Abery Logo"/>
-                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/law.webp" alt="Abery Logo"/>
-                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/leciter.webp" alt="Abery Logo"/>
-                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/london.webp" alt="Abery Logo"/>
-                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/manchester.webp" alt="Abery Logo"/>
-                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/newhman.webp" alt="Abery Logo"/>
+                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/chicago.webp" alt="Abery Logo" />
+                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/chichester.webp"
+                    alt="Abery Logo" />
+                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/conventry.webp"
+                    alt="Abery Logo" />
+                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/cqu.webp" alt="Abery Logo" />
+                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/crandell.webp"
+                    alt="Abery Logo" />
+                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/kamk.webp" alt="Abery Logo" />
+                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/law.webp" alt="Abery Logo" />
+                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/leciter.webp" alt="Abery Logo" />
+                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/london.webp" alt="Abery Logo" />
+                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/manchester.webp"
+                    alt="Abery Logo" />
+                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/newhman.webp" alt="Abery Logo" />
 
                 <!-- Duplicate logos for smooth infinite scrolling -->
-                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/plymouth.webp" alt="Abery Logo"/>
-                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/pra.webp" alt="Abery Logo"/>
-                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/reading.webp" alt="Abery Logo"/>
-                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/roehph.webp" alt="Abery Logo"/>
-                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/southercroos.webp" alt="Abery Logo"/>
-                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/ulster.webp" alt="Abery Logo"/>
-                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/uon.webp" alt="Abery Logo"/>
-                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/william.webp" alt="Abery Logo"/>
-                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/birman.webp" alt="Abery Logo"/>
-                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/winchsters.webp" alt="Abery Logo"/>
-                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/yorkville.webp" alt="Abery Logo"/>
+                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/plymouth.webp"
+                    alt="Abery Logo" />
+                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/pra.webp" alt="Abery Logo" />
+                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/reading.webp" alt="Abery Logo" />
+                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/roehph.webp" alt="Abery Logo" />
+                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/southercroos.webp"
+                    alt="Abery Logo" />
+                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/ulster.webp" alt="Abery Logo" />
+                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/uon.webp" alt="Abery Logo" />
+                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/william.webp" alt="Abery Logo" />
+                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/birman.webp" alt="Abery Logo" />
+                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/winchsters.webp"
+                    alt="Abery Logo" />
+                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/progressions/yorkville.webp"
+                    alt="Abery Logo" />
             </div>
         </div>
     </section>
     <!--success rate section end-->
-    
+
     <footer>
         <footer class="theme_bg_dark">
             <div class="container pt-5 pb-3">
                 <div class="row mb-sm-5">
                     <div class="col-lg-4 mb-lg-0 mb-4">
-                        <img src="https://rawasrazak3.github.io/LYMAX-SA/img/lymax-with-slogan-logo.svg" 
-                        alt="" 
-                        class="mb-0 ml-0"
-                        style="height:110px" />
+                        <img src="https://rawasrazak3.github.io/LYMAX-SA/img/lymax-with-slogan-logo.svg" alt=""
+                            class="mb-0 ml-0" style="height:110px" />
                         <ul class="address_ul">
                             <li>
                                 <a target="_blank" href="https://maps.app.goo.gl/fo2E7qLkoRLqE9Yw5">
-                                <i class="bi bi-globe"></i>
-                                <p>Level 8, Infra Futura, Seaport-Airport Rd, Opp BMC, Thrikkakara, Kakkanadu, Kochi, Kerala-682021</p>
-                            </a>
+                                    <i class="bi bi-globe"></i>
+                                    <p>Level 8, Infra Futura, Seaport-Airport Rd, Opp BMC, Thrikkakara, Kakkanadu,
+                                        Kochi, Kerala-682021</p>
+                                </a>
                             </li>
                             <li>
                                 <a href="tel:+917994748495">
-                                <i class="bi bi-telephone-fill"></i>
-                                <p>+91 7994748495</p>
-                            </a>
+                                    <i class="bi bi-telephone-fill"></i>
+                                    <p>+91 7994748495</p>
+                                </a>
                             </li>
                             <li>
                                 <a href="mailto:info@LymaxLearning.com" target="_blank">
-                                <i class="bi bi-envelope-fill"></i>
-                                <p>info@LymaxLearning.com</p>
-                            </a>
+                                    <i class="bi bi-envelope-fill"></i>
+                                    <p>info@LymaxLearning.com</p>
+                                </a>
                             </li>
 
                         </ul>
@@ -706,17 +895,22 @@
                                 <ul>
                                     <li><a href="https://rawasrazak3.github.io/LYMAX-SA/about-us">About Us</a></li>
                                     <li><a href="https://rawasrazak3.github.io/LYMAX-SA/programmes">Programmes</a></li>
-                                    <li><a href="https://rawasrazak3.github.io/LYMAX-SA/studying-with-us">Studying with Us</a></li>
+                                    <li><a href="https://rawasrazak3.github.io/LYMAX-SA/studying-with-us">Studying with
+                                            Us</a></li>
                                     <li><a href="https://rawasrazak3.github.io/LYMAX-SA/contact-us">Contact Us</a></li>
                                 </ul>
                             </div>
                             <div class="col-lg-4 col-md-6 mb-lg-0 mb-4">
                                 <h6>Useful Info</h6>
                                 <ul>
-                                    <li><a href="https://rawasrazak3.github.io/LYMAX-SA/terms-and-conditions">Terms & conditions </a></li>
-                                    <li><a href="https://rawasrazak3.github.io/LYMAX-SA/privacy-policy">Privacy Policy</a></li>
-                                    <li><a href="https://rawasrazak3.github.io/LYMAX-SA/cookie-policy">Cookie Policy</a></li>
-                                    <li><a href="https://rawasrazak3.github.io/LYMAX-SA/refund-policy">Refund Policy</a></li>
+                                    <li><a href="https://rawasrazak3.github.io/LYMAX-SA/terms-and-conditions">Terms &
+                                            conditions </a></li>
+                                    <li><a href="https://rawasrazak3.github.io/LYMAX-SA/privacy-policy">Privacy
+                                            Policy</a></li>
+                                    <li><a href="https://rawasrazak3.github.io/LYMAX-SA/cookie-policy">Cookie Policy</a>
+                                    </li>
+                                    <li><a href="https://rawasrazak3.github.io/LYMAX-SA/refund-policy">Refund Policy</a>
+                                    </li>
                                 </ul>
                             </div>
 
@@ -730,14 +924,17 @@
                                         <a target="_blank" href="javascript:void(0)"><i class="bi bi-linkedin"></i></a>
                                     </li>
                                     <li>
-                                        <a target="_blank" href="https://www.instagram.com/lymax.learning?igsh=MzFhcG44ZmdybDZ5"><i class="bi bi-instagram"></i></a>
+                                        <a target="_blank"
+                                            href="https://www.instagram.com/lymax.learning?igsh=MzFhcG44ZmdybDZ5"><i
+                                                class="bi bi-instagram"></i></a>
                                     </li>
                                     <li>
                                         <a target="_blank" href="javascript:void(0)"><i class="bi bi-youtube"></i></a>
                                     </li>
                                 </ul>
                                 <h6>Our Official Partner</h6>
-                                <img  src="https://rawasrazak3.github.io/LYMAX-SA/img/home/official-partner.webp" style="width: 130px;height: auto;" />
+                                <img src="https://rawasrazak3.github.io/LYMAX-SA/img/home/official-partner.webp"
+                                    style="width: 130px;height: auto;" />
                             </div>
                         </div>
 
@@ -746,7 +943,8 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <p class="mb-0">©2025 All Rights Reserved. © Lymax and/or its subsidiaries or affiliates are copyrights
+                        <p class="mb-0">©2025 All Rights Reserved. © Lymax and/or its subsidiaries or affiliates are
+                            copyrights
                         </p>
                     </div>
                 </div>
@@ -754,10 +952,16 @@
         </footer>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
-    <script src="https://rawasrazak3.github.io/LYMAX-SA/js-cynosure/main-custom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+        crossorigin="anonymous"></script>
+    <script src="/js-cynosure/main-custom.js"></script>
 
     <!-- Sweet alert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -772,7 +976,7 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('.select-2').select2({
 
             });
@@ -780,7 +984,9 @@
     </script>
 
     <!-- input mask -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8-beta.17/jquery.inputmask.min.js" integrity="sha512-zdfH1XdRONkxXKLQxCI2Ak3c9wNymTiPh5cU4OsUavFDATDbUzLR+SYWWz0RkhDmBDT0gNSUe4xrQXx8D89JIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8-beta.17/jquery.inputmask.min.js"
+        integrity="sha512-zdfH1XdRONkxXKLQxCI2Ak3c9wNymTiPh5cU4OsUavFDATDbUzLR+SYWWz0RkhDmBDT0gNSUe4xrQXx8D89JIQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         $(".sort-code").inputmask("99-99-99");
         $(".national-insurance-number").inputmask("AA 99 99 99 A");
@@ -788,7 +994,7 @@
 
     <!-- Bootstrap custom file input -->
     <script>
-        $('.custom-file-input').on('change', function() {
+        $('.custom-file-input').on('change', function () {
             //get the file name
             var fileName = $(this).val();
             //replace the "Choose a file" label

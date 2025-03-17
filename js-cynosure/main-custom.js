@@ -34,11 +34,11 @@ $(document).ready(function() {
 
 
         // side navbar
-        $('.navbar-toggler').click(function() {
-            $(this).toggleClass('collapsed');
-            $('.side_navbar_wrapper').toggleClass('expanded');
-            $('body').toggleClass('fixed');
-        })
+        // $('.navbar-toggler').click(function() {
+        //     $(this).toggleClass('collapsed');
+        //     $('.side_navbar_wrapper').toggleClass('expanded');
+        //     $('body').toggleClass('fixed');
+        // })
 
 
 
@@ -443,8 +443,10 @@ $(document).ready(function() {
     $(window).scroll(function() {
         if ($(this).scrollTop() > 100) {
             $header.addClass("scrolled").removeClass("at-top");
+            $headerText.css("color", "var(--theme-primary-color)"); // Change text color on scroll
         } else {
             $header.addClass("at-top").removeClass("scrolled");
+            $headerText.css("color", "#FFD700"); // Change text color on scroll
         }
     });
 });
@@ -465,32 +467,46 @@ $(document).ready(function() {
         let message = $("#message").val().trim();
         let valid = true;
 
-        // Ensure the phone number starts with +91
-        if (!phoneNumber.startsWith("91")) {
-            phoneInput.val("91" + phoneNumber);
-            phoneNumber = phoneInput.val();
-        }
+        // here, the index maps to the error code returned from getValidationError - see readme
+        const errorMap = ["Invalid number", "Invalid country code", "Too short", "Too long", "Invalid number"];
 
-        // Remove "91" and check length
-        let numericPhone = phoneNumber.replace("91", "").trim();
+        // initialise plugin
+        const iti = window.intlTelInput(input, {
+            initialCountry: "in",
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/utils.js",
+        });
 
         // Validation
         if (name === "") {
-            $("#nameError").text("Name is required.");
+            $("#nameError").textContent = "Name is required.";
             valid = false;
         }
 
         if (email === "") {
-            $("#emailError").text("Email is required.");
+            $("#emailError").textContent = "Email is required.";
             valid = false;
         } else if (!validateEmail(email)) {
-            $("#emailError").text("Please enter a valid email address.");
+            $("#emailError").textContent = "Please enter a valid email address.";
             valid = false;
         }
 
-        if (numericPhone.length !== 10) {
-            $("#phoneError").text("Phone number must be exactly 10 digits.");
+        if (phoneNumber === "") {
+            $("#phoneError").text("Phone No is required.");
             valid = false;
+        } else {
+            try {
+                if (!iti.isValidNumber()) {
+                    const errorCode = iti.getValidationError();
+                    const msg = errorMap[errorCode] || "Invalid number";
+                    console.log(msg)
+                    $("#phoneError").text(msg);
+                    valid = false;
+                }
+            } catch (error) {
+                console.error("Error validating phone number:", error);
+                $("#phoneError").text("Invalid phone number.");
+                valid = false;
+            }
         }
 
         if (message === "") {
@@ -574,3 +590,13 @@ $(document).ready(function () {
         }
     });
 });
+
+function openDrawer() {
+    document.getElementById("sideDrawer").classList.add("open");
+}
+
+function closeDrawer() {
+    document.getElementById("sideDrawer").classList.remove("open");
+}
+
+

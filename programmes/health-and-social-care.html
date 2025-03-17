@@ -141,32 +141,26 @@
 </head>
 
 <body class="">
-
-    <div class="side_navbar_wrapper">
-        <div class="side_navbar_overlay"></div>
-        <div class="side_navbar_content">
-            <div class="row">
-                <div class="col-12">
-                    <ul class="header_navlinks">
-                        <li><a href="https://rawasrazak3.github.io/LYMAX-SA">Home</a></li>
-                        <li><a href=" https://rawasrazak3.github.io/LYMAX-SA/studying-with-us">Studying with Us</a></li>
-                        <li><a href=" https://rawasrazak3.github.io/LYMAX-SA/about-us">About Us</a></li>
-                        <li><a href="https://rawasrazak3.github.io/LYMAX-SA/programmes">Programmes</a></li>
-                        <li><a href=" https://rawasrazak3.github.io/LYMAX-SA/contact-us">Contact Us</a></li>
+    <section class="common_banner_sec">
+        <img src="https://rawasrazak3.github.io/LYMAX-SA/uploads/programmes/health-and-social-care.webp"
+            class="banner_img" alt="">
+        <div class="overlay"></div>
+        <div class="main-header">
+            <img class="logo" src="https://rawasrazak3.github.io/LYMAX-SA/img/lymax-main-logo.svg " alt="" />
+            <div class="navbar">
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Study With Us</a></li>
+                        <li><a href="#">Programmes</a></li>
+                        <li><a href="#">Contact Us</a></li>
                     </ul>
-                </div>
+                </nav>
             </div>
-        </div>
-    </div>
-
-    <header>
-        <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg p-0">
-                <a class="navbar-brand p-0" href="https://rawasrazak3.github.io/LYMAX-SA">
-                    <img src="https://rawasrazak3.github.io/LYMAX-SA/img/lymax-main-logo.svg " alt="" />
-                </a>
-                <h2 class="header-text">India's 1st World Class Higher Education Hub</h2>
+            <div class="side-drawer-button">
                 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                    onclick="openDrawer()"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <span class="sr-only"></span>
@@ -174,25 +168,45 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-            </nav>
+            </div>
         </div>
-    </header>
 
-    <div class="container"></div>
+        <div id="sideDrawer" class="side-drawer">
+            <button class="close-btn" onclick="closeDrawer()">✖</button>
+            <div class="drawer-content">
+                <img class="logo" src="https://rawasrazak3.github.io/LYMAX-SA/img/lymax-main-logo.svg" alt="Logo">
 
-    <section class="common_banner_sec">
-        <img src="https://rawasrazak3.github.io/LYMAX-SA/uploads/programmes/health-and-social-care.webp"
-            class="banner_img" alt="">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 ">
-                    <div class="heading_box">
-                        <h1>Health And Social Care</h1>
-                        <h2>Advanced Entry Route</h2>
-                        <a target="_blank" href="https://rawasrazak3.github.io/LYMAX-SA/apply-online" class="theme_btn">
-                            Apply Now
-                        </a>
+                <div class="drawer-body">
+                    <div class="drawer-body-content">
+                        <div class="contact-section">
+                            <h3>Get In Touch</h3>
+                            <br>
+                            <p><i class="fa-solid fa-envelope"></i> Email Us <br> <span class="pl-4" style="font-size: 18px;font-weight: bold;">info@LymaxLearning.com</span></p>
+                            <p><i class="fa-solid fa-phone"></i> Call Us <br><span class="pl-4" style="font-size: 18px;font-weight: bold;">+91 7994748495</span></p>
+                            <button class="navigate-btn" onclick="window.open('https://maps.app.goo.gl/fo2E7qLkoRLqE9Yw5', '_blank')">
+                                <i class="fa-solid fa-location-dot"></i> Navigate
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="drawer-body-content">
+                        <div class="quick-links">
+                            <h3>Quick Links</h3>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Apply Now</a></li>
+                                <li><a href="#">Careers</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="drawer-body-content">
+                        <div class="main-links">
+                            <a href="#">About Us</a>
+                            <a href="#">Study with Us</a>
+                            <a href="#">Programmes</a>
+                            <a href="#">Contact Us</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -203,6 +217,7 @@
     <section class="programme__overview__sec">
         <div class="container">
             <div class="theme_content_box">
+                <h1>Health And Social Care</h1>
                 <div class="row">
                     <div class="col-lg-8 my-2">
                         <h2>Modules</h2>

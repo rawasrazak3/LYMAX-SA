@@ -6,23 +6,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Contact Us | LYMAX</title>
+    <title>Career | LYMAX</title>
     <meta name="description" content="" />
     <link rel="canonical" href="">
 
     <!-- <meta name="csrf-token" content="c8NuH16B7IsCnWmww4mDK4VbMgvyPtX6jgyjuflB"> -->
 
 
-    <meta itemprop="name" content="Contact Us | LYMAX">
+    <meta itemprop="name" content="Career | LYMAX">
     <meta itemprop="description" content="">
 
 
     <meta property="og:type" content="website">
 
-    <meta property="og:title" content="Contact Us | LYMAX" />
+    <meta property="og:title" content="Career | LYMAX" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@Site  Title" />
-    <meta name="twitter:title" content="Contact Us | LYMAX" />
+    <meta name="twitter:title" content="Career | LYMAX" />
 
     <meta property="og:description" content="" />
     <meta name="twitter:description" content="" />
@@ -97,6 +97,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <!-- Select 2 -->
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <!-- Country Code -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput.min.js"></script>
 
@@ -252,10 +253,18 @@
             <div class="row">
                 <div class="col-lg-8 my-2">
                     <div class="theme_content_box">
-                        <h1 style="font-weight: bold;">Contact Us</h1>
+                        <h1 style="font-weight: bold;">Work With Us</h1>
                         <br><br>
                         <div class="theme_input_box">
                             <form id="contactForm" action="send_email.php" method="POST">
+                                <p>Job Role <span style="color: red;">*</span></p>
+                                <select class="form-select select2" id="qualification" style="width: 100%;height: 50px;border-color: var(theme_color_primary);">
+                                    <option value="" selected disabled>Select Job Role</option>
+                                    <option value="Job Role 1">Job Role 1</option>
+                                    <option value="Job Role 2">Job Role 2</option>
+                                    <option value="Job Role 3">Job Role 3</option>
+                                    <option value="Job Role 4">Job Role 4</option>
+                                </select>
                                 <div class="form-group">
                                     <label for="name">Name <span style="color: red;">*</span></label>
                                     <input type="text" id="name" 
@@ -278,24 +287,41 @@
                                     <span class="error-message" id="phoneError"></span>
                                 </div>
                                 <div class="form-group">
-                                    <label for="message">Message</label>
-                                    <textarea id="message" 
-                                              name="message" 
-                                              placeholder="Your Message" 
-                                              rows="5" required></textarea>
+                                    <label for="experience">Experience <span style="color: red;">*</span></label><br>
+                                    <input type="experience" id="experience" 
+                                           name="experience" 
+                                           required>
+                                    <span class="error-message" id="experienceError"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="qualification">Qualification <span style="color: red;">*</span></label><br>
+                                    <input type="qualification" id="qualification" 
+                                           name="qualification" 
+                                           required>
+                                    <span class="error-message" id="qualificationError"></span>
+                                </div>
+                                <div class="career-file-input-card">
+                                    <input type="file" >
+                                </div>
+                                <div class="form-group">
+                                    <label for="cover-letter">Cover Letter</label>
+                                    <textarea id="cover-letter" 
+                                              name="cover-letter" 
+                                              placeholder="Your Cover Letter" 
+                                              rows="5" ></textarea>
                                     <span class="error-message" 
-                                          id="messageError"></span>
+                                          id="coverLetterError"></span>
                                 </div>
                                 <div id="responseMessage"></div>
                                 <br><br>
-                                <button type="submit" >Send Message</button>
                             </form>
+                            <button type="submit" >Send Message</button>
                             <br><br>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 my-2" style="padding-top: 15px;">
-                    <div class="theme_card_alternate">
+                    <!-- <div class="theme_card_alternate">
                         <ul>
                              <li class="theme_color_primary">
                                 <a href="javascript:void(0)">
@@ -317,7 +343,7 @@
                                 </a>
                             </li>
                         </ul>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
