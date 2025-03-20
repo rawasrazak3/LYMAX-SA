@@ -437,19 +437,19 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // header transparent when scrolling 
-$(document).ready(function() {
-    let $header = $("header");
+// $(document).ready(function() {
+//     let $header = $("header");
 
-    $(window).scroll(function() {
-        if ($(this).scrollTop() > 100) {
-            $header.addClass("scrolled").removeClass("at-top");
-            $headerText.css("color", "var(--theme-primary-color)"); // Change text color on scroll
-        } else {
-            $header.addClass("at-top").removeClass("scrolled");
-            $headerText.css("color", "#FFD700"); // Change text color on scroll
-        }
-    });
-});
+//     $(window).scroll(function() {
+//         if ($(this).scrollTop() > 100) {
+//             $header.addClass("scrolled").removeClass("at-top");
+//             $headerText.css("color", "var(--theme-primary-color)"); // Change text color on scroll
+//         } else {
+//             $header.addClass("at-top").removeClass("scrolled");
+//             $headerText.css("color", "#FFD700"); // Change text color on scroll
+//         }
+//     });
+// });
 
 //contact form validation and submit
 $(document).ready(function() {
@@ -471,47 +471,36 @@ $(document).ready(function() {
         const errorMap = ["Invalid number", "Invalid country code", "Too short", "Too long", "Invalid number"];
 
         // initialise plugin
-        const iti = window.intlTelInput(input, {
-            initialCountry: "in",
-            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/utils.js",
-        });
+        const iti = initializeIntlTelPlugin();
 
         // Validation
         if (name === "") {
-            $("#nameError").textContent = "Name is required.";
+            $("#nameError").text("Name is required.");
             valid = false;
+        }else{
+            $("#nameError").text("");
         }
 
         if (email === "") {
-            $("#emailError").textContent = "Email is required.";
+            $("#emailError").text("Email is required.");
             valid = false;
         } else if (!validateEmail(email)) {
-            $("#emailError").textContent = "Please enter a valid email address.";
+            $("#emailError").text("Please enter a valid email address.");
             valid = false;
+        }else{
+            $("#emailError").text("");
         }
 
         if (phoneNumber === "") {
             $("#phoneError").text("Phone No is required.");
             valid = false;
-        } else {
-            try {
-                if (!iti.isValidNumber()) {
-                    const errorCode = iti.getValidationError();
-                    const msg = errorMap[errorCode] || "Invalid number";
-                    console.log(msg)
-                    $("#phoneError").text(msg);
-                    valid = false;
-                }
-            } catch (error) {
-                console.error("Error validating phone number:", error);
-                $("#phoneError").text("Invalid phone number.");
-                valid = false;
-            }
-        }
-
-        if (message === "") {
-            $("#messageError").text("Message is required.");
+        } else if (!iti.isValidNumber()) {
+            const errorCode = iti.getValidationError();
+            const msg = errorMap[errorCode] || "Invalid number";
+            $("#phoneError").text(msg);
             valid = false;
+        }else{
+            $("#phoneError").text("");
         }
 
         if (valid) {
@@ -520,10 +509,9 @@ $(document).ready(function() {
         }
     });
 
-    function validateEmail(email) {
-        return /\S+@\S+\.\S+/.test(email);
-    }
+    validateEmail(email);
 
+        
     function submitForm(name, email, phone, message) {
         let formData = new FormData();
         formData.append("name", name);
@@ -552,17 +540,23 @@ $(document).ready(function() {
             }
         });
     }
-
-    function showSnackbar() {
-        let snackbar = $("#snackbar");
-        snackbar.addClass("show");
-
-        // Hide Snackbar after 2 seconds
-        setTimeout(function() {
-            snackbar.removeClass("show");
-        }, 2000);
-    }
 });
+
+//validate email
+function validateEmail(email) {
+    return /\S+@\S+\.\S+/.test(email);
+}
+
+//show/hide snackbar
+function showSnackbar() {
+    let snackbar = $("#snackbar");
+    snackbar.addClass("show");
+
+    // Hide Snackbar after 2 seconds
+    setTimeout(function() {
+        snackbar.removeClass("show");
+    }, 2000);
+}
 
 //home banner course dropdown list
 $(document).ready(function () {
@@ -599,4 +593,614 @@ function closeDrawer() {
     document.getElementById("sideDrawer").classList.remove("open");
 }
 
+function initializeIntlTelPlugin(){
+    return window.intlTelInput(input, {
+        initialCountry: "in",
+        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/utils.js",
+    });
+}
+
+
+//career form validation and submit
+$(document).ready(function() {
+    $("#careerForm").submit(function(event) {
+        event.preventDefault(); // Prevent form submission until validation is complete
+
+        // Clear previous error messages
+        $("#jobRoleError,#nameError, #emailError, #phoneError, #experienceError, #qualificationError, #resumeFileError").text("");
+
+        // Get form values
+        let jobRole = $("#jobRole").val();
+        let name = $("#name").val().trim();
+        let email = $("#email").val().trim();
+        let phoneInput = $("#phone");
+        let phoneNumber = phoneInput.val().trim();
+        let experience = $("#experience").val().trim();
+        let qualification = $("#qualification").val().trim();
+        let resumeFile = $("#resumeFile")[0].files[0]; // Get the file
+        let coverLetter = $("#coverLetter").val().trim();
+        let valid = true;
+
+        // here, the index maps to the error code returned from getValidationError - see readme
+        const errorMap = ["Invalid number", "Invalid country code", "Too short", "Too long", "Invalid number"];
+
+        // initialise plugin
+        const iti = initializeIntlTelPlugin();
+
+        console.log(jobRole);
+
+        // Validation
+        if (!jobRole) {
+            $("#jobRoleError").text("Job Role is required.");
+            valid = false;
+        }else{
+            $("#jobRoleError").text("");
+        }
+
+        if (name === "") {
+            $("#nameError").text("Name is required.");
+            valid = false;
+        }else{
+            $("#nameError").text("");
+        }
+
+        if (email === "") {
+            $("#emailError").text("Email is required.");
+            valid = false;
+        } else if (!validateEmail(email)) {
+            $("#emailError").text("Please enter a valid email address.");
+            valid = false;
+        }else{
+            $("#emailError").text("");
+        }
+
+        if (phoneNumber === "") {
+            $("#phoneError").text("Phone No is required.");
+            valid = false;
+        } else if (!iti.isValidNumber()) {
+            const errorCode = iti.getValidationError();
+            const msg = errorMap[errorCode] || "Invalid number";
+            $("#phoneError").text(msg);
+            valid = false;
+        }else{
+            $("#phoneError").text("");
+        }
+
+        if (experience === "") {
+            $("#experienceError").text("Experience is required.");
+            valid = false;
+        }else{
+            $("#experienceError").text("");
+        }
+
+        if (qualification === "") {
+            $("#qualificationError").text("Qualification is required.");
+            valid = false;
+        }else{
+            $("#qualificationError").text("");
+        }
+
+        // Resume File Validation
+        if (!resumeFile) {
+            $("#resumeFileError").text("Resume file is required.");
+            valid = false;
+        } else {
+            let fileName = resumeFile.name;
+            let fileSize = resumeFile.size;
+            let allowedExtensions = ["pdf", "docx"];
+            let fileExtension = fileName.split('.').pop().toLowerCase();
+
+            if (!allowedExtensions.includes(fileExtension)) {
+                $("#resumeFileError").text("Only PDF or DOCX files are allowed.");
+                valid = false;
+            } else if (fileSize > 2 * 1024 * 1024) { // 2MB limit
+                $("#resumeFileError").text("File size must be under 2MB.");
+                valid = false;
+            } else {
+                $("#resumeFileError").text("");
+            }
+        }
+
+        if (valid) {
+            // Submit the form via AJAX (Fetch API alternative in jQuery)
+            submitForm(jobRole,name, email, phoneNumber, experience, qualification,coverLetter, resumeFile);
+        }
+    });
+
+    validateEmail(email);
+
+    function submitForm(jobRole,name, email, phoneNumber, experience, qualification,coverLetter, resumeFile) {
+        let formData = new FormData();
+        formData.append("job_role", jobRole);
+        formData.append("name", name);
+        formData.append("email", email);
+        formData.append("phone", phoneNumber);
+        formData.append("experience", experience);
+        formData.append("qualification", qualification);
+        formData.append("cover_letter", coverLetter);
+        formData.append("resume", resumeFile);
+
+        $.ajax({
+            url: "send_email.php",
+            type: "POST",
+            data: formData,
+            processData: false,
+            contentType: false,
+            dataType: "json",
+            success: function(data) {
+                if (data.success) {
+                    $("#responseMessage").text(data.message);
+                    showSnackbar();
+                    $("#careerForm")[0].reset(); // Reset form after success
+                } else {
+                    $("#responseMessage").text("Failed to send message: " + data.error);
+                }
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                $("#responseMessage").text("Error: " + errorThrown);
+            }
+        });
+    }
+});
+
+
+//application form validation and submit
+$(document).ready(function() {
+    $("#applicationForm").submit(function(event) {
+        event.preventDefault(); // Prevent form submission until validation is complete
+
+        // Clear previous error messages
+        $("#firstNameError,#lastNameError, #dateOfBirthError, #birthCountryError, #genderError, #phoneError, #alternatePhoneError,#emailError, #passportError, #disabilityError, #referralError, #interviewDateError, #courseError, #fatherNameError, #fatherMobNoError, #fatherOccupationError, #motherNameError, #motherMobNoError, #motherOccupationError, #addressLine1Error, #addressLine2Error, #cityError, #districtError, #stateError, #countryError, #pincodeError, #addressError, #sslcBoardError, #sslcSchoolNameError, #sslcYearError, #sslcPercentageError, #qualificationError, #resultError, #plusTwoBoardError, #plusTwoSchoolError, #plusTwoYearError, #plusTwoPercentageError, #UniversityError, #collegeNameError, #UGYearError, #UGPercentageError, #applicantNameError, #applicationDateError, #agreeDeclarationError, #agreeTermsConditionError").text("");
+
+        // Get form values
+        let firstName = $("#firstName").val().trim();
+        let lastName = $("#lastName").val().trim();
+        let dateOfBirth = $("#dateOfBirth").val().trim();
+        let birthCountry = $("#birthCountry").val().trim();
+        let gender = $("#gender").val();
+        let phoneNumber = $("#phone").val().trim();
+        let alternatePhone = $("#alternatePhone").val().trim();
+        let email = $("#email").val().trim();
+        let passport = $("input[name='passport']:checked").val();
+        let disability = $("input[name='disability']:checked").val();
+        let referral = $("#referral").val();
+        let interviewDate = $("#interviewDate").val().trim();
+
+        let course = $("#course").val();
+
+        let fatherName = $("#fatherName").val().trim();
+        let fatherMobNo = $("#fatherMobNo").val().trim();
+        let fatherOccupation = $("#fatherOccupation").val().trim();
+        let motherName = $("#motherName").val().trim();
+        let motherMobNo = $("#motherMobNo").val().trim();
+        let motherOccupation = $("#motherOccupation").val().trim();
+
+        let addressLine1 = $("#addressLine1").val().trim();
+        let addressLine2 = $("#addressLine2").val().trim();
+        let city = $("#city").val().trim();
+        let district = $("#district").val().trim();
+        let state = $("#state").val().trim();
+        let country = $("#country").val().trim();
+        let pincode = $("#pincode").val().trim();
+        let address = $("input[name='address']:checked").val();
+
+        let sslcBoard = $("#sslcBoard").val().trim();
+        let sslcSchoolName = $("#sslcSchoolName").val().trim();
+        let sslcYear = $("#sslcYear").val().trim();
+        let sslcPercentage = $("#sslcPercentage").val().trim();
+        
+        let qualification = $("input[name='qualification']:checked").val();
+        let result = $("input[name='result']:checked").val();
+        
+        let plusTwoBoard = $("#plusTwoBoard").val().trim();
+        let plusTwoSchool = $("#plusTwoSchool").val().trim();
+        let plusTwoYear = $("#plusTwoYear").val().trim();
+        let plusTwoPercentage = $("#plusTwoPercentage").val().trim();
+        
+        let University = $("#University").val().trim();
+        let collegeName = $("#collegeName").val().trim();
+        let UGYear = $("#UGYear").val().trim();
+        let UGPercentage = $("#UGPercentage").val().trim();
+        
+        let applicantName = $("#applicantName").val().trim();
+        let applicationDate = $("#applicationDate").val().trim();
+        
+        let agreeDeclaration = $("#agreeDeclaration").val().trim();
+        let agreeTermsCondition = $("#agreeTermsCondition").val().trim();
+        
+        let valid = true;
+
+        // here, the index maps to the error code returned from getValidationError - see readme
+        const errorMap = ["Invalid number", "Invalid country code", "Too short", "Too long", "Invalid number"];
+
+        // initialise plugin
+        const iti = initializeIntlTelPlugin();
+        const alternateiti = initializeIntlTelPlugin();
+        const fatherMobiti = initializeIntlTelPlugin();
+        const motherMobiti = initializeIntlTelPlugin();
+
+        // Validation
+        if (firstName === "") {
+            $("#firstNameError").text("First Name is required.");
+            valid = false;
+        }else{
+            $("#firstNameError").text("");
+        }
+
+        if (lastName === "") {
+            $("#lastNameError").text("Last Name is required.");
+            valid = false;
+        }else{
+            $("#lastNameError").text("");
+        }
+
+        if (dateOfBirth === "") {
+            $("#dateOfBirthError").text("Date of Birth is required.");
+            valid = false;
+        }else{
+            $("#dateOfBirthError").text("");
+        }
+
+        if (birthCountry === "") {
+            $("#birthCountryError").text("Birth Country is required.");
+            valid = false;
+        }else{
+            $("#birthCountryError").text("");
+        }
+
+        if (!gender) {
+            $("#genderError").text("Please select a gender.");
+            valid = false;
+        }else{
+            $("#genderError").text("");
+        }
+
+        if (phoneNumber === "") {
+            $("#phoneError").text("Phone No is required.");
+            valid = false;
+        } else if (!iti.isValidNumber()) {
+            const errorCode = iti.getValidationError();
+            const msg = errorMap[errorCode] || "Invalid number";
+            $("#phoneError").text(msg);
+            valid = false;
+        }else{
+            $("#phoneError").text("");
+        }
+1
+        if (alternatePhone !== "") {
+            if (!alternateiti.isValidNumber()) {
+                const errorCode = alternateiti.getValidationError();
+                const msg = errorMap[errorCode] || "Invalid number";
+                $("#alternatePhoneError").text(msg);
+                valid = false;
+            }else{
+                $("#alternatePhoneError").text("");
+            }
+        }else{
+            $("#alternatePhoneError").text("");
+        }
+
+        if (email === "") {
+            $("#emailError").text("Email is required.");
+            valid = false;
+        } else if (!validateEmail(email)) {
+            $("#emailError").text("Please enter a valid email address.");
+            valid = false;
+        }else{
+            $("#emailError").text("");
+        }
+
+        if (!referral) {
+            $("#referralError").text("Experience is required.");
+            valid = false;
+        }else{
+            $("#referralError").text("");
+        }
+
+        if (interviewDate === "") {
+            $("#interviewDateError").text("Interview Date is required.");
+            valid = false;
+        }else{
+            $("#interviewDateError").text("");
+        }
+
+        if (!course) {
+            $("#courseError").text("Course is required.");
+            valid = false;
+        }else{
+            $("#courseError").text("");
+        }
+
+        if (fatherName === "") {
+            $("#fatherNameError").text("Father Name is required.");
+            valid = false;
+        }else{
+            $("#fatherNameError").text("");
+        }
+
+        if (fatherMobNo === "") {
+            $("#fatherMobNoError").text("Father Mobile No is required.");
+            valid = false;
+        } else if (!fatherMobiti.isValidNumber()) {
+            const errorCode = fatherMobiti.getValidationError();
+            const msg = errorMap[errorCode] || "Invalid number";
+            $("#fatherMobNoError").text(msg);
+            valid = false;
+        }else{
+            $("#fatherMobNoError").text("");
+        }
+
+        // if (fatherOccupation === "") {
+        //     $("#fatherOccupationError").text("Father Occupation is required.");
+        //     valid = false;
+        // }else{
+        //     $("#fatherOccupationError").text("");
+        // }
+
+        if (motherName === "") {
+            $("#motherNameError").text("Mother Name is required.");
+            valid = false;
+        }else{
+            $("#motherNameError").text("");
+        }
+
+        if (motherMobNo === "") {
+            $("#motherMobNoError").text("Mother Mobile No is required.");
+            valid = false;
+        } else if (!motherMobiti.isValidNumber()) {
+            const errorCode = motherMobiti.getValidationError();
+            const msg = errorMap[errorCode] || "Invalid number";
+            $("#motherMobNoError").text(msg);
+            valid = false;
+        }else{
+            $("#motherMobNoError").text("");
+        }
+
+        // if (motherOccupation === "") {
+        //     $("#motherOccupationError").text("Mother Occupation is required.");
+        //     valid = false;
+        // }else{
+        //     $("#motherOccupationError").text("");
+        // }
+
+        if (addressLine1 === "") {
+            $("#addressLine1Error").text("Address Line 1 is required.");
+            valid = false;
+        }else{
+            $("#addressLine1Error").text("");
+        }
+
+        if (addressLine2 === "") {
+            $("#addressLine2Error").text("Address Line 2 is required.");
+            valid = false;
+        }else{
+            $("#addressLine2Error").text("");
+        }
+
+        if (city === "") {
+            $("#cityError").text("City is required.");
+            valid = false;
+        }else{
+            $("#cityError").text("");
+        }
+
+        if (district === "") {
+            $("#districtError").text("District is required.");
+            valid = false;
+        }else{
+            $("#districtError").text("");
+        }
+
+        if (state === "") {
+            $("#stateError").text("State is required.");
+            valid = false;
+        }else{
+            $("#stateError").text("");
+        }
+
+        if (country === "") {
+            $("#countryError").text("Country is required.");
+            valid = false;
+        }else{
+            $("#countryError").text("");
+        }
+
+        if (pincode === "") {
+            $("#pincodeError").text("Pincode is required.");
+            valid = false;
+        }else{
+            $("#pincodeError").text("");
+        }
+
+        if (sslcBoard === "") {
+            $("#sslcBoardError").text("Board is required.");
+            valid = false;
+        }else{
+            $("#sslcBoardError").text("");
+        }
+
+        if (sslcSchoolName === "") {
+            $("#sslcSchoolNameError").text("School Name is required.");
+            valid = false;
+        }else{
+            $("#sslcSchoolNameError").text("");
+        }
+
+        if (sslcYear === "") {
+            $("#sslcYearError").text("Year is required.");
+            valid = false;
+        }else{
+            $("#sslcYearError").text("");
+        }
+
+        if (sslcPercentage === "") {
+            $("#sslcPercentageError").text("Percentage/CGPA is required.");
+            valid = false;
+        }else{
+            $("#sslcPercentageError").text("");
+        }
+
+        if (plusTwoBoard === "") {
+            $("#plusTwoBoardError").text("Board is required.");
+            valid = false;
+        }else{
+            $("#plusTwoBoardError").text("");
+        }
+
+        if (plusTwoSchool === "") {
+            $("#plusTwoSchoolError").text("School Name is required.");
+            valid = false;
+        }else{
+            $("#plusTwoSchoolError").text("");
+        }
+
+        if (plusTwoYear === "") {
+            $("#plusTwoYearError").text("Year is required.");
+            valid = false;
+        }else{
+            $("#plusTwoYearError").text("");
+        }
+
+        if (plusTwoPercentage === "") {
+            $("#plusTwoPercentageError").text("Percentage/CGPA is required.");
+            valid = false;
+        }else{
+            $("#plusTwoPercentageError").text("");
+        }
+
+        // if (University === "") {
+        //     $("#UniversityError").text("University is required.");
+        //     valid = false;
+        // }else{
+        //     $("#UniversityError").text("");
+        // }
+
+        // if (collegeName === "") {
+        //     $("#collegeNameError").text("College Name is required.");
+        //     valid = false;
+        // }else{
+        //     $("#collegeNameError").text("");
+        // }
+
+        // if (UGYear === "") {
+        //     $("#UGYearError").text("Year is required.");
+        //     valid = false;
+        // }else{
+        //     $("#UGYearError").text("");
+        // }
+
+        // if (UGPercentage === "") {
+        //     $("#UGPercentageError").text("Percentage/CGPA is required.");
+        //     valid = false;
+        // }else{
+        //     $("#UGPercentageError").text("");
+        // }
+
+        if (applicantName === "") {
+            $("#applicantNameError").text("Applicant Name is required.");
+            valid = false;
+        }else{
+            $("#applicantNameError").text("");
+        }
+
+        if (applicationDate === "") {
+            $("#applicationDateError").text("Application Date is required.");
+            valid = false;
+        }else{
+            $("#applicationDateError").text("");
+        }
+
+        if (!$("#agreeDeclaration").is(":checked")) {
+            $("#agreeDeclarationError").text("You must agree to continue.");
+        }else{
+            $("#agreeDeclarationError").text("");
+        }
+
+        if (!$("#agreeTermsCondition").is(":checked")) {
+            $("#agreeTermsConditionError").text("You must agree to continue.");
+            valid = false;
+        }else{
+            $("#agreeTermsConditionError").text("");
+        }
+
+        if (valid) {
+            // Submit the form via AJAX (Fetch API alternative in jQuery)
+            submitForm(firstName,lastName, dateOfBirth, birthCountry, gender, phoneNumber,alternatePhone, email, passport, disability, referral, interviewDate, course, fatherName, fatherMobNo, fatherOccupation, motherName, motherMobNo, motherOccupation, addressLine1, addressLine2, city, district, state, country, pincode, address, sslcBoard,sslcSchoolName,sslcYear,sslcPercentage, qualification, result, plusTwoBoard, plusTwoSchool, plusTwoYear, plusTwoPercentage, University, collegeName, UGYear, UGPercentage, applicantName, applicationDate);
+        }
+    });
+
+    validateEmail(email);
+
+    function submitForm(firstName,lastName, dateOfBirth, birthCountry, gender, phoneNumber,alternatePhone, email, passport, disability, referral, interviewDate, course, fatherName, fatherMobNo, fatherOccupation, motherName, motherMobNo, motherOccupation, addressLine1, addressLine2, city, district, state, country, pincode, address, sslcBoard,sslcSchoolName,sslcYear,sslcPercentage, qualification, result, plusTwoBoard, plusTwoSchool, plusTwoYear, plusTwoPercentage, University, collegeName, UGYear, UGPercentage, applicantName, applicationDate) {
+        let formData = new FormData();
+        formData.append("firstName", firstName);
+        formData.append("lastName", lastName);
+        formData.append("dateOfBirth", dateOfBirth);
+        formData.append("birthCountry", birthCountry);
+        formData.append("gender", gender);
+        formData.append("phoneNumber", phoneNumber);
+        formData.append("alternatePhone", alternatePhone);
+        formData.append("email", email);
+        formData.append("passport", passport);
+        formData.append("disability", disability);
+        formData.append("referral", referral);
+        formData.append("interviewDate", interviewDate);
+
+        formData.append("course", course);
+
+        formData.append("fatherName", fatherName);
+        formData.append("fatherMobNo", fatherMobNo);
+        formData.append("fatherOccupation", fatherOccupation);
+        formData.append("motherName", motherName);
+        formData.append("motherMobNo", motherMobNo);
+        formData.append("motherOccupation", motherOccupation);
+
+        formData.append("addressLine1", addressLine1);
+        formData.append("addressLine2", addressLine2);
+        formData.append("city", city);
+        formData.append("district", district);
+        formData.append("state", state);
+        formData.append("country", country);
+        formData.append("pincode", pincode);
+
+        formData.append("sslcBoard", sslcBoard);
+        formData.append("sslcSchoolName", sslcSchoolName);
+        formData.append("sslcYear", sslcYear);
+        formData.append("sslcPercentage", sslcPercentage);
+
+        formData.append("plusTwoBoard", plusTwoBoard);
+        formData.append("plusTwoSchool", plusTwoSchool);
+        formData.append("plusTwoYear", plusTwoYear);
+        formData.append("plusTwoPercentage", plusTwoPercentage);
+
+        formData.append("University", University);
+        formData.append("collegeName", collegeName);
+        formData.append("UGYear", UGYear);
+        formData.append("UGPercentage", UGPercentage);
+
+        formData.append("applicantName", applicantName);
+        formData.append("applicationDate", applicationDate);
+
+        $.ajax({
+            url: "send_email.php",
+            type: "POST",
+            data: formData,
+            processData: false,
+            contentType: false,
+            dataType: "json",
+            success: function(data) {
+                if (data.success) {
+                    $("#responseMessage").text(data.message);
+                    showSnackbar();
+                    $("#careerForm")[0].reset(); // Reset form after success
+                } else {
+                    $("#responseMessage").text("Failed to send message: " + data.error);
+                }
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                $("#responseMessage").text("Error: " + errorThrown);
+            }
+        });
+    }
+});
 

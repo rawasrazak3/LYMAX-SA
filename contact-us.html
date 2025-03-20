@@ -100,6 +100,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput.min.js"></script>
 
+    <!-- font awesome icon -->
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 
     <style>
         .swal2-container {
@@ -172,11 +176,11 @@
             <div class="navbar">
                 <nav>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Study With Us</a></li>
-                        <li><a href="#">Programmes</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="https://rawasrazak3.github.io/LYMAX-SA">Home</a></li>
+                        <li><a href=" https://rawasrazak3.github.io/LYMAX-SA/studying-with-us">Studying with Us</a></li>
+                        <li><a href=" https://rawasrazak3.github.io/LYMAX-SA/about-us">About Us</a></li>
+                        <li><a href="https://rawasrazak3.github.io/LYMAX-SA/programmes">Programmes</a></li>
+                        <li><a href=" https://rawasrazak3.github.io/LYMAX-SA/contact-us">Contact Us</a></li>
                     </ul>
                 </nav>
                 <!-- <button class="cta-button">Let's Talk</button> -->
@@ -194,6 +198,8 @@
             </div>
         </div>
 
+        <!-- <h1>Contact Us</h1> -->
+
         <div id="sideDrawer" class="side-drawer">
             <button class="close-btn" onclick="closeDrawer()">✖</button>
             <div class="drawer-content">
@@ -204,11 +210,9 @@
                         <div class="contact-section">
                             <h3>Get In Touch</h3>
                             <br>
-                            <p><i class="fa-solid fa-envelope"></i> Email Us <br> <span class="pl-4" style="font-size: 18px;font-weight: bold;">info@LymaxLearning.com</span></p>
-                            <p><i class="fa-solid fa-phone"></i> Call Us <br><span class="pl-4" style="font-size: 18px;font-weight: bold;">+91 7994748495</span></p>
-                            <button class="navigate-btn" onclick="window.open('https://maps.app.goo.gl/fo2E7qLkoRLqE9Yw5', '_blank')">
-                                <i class="fa-solid fa-location-dot"></i> Navigate
-                            </button>
+                            <p><i class="fa-solid fa-envelope"></i> Email Us <br> <span class="pl-4" style="font-size: 18px;font-weight: 500;">info@LymaxLearning.com</span></p>
+                            <p><i class="fa-solid fa-phone"></i> Call Us <br><span class="pl-4" style="font-size: 18px;font-weight: 500;">+91 7994748495</span></p>
+                            <p><i class="fa-solid fa-location-dot"></i> Address <br><a class="pl-4" href="https://maps.app.goo.gl/fo2E7qLkoRLqE9Yw5">Level 8, Infra Futura, Seaport-Airport Rd, Opp BMC, Thrikkakara, Kakkanadu, Kochi, Kerala-682021</a></p>
                         </div>
                     </div>
                     
@@ -216,19 +220,19 @@
                         <div class="quick-links">
                             <h3>Quick Links</h3>
                             <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Apply Now</a></li>
-                                <li><a href="#">Careers</a></li>
+                                <li><a href="https://rawasrazak3.github.io/LYMAX-SA">Home</a></li>
+                                <li><a href="https://rawasrazak3.github.io/LYMAX-SA/apply-online">Apply Now</a></li>
+                                <li><a href="https://rawasrazak3.github.io/LYMAX-SA/career">Careers</a></li>
                             </ul>
                         </div>
                     </div>
                     
                     <div class="drawer-body-content">
                         <div class="main-links">
-                            <a href="#">About Us</a>
-                            <a href="#">Study with Us</a>
-                            <a href="#">Programmes</a>
-                            <a href="#">Contact Us</a>
+                            <a href=" https://rawasrazak3.github.io/LYMAX-SA/about-us">About Us</a>
+                            <a href=" https://rawasrazak3.github.io/LYMAX-SA/studying-with-us">Studying with Us</a>
+                            <a href="https://rawasrazak3.github.io/LYMAX-SA/programmes">Programmes</a>
+                            <a href=" https://rawasrazak3.github.io/LYMAX-SA/contact-us">Contact Us</a>
                         </div>
                     </div>
                 </div>
@@ -253,7 +257,7 @@
                 <div class="col-lg-8 my-2">
                     <div class="theme_content_box">
                         <h1 style="font-weight: bold;">Contact Us</h1>
-                        <br><br>
+                        <br>
                         <div class="theme_input_box">
                             <form id="contactForm" action="send_email.php" method="POST">
                                 <div class="form-group">
@@ -263,18 +267,18 @@
                                            placeholder="Your Name">
                                     <span class="error-message" id="nameError"></span>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group" >
                                     <label for="email">Email <span style="color: red;">*</span></label>
                                     <input type="email" id="email" 
                                            name="email" 
-                                           placeholder="Your Email" required>
+                                           placeholder="Your Email"  >
                                     <span class="error-message" id="emailError"></span>
                                 </div>
                                 <div class="form-group">
                                     <label for="phone">Phone <span style="color: red;">*</span></label><br>
                                     <input type="tel" id="phone" 
                                            name="phone" 
-                                           required>
+                                           >
                                     <span class="error-message" id="phoneError"></span>
                                 </div>
                                 <div class="form-group">
@@ -282,7 +286,7 @@
                                     <textarea id="message" 
                                               name="message" 
                                               placeholder="Your Message" 
-                                              rows="5" required></textarea>
+                                              rows="5" ></textarea>
                                     <span class="error-message" 
                                           id="messageError"></span>
                                 </div>
@@ -371,11 +375,21 @@
                             </div>
                             <div class="col-lg-4 col-md-6 mb-lg-0 mb-4">
                                 <h6>Useful Info</h6>
+                                <!-- <ul>
+                                    <li><a href="https://rawasrazak3.github.io/LYMAX-SA/terms-and-conditions">Terms &
+                                            conditions </a></li>
+                                    <li><a href="https://rawasrazak3.github.io/LYMAX-SA/privacy-policy">Privacy
+                                            Policy</a></li>
+                                    <li><a href="https://rawasrazak3.github.io/LYMAX-SA/cookie-policy">Cookie Policy</a>
+                                    </li>
+                                    <li><a href="https://rawasrazak3.github.io/LYMAX-SA/refund-policy">Refund Policy</a>
+                                    </li>
+                                </ul> -->
                                 <ul>
-                                    <li><a href="https://rawasrazak3.github.io/LYMAX-SA/terms-and-conditions">Terms & conditions </a></li>
-                                    <li><a href="https://rawasrazak3.github.io/LYMAX-SA/privacy-policy">Privacy Policy</a></li>
-                                    <li><a href="https://rawasrazak3.github.io/LYMAX-SA/cookie-policy">Cookie Policy</a></li>
-                                    <li><a href="https://rawasrazak3.github.io/LYMAX-SA/refund-policy">Refund Policy</a></li>
+                                    <li><p>Terms & conditions </p></li>
+                                    <li><p>Privacy Policy</p></li>
+                                    <li><p>Cookie Policy</p></li>
+                                    <li><p>Refund Policy</p></li>
                                 </ul>
                             </div>
 
@@ -383,16 +397,16 @@
                                 <h6>Stay connected</h6>
                                 <ul class="social_links">
                                     <li>
-                                        <a target="_blank" href="javascript:void(0)"><i class="bi bi-facebook"></i></a>
+                                        <a target="_blank" href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
                                     </li>
                                     <li>
-                                        <a target="_blank" href="javascript:void(0)"><i class="bi bi-linkedin"></i></a>
+                                        <a target="_blank" href="https://www.linkedin.com/company/lymax-learning/"><i class="bi bi-linkedin"></i></a>
                                     </li>
                                     <li>
                                         <a target="_blank" href="https://www.instagram.com/lymax.learning?igsh=MzFhcG44ZmdybDZ5"><i class="bi bi-instagram"></i></a>
                                     </li>
                                     <li>
-                                        <a target="_blank" href="javascript:void(0)"><i class="bi bi-youtube"></i></a>
+                                        <a target="_blank" href="https://www.youtube.com/"><i class="bi bi-youtube"></i></a>
                                     </li>
                                 </ul>
                                 <h6>Our Official Partner</h6>
@@ -463,7 +477,7 @@
             fetch('https://ipapi.co/json')
                 .then(res => res.json())
                 .then(data => callback(data.country_code))
-                .catch(() => callback("US"));
+                .catch(() => callback("IN"));
         },
         utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js"
     });
@@ -471,8 +485,8 @@
     // Get country code and number details
     input.addEventListener("countrychange", function() {
         var countryData = iti.getSelectedCountryData();
-        console.log("Country Code:", countryData.dialCode);
-        console.log("Country Name:", countryData.name);
+        // console.log("Country Code:", countryData.dialCode);
+        // console.log("Country Name:", countryData.name);
     });
 </script>
 
