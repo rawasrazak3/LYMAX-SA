@@ -60,6 +60,7 @@ body {
     position: relative;
     /* padding-top: 75px; */
     height: auto;
+    width: 100%;
     /* To create scroll effect */
 }
 
