@@ -88,6 +88,18 @@
         }
     </script>
 
+    <script>
+        // Function to close overlay manually
+        function closeOverlay() {
+            document.getElementById("imageOverlay").style.display = "none";
+        }
+
+        // Automatically close overlay after 3 seconds
+        setTimeout(() => {
+            closeOverlay();
+        }, 3000);
+    </script>
+
     <!-- Start of HubSpot Embed Code -->
     <!-- <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/25167852.js"></script> -->
     <!-- End of HubSpot Embed Code -->
@@ -118,17 +130,6 @@
         }
     </script>
 
-    <script>
-        // Function to close overlay manually
-        function closeOverlay() {
-            document.getElementById("imageOverlay").style.display = "none";
-        }
-
-        // Automatically close overlay after 3 seconds
-        setTimeout(() => {
-            closeOverlay();
-        }, 3000);
-    </script>
 
     <meta itemprop="image" content="">
     <meta property="og:image" content="" />
@@ -192,10 +193,10 @@
     <!-- <div class="container"></div> -->
 
     <section class="home-banner">
-        <video autoplay muted loop playsinline >
+        <video autoplay muted loop playsinline>
             <source src="https://rawasrazak3.github.io/LYMAX-SA/img/video/london.mp4" type="video/mp4">
         </video>
-        
+
         <!-- Dark Overlay -->
         <div class="overlay"></div>
 
@@ -262,9 +263,13 @@
                         <div class="contact-section">
                             <h3>Get In Touch</h3>
                             <br>
-                            <p><i class="fa-solid fa-envelope"></i> Email Us <br> <span class="pl-5">info@LymaxLearning.com</span></p>
-                            <p><i class="fa-solid fa-phone"></i> Call Us <br><span class="pl-5">+91 7994748495</span></p>
-                            <p><i class="fa-solid fa-location-dot"></i> Address <br><a class="pl-5" href="https://maps.app.goo.gl/fo2E7qLkoRLqE9Yw5">Level 8, Infra Futura, Seaport-Airport Rd, Opp BMC, Thrikkakara, Kakkanadu, Kochi, Kerala-682021</a></p>
+                            <p><i class="fa-solid fa-envelope"></i> Email Us <br> <span
+                                    class="pl-5">info@LymaxLearning.com</span></p>
+                            <p><i class="fa-solid fa-phone"></i> Call Us <br><span class="pl-5">+91 7994748495</span>
+                            </p>
+                            <p><i class="fa-solid fa-location-dot"></i> Address <br><a class="pl-5"
+                                    href="https://maps.app.goo.gl/fo2E7qLkoRLqE9Yw5">Level 8, Infra Futura,
+                                    Seaport-Airport Rd, Opp BMC, Thrikkakara, Kakkanadu, Kochi, Kerala-682021</a></p>
                         </div>
                     </div>
 
@@ -303,14 +308,14 @@
     <!-- <section class="home-banner">
         <div class="home_banner_overlay"></div> -->
 
-        <!-- Video for Desktop -->
-        <!-- <video class="desktop-video" src="https://rawasrazak3.github.io/LYMAX-SA/img/video/london.mp4" autoplay=""
+    <!-- Video for Desktop -->
+    <!-- <video class="desktop-video" src="https://rawasrazak3.github.io/LYMAX-SA/img/video/london.mp4" autoplay=""
             muted="" loop="" playsinline="" preload="metadata"></video> -->
 
-        <!-- Image for Mobile -->
-        <!-- <img class="mobile-image" src="https://rawasrazak3.github.io/LYMAX-SA/img/home/banner/home-thumbnail.webp" alt="London" /> -->
+    <!-- Image for Mobile -->
+    <!-- <img class="mobile-image" src="https://rawasrazak3.github.io/LYMAX-SA/img/home/banner/home-thumbnail.webp" alt="London" /> -->
 
-        <!-- <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <!-- <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="caption_box">
@@ -386,7 +391,7 @@
                                             </ul>
                                         </div>
                                     </div> -->
-<!-- 
+    <!-- 
                                     <br>
                                     <a href="https://rawasrazak3.github.io/LYMAX-SA/apply-online"
                                         class="theme_btn mb-sm-0 mb-2">Register Your Course Interest</a>
@@ -909,10 +914,18 @@
                                     </li>
                                 </ul> -->
                                 <ul>
-                                    <li><p>Terms & conditions </p></li>
-                                    <li><p>Privacy Policy</p></li>
-                                    <li><p>Cookie Policy</p></li>
-                                    <li><p>Refund Policy</p></li>
+                                    <li>
+                                        <p>Terms & conditions </p>
+                                    </li>
+                                    <li>
+                                        <p>Privacy Policy</p>
+                                    </li>
+                                    <li>
+                                        <p>Cookie Policy</p>
+                                    </li>
+                                    <li>
+                                        <p>Refund Policy</p>
+                                    </li>
                                 </ul>
                             </div>
 
@@ -920,16 +933,21 @@
                                 <h6>Stay connected</h6>
                                 <ul class="social_links">
                                     <li>
-                                        <a target="_blank" href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+                                        <a target="_blank" href="https://www.facebook.com/"><i
+                                                class="bi bi-facebook"></i></a>
                                     </li>
                                     <li>
-                                        <a target="_blank" href="https://www.linkedin.com/company/lymax-learning/"><i class="bi bi-linkedin"></i></a>
+                                        <a target="_blank" href="https://www.linkedin.com/company/lymax-learning/"><i
+                                                class="bi bi-linkedin"></i></a>
                                     </li>
                                     <li>
-                                        <a target="_blank" href="https://www.instagram.com/lymax.learning?igsh=MzFhcG44ZmdybDZ5"><i class="bi bi-instagram"></i></a>
+                                        <a target="_blank"
+                                            href="https://www.instagram.com/lymax.learning?igsh=MzFhcG44ZmdybDZ5"><i
+                                                class="bi bi-instagram"></i></a>
                                     </li>
                                     <li>
-                                        <a target="_blank" href="https://www.youtube.com/"><i class="bi bi-youtube"></i></a>
+                                        <a target="_blank" href="https://www.youtube.com/"><i
+                                                class="bi bi-youtube"></i></a>
                                     </li>
                                 </ul>
                                 <h6>Our Official Partner</h6>
@@ -1001,6 +1019,9 @@
             $(this).next('.custom-file-label').html(fileName);
         })
     </script>
+
+
+
 
 </body>
 

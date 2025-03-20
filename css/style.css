@@ -2429,14 +2429,13 @@ textarea {
 /*Home Banner Ads*/
 
 .home-ads-banner-overlay {
+    display: flex;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
-    /* Dark overlay */
-    display: flex;
     justify-content: center;
     align-items: center;
     z-index: 9999;
@@ -2711,13 +2710,10 @@ textarea {
 .home-banner-content {
     position: relative;
     top: 20%;
-    /* left: 50%; */
-    /* transform: translate(-50%, -50%); */
     text-align: center;
     align-items: center;
     color: white;
     z-index: 2;
-    /* padding-left: 10px; */
     padding-right: 20px;
 }
 
@@ -3057,6 +3053,11 @@ textarea {
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
+    .main-header .logo {
+        width: 120px;
+        height: auto;
+        z-index: 5;
+    }
     .home-banner {
         position: relative;
         width: 100%;
@@ -3071,6 +3072,16 @@ textarea {
         align-items: center;
         justify-content: space-between;
         padding: 15px 20px;
+    }
+
+    .home-banner-content {
+        position: relative;
+        top: 15%;
+        text-align: center;
+        align-items: center;
+        color: white;
+        z-index: 2;
+        padding-right: 10px;
     }
 
     .home-banner-content h1 {
