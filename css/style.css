@@ -3061,6 +3061,28 @@ textarea {
     }
 }
 
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    /* WhatsApp green */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    /* Max z-index to keep it on top */
+}
+
+.whatsapp-float img {
+    width: 50%;
+    height: 50%;
+}
+
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
@@ -3069,6 +3091,7 @@ textarea {
         height: auto;
         z-index: 5;
     }
+
     .home-banner {
         position: relative;
         width: 100%;
@@ -3179,8 +3202,8 @@ textarea {
         justify-content: space-between;
         height: 350px;
         position: relative;
-    } 
-    
+    }
+
     .common_banner_sec h1 {
         font-size: 38px;
         font-weight: bold;
@@ -3313,8 +3336,8 @@ textarea {
         font-weight: 500;
         text-align: start;
     }
-    
-    
+
+
     .side-drawer .quick-links ul {
         list-style: none;
         padding: 0;
