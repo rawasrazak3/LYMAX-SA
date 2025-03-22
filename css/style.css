@@ -58,10 +58,8 @@ body {
     background: var(--theme-color-white);
     color: var(--theme-color);
     position: relative;
-    /* padding-top: 75px; */
     height: auto;
     width: 100%;
-    /* To create scroll effect */
 }
 
 a,
@@ -2181,7 +2179,7 @@ footer a:focus {
 
 @media (max-width: 480px) {
     section {
-        padding-top: 30px;
+        padding-top: 0px;
         padding-bottom: 30px;
     }
 
@@ -2734,13 +2732,120 @@ textarea {
     animation: slideUp 1s ease-in-out forwards;
 }
 
-.home-banner-content h3 {
+/* .home-banner-content h3 {
     opacity: 0;
     font-size: 24px;
     font-weight: 400;
     color: white;
     animation: slideUp 1s ease-in-out forwards;
+} */
+
+.home-banner-content h3 {
+    color: white;
+    overflow: hidden;
+    border-right: 0.15em solid transparent;
+    /* Typewriter cursor */
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.15em;
+    display: inline-block;
+    width: 0;
+    font-size: 34px;
+
+    /* Aurora Gradient Effect */
+    background: linear-gradient(90deg, #ff00ff, #00ffff, #ff00ff);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: typing 13s steps(30, end) infinite, blink-caret 0.5s step-end infinite, aurora 5s infinite alternate;
 }
+
+/* The typing effect */
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+
+    50% {
+        width: 42ch;
+    }
+
+    /* Typing completes */
+    80% {
+        width: 42ch;
+    }
+
+    /* Hold text for 10 seconds */
+    100% {
+        width: 0;
+    }
+
+    /* Start deleting */
+}
+
+/* Aurora gradient animation */
+@keyframes aurora {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* The blinking cursor effect */
+@keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@media (max-width: 950px) {
+    .home-banner-content h3 {
+        color: white;
+        overflow: hidden;
+        border-right: 0.15em solid transparent;
+        /* Typewriter cursor */
+        white-space: nowrap;
+        margin: 0 auto;
+        letter-spacing: 0.15em;
+        display: inline-block;
+        width: 0;
+        font-size: 24px;
+
+        /* Aurora Gradient Effect */
+        background: linear-gradient(90deg, #ff00ff, #00ffff, #ff00ff);
+        background-size: 200% 200%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: typing 13s steps(30, end) infinite, blink-caret 0.5s step-end infinite, aurora 5s infinite alternate;
+    }
+}
+
+@media (max-width: 500px) {
+    .home-banner-content h3 {
+        color: white;
+        overflow: hidden;
+        border-right: 0.15em solid transparent;
+        /* Typewriter cursor */
+        white-space: nowrap;
+        margin: 0 auto;
+        letter-spacing: 0.15em;
+        display: inline-block;
+        width: 0;
+        font-size: 10px;
+
+        /* Aurora Gradient Effect */
+        background: linear-gradient(90deg, #ff00ff, #00ffff, #ff00ff);
+        background-size: 200% 200%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: typing 13s steps(30, end) infinite, blink-caret 0.5s step-end infinite, aurora 5s infinite alternate;
+    }
+}
+
+
 
 .home-banner-content h6 {
     opacity: 0;
@@ -3135,10 +3240,23 @@ textarea {
     }
 
     .home-banner-content h3 {
-        font-size: 18px;
-        font-weight: 400;
         color: white;
-        animation: slideUp 1s ease-in-out forwards;
+        overflow: hidden;
+        border-right: 0.15em solid transparent;
+        /* Typewriter cursor */
+        white-space: nowrap;
+        margin: 0 auto;
+        letter-spacing: 0.15em;
+        display: inline-block;
+        width: 0;
+        font-size: 18px;
+
+        /* Aurora Gradient Effect */
+        background: linear-gradient(90deg, #ff00ff, #00ffff, #ff00ff);
+        background-size: 200% 200%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: typing 13s steps(30, end) infinite, blink-caret 0.5s step-end infinite, aurora 5s infinite alternate;
     }
 
     .home-banner-content h6 {
