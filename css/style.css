@@ -2549,14 +2549,12 @@ textarea {
 }
 
 .main-header .side-drawer-button {
-    width: 55px;
-    height: 50px;
-    background: rgba(0, 0, 0, 0.4);
-    border-radius: 50px;
+    width: auto;
+    height: auto;
+    background: transparent;
+    /* border-radius: 50px; */
     z-index: 5;
-    border-color: white;
-    border-style: solid;
-    border-width: 1px;
+    border: none;
     padding-right: 1%;
 }
 
@@ -2693,7 +2691,7 @@ textarea {
     letter-spacing: var(--ls);
     position: relative;
     overflow: hidden;
-    background: linear-gradient(90deg, #ff00ff, #00ffff, #ffcc00, #ff00ff);
+    background: linear-gradient(90deg, #C8336D, #2F9CCC, #ffcc00, #C8336D);
     background-size: 400% 400%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
