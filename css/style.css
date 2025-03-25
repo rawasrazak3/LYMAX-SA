@@ -3444,7 +3444,6 @@ textarea {
 .application-form-content .radio-options {
     width: 100%;
     display: flex;
-    flex-direction: row;
     /* justify-content: space-between; */
     gap: 20px;
     /* Adds spacing between options */
