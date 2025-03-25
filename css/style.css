@@ -2691,7 +2691,7 @@ textarea {
     letter-spacing: var(--ls);
     position: relative;
     overflow: hidden;
-    background: linear-gradient(90deg, #C8336D, #2F9CCC, #ffcc00, #C8336D);
+    background: linear-gradient(90deg, #C8336D, #2F9CCC, white, #C8336D);
     background-size: 400% 400%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
