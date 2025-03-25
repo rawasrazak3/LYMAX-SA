@@ -25,6 +25,15 @@
     --theme-radius-button: 30px;
     --theme-transition: all 0.3s;
     --bootstrap-icons: "bootstrap-icons";
+    --bg: #000000;
+    --clr-1: #00c2ff;
+    --clr-2: #33ff8c;
+    --clr-3: #ffc640;
+    --clr-4: #e54cff;
+
+    --blur: 1rem;
+    --fs: clamp(1rem, 8vw, 3rem);
+    --ls: clamp(-1.75px, -0.25vw, -3.5px);
 }
 
 * {
@@ -2514,60 +2523,6 @@ textarea {
     }
 }
 
-/* Full-screen video */
-/* .hero {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-}
-
-.hero-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-} */
-
-/* Dark Overlay */
-/* .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-} */
-
-/* Navbar */
-/* .navbar {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: auto;
-    padding: 10px 20px;
-    background: rgba(0, 0, 0, 0.4);
-    border-radius: 50px;
-    margin-top: 0px;
-    z-index: 5;
-    border-style: solid;
-    border-width: 1px;
-    border-color: white;
-} */
-
-/* .logo {
-    width: 200px;
-    height: 100px;
-    z-index: 5;
-}
-
-.logo span {
-    color: #0f0;
-} */
-
 .main-header nav ul {
     margin-top: 15px;
     display: flex;
@@ -2732,119 +2687,30 @@ textarea {
     animation: slideUp 1s ease-in-out forwards;
 }
 
-/* .home-banner-content h3 {
-    opacity: 0;
-    font-size: 24px;
-    font-weight: 400;
-    color: white;
-    animation: slideUp 1s ease-in-out forwards;
-} */
-
 .home-banner-content h3 {
-    color: white;
+    font-size: 38px;
+    font-weight: 800;
+    letter-spacing: var(--ls);
+    position: relative;
     overflow: hidden;
-    border-right: 0.15em solid transparent;
-    /* Typewriter cursor */
-    white-space: nowrap;
-    margin: 0 auto;
-    letter-spacing: 0.15em;
-    display: inline-block;
-    width: 0;
-    font-size: 34px;
-
-    /* Aurora Gradient Effect */
-    background: linear-gradient(90deg, #ff00ff, #00ffff, #ff00ff);
-    background-size: 200% 200%;
+    background: linear-gradient(90deg, #ff00ff, #00ffff, #ffcc00, #ff00ff);
+    background-size: 400% 400%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: typing 13s steps(30, end) infinite, blink-caret 0.5s step-end infinite, aurora 5s infinite alternate;
+    animation: slideUp 1s ease-in-out forwards, aurora-text 6s infinite linear;
 }
 
-/* The typing effect */
-@keyframes typing {
-    0% {
-        width: 0;
-    }
-
-    50% {
-        width: 42ch;
-    }
-
-    /* Typing completes */
-    80% {
-        width: 42ch;
-    }
-
-    /* Hold text for 10 seconds */
-    100% {
-        width: 0;
-    }
-
-    /* Start deleting */
-}
-
-/* Aurora gradient animation */
-@keyframes aurora {
+@keyframes aurora-text {
     0% {
         background-position: 0% 50%;
     }
-
-    100% {
+    50% {
         background-position: 100% 50%;
     }
-}
-
-/* The blinking cursor effect */
-@keyframes blink-caret {
-    50% {
-        border-color: transparent;
+    100% {
+        background-position: 0% 50%;
     }
 }
-
-@media (max-width: 950px) {
-    .home-banner-content h3 {
-        color: white;
-        overflow: hidden;
-        border-right: 0.15em solid transparent;
-        /* Typewriter cursor */
-        white-space: nowrap;
-        margin: 0 auto;
-        letter-spacing: 0.15em;
-        display: inline-block;
-        width: 0;
-        font-size: 24px;
-
-        /* Aurora Gradient Effect */
-        background: linear-gradient(90deg, #ff00ff, #00ffff, #ff00ff);
-        background-size: 200% 200%;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation: typing 13s steps(30, end) infinite, blink-caret 0.5s step-end infinite, aurora 5s infinite alternate;
-    }
-}
-
-@media (max-width: 500px) {
-    .home-banner-content h3 {
-        color: white;
-        overflow: hidden;
-        border-right: 0.15em solid transparent;
-        /* Typewriter cursor */
-        white-space: nowrap;
-        margin: 0 auto;
-        letter-spacing: 0.15em;
-        display: inline-block;
-        width: 0;
-        font-size: 10px;
-
-        /* Aurora Gradient Effect */
-        background: linear-gradient(90deg, #ff00ff, #00ffff, #ff00ff);
-        background-size: 200% 200%;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation: typing 13s steps(30, end) infinite, blink-caret 0.5s step-end infinite, aurora 5s infinite alternate;
-    }
-}
-
 
 
 .home-banner-content h6 {
@@ -2902,17 +2768,6 @@ textarea {
     color: white;
     opacity: 0.8;
 }
-
-
-
-/* General Styles */
-/* body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #000;
-    color: #fff;
-} */
 
 /* Menu Button */
 .menu-btn {
@@ -3240,23 +3095,8 @@ textarea {
     }
 
     .home-banner-content h3 {
-        color: white;
-        overflow: hidden;
-        border-right: 0.15em solid transparent;
-        /* Typewriter cursor */
-        white-space: nowrap;
-        margin: 0 auto;
-        letter-spacing: 0.15em;
-        display: inline-block;
-        width: 0;
-        font-size: 18px;
-
-        /* Aurora Gradient Effect */
-        background: linear-gradient(90deg, #ff00ff, #00ffff, #ff00ff);
-        background-size: 200% 200%;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation: typing 13s steps(30, end) infinite, blink-caret 0.5s step-end infinite, aurora 5s infinite alternate;
+        font-size: 28px;
+        font-weight: 800;
     }
 
     .home-banner-content h6 {
@@ -3333,18 +3173,6 @@ textarea {
         margin-left: 25px;
         margin-bottom: 45px;
     }
-
-    /* Navbar adjustments */
-    /* .navbar {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    } */
-
-    /* .navbar ul {
-        display: none; 
-    } */
 
     .cta-button {
         width: 100%;
