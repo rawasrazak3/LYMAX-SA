@@ -3045,10 +3045,25 @@ textarea {
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
+    .main-header {
+        margin-top: 10px;
+    }
+
     .main-header .logo {
         width: 120px;
         height: auto;
         z-index: 5;
+    }
+
+    .main-header .side-drawer-button {
+        width: auto;
+        height: auto;
+        background: transparent;
+        /* border-radius: 50px; */
+        z-index: 5;
+        border: none;
+        padding-right: 1%;
+        margin-top: 25px;
     }
 
     .home-banner {
