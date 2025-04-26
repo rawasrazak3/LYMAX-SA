@@ -558,6 +558,124 @@ function showSnackbar() {
     }, 2000);
 }
 
+
+function openPopup() {
+    document.getElementById("popupForm").style.display = "flex";
+}
+
+function closePopup() {
+    document.getElementById("popupForm").style.display = "none";
+}
+
+//apply now form validation and submit
+$(document).ready(function() {
+    $("#applyNowForm").submit(function(event) {
+        event.preventDefault(); // Prevent form submission until validation is complete
+
+        // Clear previous error messages
+        $("#nameError, #emailError, #whatsappNoError, #qualificationError, #courseError").text("");
+
+        // Get form values
+        let name = $("#name").val().trim();
+        let email = $("#email").val().trim();
+        let phoneInput = $("#whatsappNo");
+        let phoneNumber = phoneInput.val().trim();
+        let qualification = $("#qualification").val().trim();
+        let course = $("#course").val();
+        let valid = true;
+
+        // here, the index maps to the error code returned from getValidationError - see readme
+        const errorMap = ["Invalid number", "Invalid country code", "Too short", "Too long", "Invalid number"];
+
+        // initialise plugin
+        const iti = initializeIntlTelPlugin();
+
+        // Validation
+        if (name === "") {
+            $("#nameError").text("Name is required.");
+            valid = false;
+        }else{
+            $("#nameError").text("");
+        }
+
+        if (email === "") {
+            $("#emailError").text("Email is required.");
+            valid = false;
+        } else if (!validateEmail(email)) {
+            $("#emailError").text("Please enter a valid email address.");
+            valid = false;
+        }else{
+            $("#emailError").text("");
+        }
+
+        if (phoneNumber === "") {
+            $("#whatsappNoError").text("Whatsapp No is required.");
+            valid = false;
+        } else if (!iti.isValidNumber()) {
+            const errorCode = iti.getValidationError();
+            const msg = errorMap[errorCode] || "Invalid number";
+            $("#whatsappNoError").text(msg);
+            valid = false;
+        }else{
+            $("#whatsappNoError").text("");
+        }
+
+        if (qualification === "") {
+            $("#qualificationError").text("Qualification is required.");
+            valid = false;
+        }else{
+            $("#qualificationError").text("");
+        }
+
+        if (!course) {
+            $("#courseError").text("Course is required.");
+            valid = false;
+        }else{
+            $("#courseError").text("");
+        }
+
+        if (valid) {
+            // Submit the form via AJAX (Fetch API alternative in jQuery)
+            submitForm(name, email, phoneNumber,qualification,course);
+        }
+    });
+
+    validateEmail(email);
+
+        
+    function submitForm(name, email, phone,qualification,course) {
+        let formData = new FormData();
+        formData.append("name", name);
+        formData.append("email", email);
+        formData.append("phone", phone);
+        formData.append("qualification", qualification);
+        formData.append("course", course);
+        // formData.append("message", message);
+
+        $.ajax({
+            url: "send_email.php",
+            type: "POST",
+            data: formData,
+            processData: false,
+            contentType: false,
+            dataType: "json",
+            success: function(data) {
+                if (data.success) {
+                    $("#responseMessage").text(data.message);
+                    // showSnackbar();
+                    // $("#applyNowForm")[0].reset(); // Reset form after success
+                    closePopup();
+                } else {
+                    $("#responseMessage").text("Failed to send message: " + data.error);
+                }
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                $("#responseMessage").text("Error: " + errorThrown);
+            }
+        });
+    }
+});
+
 //home banner course dropdown list
 $(document).ready(function () {
     const $dropdown = $(".custom-dropdown");
