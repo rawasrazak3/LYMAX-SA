@@ -93,13 +93,13 @@
         function closeOverlay() {
             document.getElementById("imageOverlay").style.display = "none";
             document.getElementById("homeBannerContent").style.display = "block";
-            openPopup();
+            document.getElementById("popupForm").style.display = "flex";
         }
 
         // Automatically close overlay after 3 seconds
         setTimeout(() => {
             closeOverlay();
-            openPopup();
+            document.getElementById("popupForm").style.display = "flex";
         }, 3000);
     </script>
 
