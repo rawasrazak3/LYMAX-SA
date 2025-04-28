@@ -2761,6 +2761,11 @@ textarea {
     color: white;
 }
 
+.home-banner-content-stat-box .counter {
+    font-size: 25px;
+    color: white;
+}
+
 .home-banner-content-stat-box p {
     font-size: 18px;
     color: white;

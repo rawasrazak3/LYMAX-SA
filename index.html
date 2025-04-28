@@ -12,6 +12,8 @@
 
     <!-- <meta name="csrf-token" content="LSYcxm5cSEbE7Q4R89MRGysr51zJyOvdDCF3lMQU"> -->
 
+    <!-- Other meta tags, CSS -->
+
 
     <meta itemprop="name" content="Home | LYAMAX">
     <meta itemprop="description" content="">
@@ -31,7 +33,8 @@
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 
-
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CJDRPLQ4ZB"></script>
+    <script src="analytics.js"></script>
 
 
     <!-- Web Application Manifest -->
@@ -72,6 +75,8 @@
 
     <!-- font awesome icon -->
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+
 
     <script>
         // Initialize the service worker
@@ -214,6 +219,8 @@
     </script>
 
 
+
+
     <meta itemprop="image" content="">
     <meta property="og:image" content="" />
     <meta name="twitter:image" content="" />
@@ -237,43 +244,11 @@
 </head>
 
 <body class="">
-    <!-- <div class="side_navbar_wrapper">
-        <div class="side_navbar_overlay"></div>
-        <div class="side_navbar_content">
-            <div class="row">
-                <div class="col-12">
-                    <ul class="header_navlinks">
-                        <li><a href="https://rawasrazak3.github.io/LYMAX-SA">Home</a></li>
-                        <li><a href=" https://rawasrazak3.github.io/LYMAX-SA/studying-with-us">Studying with Us</a></li>
-                        <li><a href=" https://rawasrazak3.github.io/LYMAX-SA/about-us">About Us</a></li>
-                        <li><a href="https://rawasrazak3.github.io/LYMAX-SA/programmes">Programmes</a></li>
-                        <li><a href=" https://rawasrazak3.github.io/LYMAX-SA/contact-us">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- <header>
-        <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg p-0">
-                <a class="navbar-brand p-0" href="https://rawasrazak3.github.io/LYMAX-SA">
-                    <img src="https://rawasrazak3.github.io/LYMAX-SA/img/lymax-main-logo.svg " alt="" />
-                </a>
 
-                <h2 class="header-text">India's 1st World Class Higher Education Hub</h2>
-
-                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="sr-only"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </nav>
-        </div>
-    </header> -->
-    <!-- <div class="container"></div> -->
+   <!-- Google Tag Manager (noscript) -->
+   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TWQVFM2N" height="0" width="0"
+    style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
     <div>
         <a href="https://wa.me/919037376007?text=I would like to know more" class="whatsapp-float" target="_blank">
@@ -337,23 +312,52 @@
 
             <div class="home-banner-content-stats">
                 <div class="home-banner-content-stat-box">
-                    <h2>72+</h2>
+                    <h2 class="counter" data-target="72">0</h2>
+                    <!-- <h2>72+</h2> -->
                     <p>Universities</p>
                 </div>
                 <div class="home-banner-content-stat-box">
-                    <h2>13+</h2>
+                    <h2 class="counter" data-target="13">0</h2>
                     <p>Countries</p>
                 </div>
                 <div class="home-banner-content-stat-box">
-                    <h2>30+</h2>
+                    <h2 class="counter" data-target="30">0</h2>
                     <p>Courses</p>
                 </div>
                 <div class="home-banner-content-stat-box">
-                    <h2>70%</h2>
+                    <h2><span class="counter" data-target="70">0</span>%</h2>
                     <p>Scholarships</p>
                 </div>
             </div>
         </div>
+
+        <script>
+
+            const counters = document.querySelectorAll('.counter');
+
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                let count = 0;
+                const increment = target / 200;
+
+                function updateCounter() {
+                    if (count < target) {
+                        count += increment;
+                        counter.innerText = Math.ceil(count);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        if (counter.textContent.includes('%') || counter.getAttribute('data-target').includes('%')) {
+                            counter.innerText = target + '%';
+                        } else {
+                            counter.innerText = target;
+                        }
+                    }
+                }
+
+                updateCounter();
+            });
+
+        </script>
 
         <div id="sideDrawer" class="side-drawer">
             <button class="close-btn" onclick="closeDrawer()">✖</button>
@@ -407,7 +411,7 @@
         <div class="popup-overlay" id="popupForm">
             <div class="popup">
                 <h2 style="text-align: center;">Apply Now</h2>
-                <form id="applyNowForm"  method="POST">
+                <form id="applyNowForm" method="POST">
                     <div class="form-group">
                         <label for="name">Name <span style="color: red;">*</span></label>
                         <input type="text" id="name" name="name" placeholder="Enter your name">
@@ -1086,7 +1090,7 @@
                                 <h6>Stay connected</h6>
                                 <ul class="social_links">
                                     <li>
-                                        <a target="_blank" href="https://www.facebook.com/"><i
+                                        <a target="_blank" href="https://www.facebook.com/lymax.learning"><i
                                                 class="bi bi-facebook"></i></a>
                                     </li>
                                     <li>
